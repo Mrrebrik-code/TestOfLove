@@ -1,15 +1,15 @@
 ID,Russian,English,Turkish,Massa
 с2_001,Ценности,Values,Değerler,
 с2_002,На чем базируются ваши отношения с партнером?,What are your relationship with partner?,Eşle olan ilişkiniz neler?,
-с2_003,На взаимной любви,On mutual love,Karşılıklı aşkta,3
-с2_004,"Вы убеждены, что только вместе вы сможете обрести смысл жизни",You are convinced that only together you can find the meaning of life,Sadece bir arada yaşamın anlamını bulabileceğiniz konusunda ikna oldunuz.,3
-с2_005,"Вы уверены, что очень сильно необходимы ему",Are you sure that he is very necessary for him,Onun için çok gerekli olduğundan emin misin?,4
+с2_003,На взаимной любви,On mutual love,Karşılıklı aşkta,5
+с2_004,"Вы убеждены, что только вместе вы сможете обрести смысл жизни",You are convinced that only together you can find the meaning of life,Sadece bir arada yaşamın anlamını bulabileceğiniz konusunda ikna oldunuz.,5
+с2_005,"Вы уверены, что очень сильно необходимы ему",Are you sure that he is very necessary for him,Onun için çok gerekli olduğundan emin misin?,3
 с2_006,"В чем вы больше убеждаетесь, чем ближе становятся ваши отношения?","What are you more convincing, the closer your relationship becomes?","Ne daha ikna edici, ilişkiniz yaklaşıyor?",
-с2_007,"У вашего партнера есть масса недостатков, что вас не слишком радует",Your partner has a lot of drawbacks that you are not too happy,Eşiniz çok mutlu olmadığınız bir sürü sakıncası var,3
-с2_008,Ваши свидания потеряли былую новизну,Your dates lost the former novelty,Tarihleriniz eski yenilikten kaybetti,5
+с2_007,"У вашего партнера есть масса недостатков, что вас не слишком радует",Your partner has a lot of drawbacks that you are not too happy,Eşiniz çok mutlu olmadığınız bir sürü sakıncası var,5
+с2_008,Ваши свидания потеряли былую новизну,Your dates lost the former novelty,Tarihleriniz eski yenilikten kaybetti,2
 с2_009,Вы не все рассказываете партнеру. Что вы думаете по этому поводу?,You are not all telling a partner. What do you think about it?,Hepiniz bir ortağa söylemezsiniz. Bu konu hakkında ne düşünüyorsun?,
-с2_010,"Вы не говорите ему только о том, что относится лично к вам",You do not tell him only about what applies personally to you,Ona sadece kişisel olarak sizin için ne uyguladığı hakkında söylemiyorsunuz.,3
-с2_011,"Ваши секреты – пустяк, который не следует принимать во внимание",Your secrets are a trifle that should not be taken into account,"Sırlarınız, dikkate alınmaması gereken bir önemsemdir",5
+с2_010,"Вы не говорите ему только о том, что относится лично к вам",You do not tell him only about what applies personally to you,Ona sadece kişisel olarak sizin için ne uyguladığı hakkında söylemiyorsunuz.,5
+с2_011,"Ваши секреты – пустяк, который не следует принимать во внимание",Your secrets are a trifle that should not be taken into account,"Sırlarınız, dikkate alınmaması gereken bir önemsemdir",3
 с2_012,Важную для вас обоих информацию вы не скрываете,An important information for you is not hiding,Sizin için önemli bir bilgi saklanmıyor,3
 с2_013,Что вы предпринимаете после вашей ссоры?,What do you take after your quarrel?,Kavas kazandıktan sonra ne alıyorsun?,
 с2_014,Первой идете на перемирие,First go on a truce,İlk önce ateşkes,3

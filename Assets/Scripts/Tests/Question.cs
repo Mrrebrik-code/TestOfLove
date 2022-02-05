@@ -16,5 +16,13 @@ public class Question : ScriptableObject
 	public class Answer
 	{
 		public string AnswerText;
+		public int Massa 
+		{ 
+			get 
+			{
+				var massa = Localization.Instance.GetParameter(AnswerText);
+				return Convert.ToInt32(massa);
+			} 
+		}
 	}
 }

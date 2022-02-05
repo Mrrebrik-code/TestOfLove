@@ -6,6 +6,7 @@ using UnityEngine;
 public class TestHandler : SingletonMono<TestHandler>
 {
 	private History _history = new History();
+	private Result _result = new Result();
 	private Category _categoryCurrent;
 	private List<Question> _questions = new List<Question>();
 	private Question _currentQuestion;
@@ -16,6 +17,7 @@ public class TestHandler : SingletonMono<TestHandler>
 
 	[SerializeField] private QuestionHolder _question;
 	private List<AnswerHolder> _answers = new List<AnswerHolder>();
+
 
 	private void Start()
 	{
@@ -68,6 +70,7 @@ public class TestHandler : SingletonMono<TestHandler>
 	private void HandleClickAnswer(Question.Answer answer)
 	{
 		_history.Enqueue(answer);
+		_result.Add(answer.Massa);
 		_answers.ForEach(answerTemp =>
 		{
 			answerTemp.onClick -= HandleClickAnswer;
@@ -80,6 +83,21 @@ public class TestHandler : SingletonMono<TestHandler>
 	public void Undo()
 	{
 		_history.Undo();
+	}
+
+	[Serializable]
+	private class Result
+	{
+		public int ResultTest { get; private set; }
+
+		public void Add(int count)
+		{
+			ResultTest += count;
+		}
+		public void Subtract(int count)
+		{
+			ResultTest -= count;
+		}
 	}
 
 	[Serializable]
@@ -98,11 +116,13 @@ public class TestHandler : SingletonMono<TestHandler>
 			return _questions[_questions.Count - 1];
 		}
 
-		public Question Dequeue()
+		public Question Dequeue(bool isDictionary = true)
 		{
 			var temp = _questions[_questions.Count - 1];
 			_questions.Remove(temp);
-			_questionToSelectedAnswer.Remove(temp);
+
+			if(isDictionary) _questionToSelectedAnswer.Remove(temp);
+
 
 			return temp;
 		}
@@ -112,7 +132,11 @@ public class TestHandler : SingletonMono<TestHandler>
 			if (_questions.Count > 0)
 			{
 				Instance._questions.Add(Instance._currentQuestion);
-				var question = Dequeue();
+
+				var question = Dequeue(false);
+				Instance._result.Subtract(_questionToSelectedAnswer[question].Massa);
+				_questionToSelectedAnswer.Remove(question);
+
 				Instance.Init(question);
 				//Логика отмены
 			}
