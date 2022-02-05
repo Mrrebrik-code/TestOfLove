@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class LocalizationButton : MonoBehaviour
 {
 	[SerializeField] private Languages _language;
-	[SerializeField] private Outline _outline;
+	[SerializeField] private List<Sprite> _outlineSprites;
+	[SerializeField] private Image _icon;
 	private Button _button;
 
 	private void Start()
@@ -15,7 +16,6 @@ public class LocalizationButton : MonoBehaviour
 		_button.onClick.AddListener(() =>
 		{
 			Localization.Instance.SetLanguage(_language.ToString());
-			//_outline.enabled = true;
 		});
 		Localization.Instance.Subscribe(OutlineSwitching);
 		OutlineSwitching();
@@ -23,8 +23,8 @@ public class LocalizationButton : MonoBehaviour
 
 	private void OutlineSwitching()
 	{
-		if (_language.ToString() == Localization.Instance.Language.ToString()) _outline.enabled = true;
-		else _outline.enabled = false;
+		if (_language.ToString() == Localization.Instance.Language.ToString()) _icon.sprite = _outlineSprites[0];
+		else _icon.sprite = _outlineSprites[1];
 	}
 
 	private void OnDestroy()
