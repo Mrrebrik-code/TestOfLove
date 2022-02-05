@@ -1,0 +1,169 @@
+ID,Russian,English,Turkish,Massa
+с1_001,На любовь,On love,Sevgi üzerine,
+с1_002,Ваш возраст?,Your age?,Yaşınız?,
+с1_003,До 18,Before 18,18'den önce,2
+с1_004,19-30,19-30,19-30,3
+с1_005,Более 30,Over 30,30'dan fazla,4
+с1_006,Ваша разница в возрасте?,Your difference in age?,Yaşın farkın?,
+с1_007,12 и менее лет,12 or less years,12 veya daha az yıl,5
+с1_008,Более 12 лет,Over 12 years old,12 yaşından büyük,3
+с1_009,Нету разницы,No difference,Fark yok,2
+с1_010,Ваш пол?,Your gender?,Senin cinsiyet?,
+с1_011,Мужской,Male,Erkek,4
+с1_012,Женский,Women,KADIN,3
+с1_013,Какова длительность вашего общения?,What is the duration of your communication?,İletişiminizin süresi nedir?,
+с1_014,До 1 месяца,Up to 1 month,1 aya kadar,1
+с1_015,1 месяц – 6 месяцев,1 month - 6 months,1 ay - 6 ay,2
+с1_016,6 месяцев – 2 года,6 months - 2 years,6 ay - 2 yıl,3
+с1_017,Более 2 лет,Over 2 years,2 yıldan fazla,4
+с1_018,Мы еще не общаемся,We still do not communicate,Hala iletişim kurmuyoruz,5
+с1_019,Часто ли вы встречались в течение указанного Вами срока?,How often did you meet during the term you specified?,Belirttiğiniz terim boyunca ne sıklıkla buluştunuz?,
+с1_020,Несколько раз в неделю,Few times a week,Haftada birkaç kez,4
+с1_021,Примерно раз в неделю,About once a week,Yaklaşık haftada bir,3
+с1_022,Реже одного раза в неделю,Less than once a week,Haftada bir kereden az,2
+с1_023,Вместе живем больше месяца,We live together for more than a month,Bir aydan fazla bir süredir birlikte yaşıyoruz,5
+с1_024,Занимаетесь ли вы вместе регулярно каким-либо трудом?,Do you regularly do in any way?,Düzenli olarak herhangi bir şekilde yaptınız mı?,
+с1_025,Да,Yes,Evet,3
+с1_026,Нет ,Not,Değil,5
+с1_027,Чего Вы хотели бы от этих отношений?,What would you like from these relationships?,Bu ilişkilerden ne istersiniz?,
+с1_028,"Дружбы, общения","Friendship, communication","Arkadaşlık, İletişim",2
+с1_029,"Прежде всего, удовольствия, а потом, может быть, создать семью","First of all, pleasure, and then, maybe create a family","Her şeyden önce, zevk ve sonra, belki bir aile yaratır",3
+с1_030,Создать семью,Create a family,Bir aile yarat,4
+с1_031,Мои взгляды на этот вопрос колеблются,My views on this question fluctuate,Bu soru hakkındaki görüşlerim dalgalanıyor,5
+с1_032,Кто-то из вас двоих состоит в законном браке?,Does any of you have a lawful marriage?,Herhangi birinizin yasal bir evliliğiniz var mı?,
+с1_033,Никто,No one,Kimse,2
+с1_034,Я,I AM,BEN,3
+с1_035,Другой вопрос,Another question,Başka bir soru,3
+с1_036,Оба(у каждого своя семья),Both (each has their own family),Her ikisi de (her birinin kendi ailesi vardır),5
+с1_037,Вы хотите иметь детей с этим человеком?,Do you want to have children with this person?,Bu kişiyle çocuk sahibi olmak ister misin?,
+с1_038,Да,Yes,Evet,3
+с1_039,Нет,Not,Değil,5
+с1_040,Незнаю,I do not know,bilmiyorum,3
+с1_041,"Можете ли Вы представить вас в будущем парой любящих, нежных старичков?","Can you imagine you in the future pair of loving, gentle old men?","Gelecekteki sevgi dolu, nazik yaşlı erkeklerde sizi hayal edebiliyor musunuz?",
+с1_042,Да,Yes,Evet,3
+с1_043,Нет,Not,Değil,5
+с1_044,Вам хорошо…,You well…,İyisin…,
+с1_045,"С ним плохо, но без него не могу","He is bad, but I can't","O kötü, ama yapamam",5
+с1_046,Только когда этот человек рядом,Only when this man is near,Sadece bu adam yakın olduğunda,3
+с1_047,"Когда он не рядом, тоже хорошо","When he is not near, too good","O yakın olmadığında, çok iyi",3
+с1_048,Другие стороны Вашей жизни с появлением этого человека стали…,Other sides of your life with the advent of this person became ...,Bu kişinin ortaya çıkışıyla hayatınızın diğer tarafları ...,
+с1_049,Лучше,It is better,Daha iyi,3
+с1_050,Хуже,Worse,Daha kötüsü,5
+с1_051,Не изменились ,Not changed,Değişmedi,3
+с1_052,Достаточно ли любви Вы получили от обоих своих родителей?,Are you enough love from both of your parents?,Her iki ailenizden de yeterince sevgi misiniz?,
+с1_053,Да,Yes,Evet,3
+с1_054,Нет,Not,Değil,5
+с1_055,Другое,Other,Diğer,5
+с1_056,Рядом с этим человеком Вам,Next to this person you,Bu kişinin yanında,
+с1_057,"Легко, радостно, как ни с кем","Easy, happily like anyone","Kolay, mutlu bir şey gibi",3
+с1_058,"Хорошо, но не всегда",Good but not always,İyi ama her zaman değil,3
+с1_059,Плохо,Badly,Kötü,5
+с1_060,"Вы вообще уверенный в себе человек, если речь касается личных отношений?",Are you self-confident person if it comes to personal relationships?,"Kişisel ilişkilere gelirse, kendine güvenen kişi misiniz?",
+с1_061,Да,Yes,Evet,3
+с1_062,Нет,Not,Değil,4
+с1_063,Не очень,Not good,İyi değil,3
+с1_064,Боитесь ли Вы одиночества?,Are you afraid of loneliness?,Yalnızlıktan korkuyor musun?,
+с1_065,Да,Yes,Evet,3
+с1_066,Нет,Not,Değil,4
+с1_067,Не знаю,Do not know,Bilmemek,5
+с1_068,Сколько времени прошло от расставания с предыдущим партнером до начала отношений с этим человеком?,How long has passed from parting with the previous partner before the start of relationships with this person?,Bu kişi ile ilişkilerin başlamasından önce önceki ortağın ayrılmasından ne kadar süre geçti?,
+с1_069,Меньше трех месяцев,Less than three months,Üç aydan az,3
+с1_070,От трех месяцев до года,From three months to a year,Bir yıla üç aydan,4
+с1_071,Больше года,More than a year,Bir yıldan fazla,5
+с1_072,Расставания не было,There was no parting,Ayrılma yoktu,5
+с1_073,Ищете ли Вы в этом человеке черты предыдущего партнера?,Are you looking for in this person the features of the previous partner?,"Bu kişiyi arıyor musunuz, önceki ortağın özellikleri?",
+с1_074,Бывает,It happens,Olur,3
+с1_075,Нет,Not,Değil,2
+с1_076,Не знаю,Do not know,Bilmemek,5
+с1_077,"Если этот человек сделает что-то не так, Ваши чувства к нему на время ослабнут?","If this person does something wrong, your feelings will weaken about it for a while?","Bu kişi yanlış bir şey yaparsa, duygularınız bir süredir zayıflayacak mı?",
+с1_078,Да,Yes,Evet,3
+с1_079,Нет,Not,Değil,4
+с1_080,Вы явно или в глубине души ревнуете этого человека?,Are you clearly or in the depths of the soul jealous of this person?,Açıkça ya da bu kişinin kıskançlığının derinliklerinde misiniz?,
+с1_081,Да ,Yes,Evet,5
+с1_082,Нет,Not,Değil,3
+с1_083,Чувствуете ли Вы боль и радость этого человека как свою? ,Do you feel the pain and joy of this person as yours?,Bu kişinin acısını ve sevincini senin gibi hissediyor musun?,
+с1_084,Да,Yes,Evet,3
+с1_085,Нет,Not,Değil,5
+с1_086,"Представьте, что этот человек попал на несколько месяцев в больницу. Сможете ли Вы за ним ухаживать, выносить судно, с радостью, сохраняя верность?","Imagine that this person came for several months to the hospital. Can you care for him, to carry out a ship, with joy, keeping loyalty?","Bu kişinin birkaç ay hastaneye geldiğini hayal edin. Onu umursar mısın, sevinçle, sevinçle, sadakat tutuyor musun?",
+с1_087,Да,Yes,Evet,3
+с1_088,Нет,Not,Değil,4
+с1_089,"Рассказывая об этом человеке знакомым или появляясь в их обществе вместе, Вы:","Talking about this person familiar or appearing in their society together, you:","Bu kişinin tanıdık veya toplumlarında birlikte göründüğü hakkında konuşmak,",
+с1_090,"Наслаждаетесь тем, какое впечатление производит Ваш избранник",Enjoy what impression is your chosen,Seçtiğiniz izlenimin tadını çıkarın,3
+с1_091,"Стыдитесь того, какое впечатление производит Ваш избранник",Are so impressed by your chosen one,Seçtiğiniz kişinin çok etkilendiler,4
+с1_092,Не думаете о впечатлении других,Do not think about the impression of others,Başkalarının izlenimi hakkında düşünmeyin,2
+с1_093,. Кто чаще после ссор первым идет на примирение?,. Who is more often after the quarrel first goes to reconciliation?,. Kavga ilk önce uzlaşma yaptıktan sonra daha sık kim var?,
+с1_094,Вы,You,Sen,3
+с1_095,Второй человек,Second man,İkinci adam,4
+с1_096,Никто,No one,Kimse,4
+с1_097,"25 Если бы этот человек был менее «успешен» в жизни (менее обеспечен), он был бы Вам так же интересен?","25 If this person was less ""successful"" in life (less secured), he would be as interesting for you?","25 Bu kişi hayatta daha az ""başarılı"" olsaydı (daha az güvende), sizin için ilginç olurdu?",
+с1_098,Да,Yes,Evet,3
+с1_099,Нет,Not,Değil,5
+с1_100,Не знаю,Do not know,Bilmemek,2
+с1_101,Были ли у Вас ранее половые партнеры?,Have you had previously sexual partners?,Daha önce cinsel ortaklar oldun mu?,
+с1_102,Нет,Not,Değil,3
+с1_103,"Да, от 1 до 3 партнеров","Yes, from 1 to 3 partners","Evet, 1 ila 3 ortak",4
+с1_104,"Да, более 3 партнеров","Yes, more than 3 partners","Evet, 3'ten fazla ortak",4
+с1_105,Была ли между вами и этим человеком физическая близость?,Was there physical proximity between you and this person?,Siz ve bu kişi arasında fiziksel yakınlık var mıydı?,
+с1_106,Да ,Yes,Evet,3
+с1_107,Нет,Not,Değil,3
+с1_108,"Был бы этот человек Вам столь же интересен, если бы он был совсем некрасив?",Would this person be as interesting for you if he was completely ugly?,Bu kişi tamamen çirkin olsaydı sizin için ilginç olur mu?,
+с1_109,Да,Yes,Evet,3
+с1_110,Нет,Not,Değil,4
+с1_111,Не очень,Not good,İyi değil,5
+с1_112,"Было ли бы Вам интересно три месяца общаться этим человеком, если никакие прикосновения были бы невозможны?",Would you be interested in three months to communicate with this person if no touch would be impossible?,"Hiçbir dokunuş imkansız olursa, bu kişiyle iletişim kurmak için üç aydır ilgilenir misiniz?",
+с1_113,Да,Yes,Evet,4
+с1_114,Не очень,Not good,İyi değil,5
+с1_115,Нет,Not,Değil,3
+с1_116,Возникала ли у Вас мысль приворожить этого человека?,Do you have a thought to shit this person?,Bu kişiyi bok için bir düşünceniz var mı?,
+с1_117,"Нет, конечно",Of course not,Tabii ki değil,3
+с1_118,"Да, но я отверг(ла) эту мысль и никогда этого не сделаю","Yes, but I rejected this thought and never do it","Evet, ama bu düşünceyi reddettim ve asla yapmayın",2
+с1_119,"Да, и я допускаю возможность того, что сделаю это","Yes, and I admit the opportunity to do it","Evet, ve ben bunu yapma fırsatını kabul ediyorum",5
+с1_120,"Есть ли у Вас необъяснимое чувство, что это Ваш человек?",Do you have an inexplicable feeling that this is your person?,Bunun insanın olduğuna dair açıklanamayan bir duygunuz var mı?,
+с1_121,"Да, такого чувства не было ни с кем","Yes, there was no such feeling with anyone","Evet, kimseyle böyle bir his yoktu",3
+с1_122,"Да, но такое чувство было с другим человеком","Yes, but such a feeling was with another person","Evet, ama böyle bir his başka biriyle birlikteydi.",4
+с1_123,Нет,Not,Değil,2
+с1_124,Относитесь ли Вы с уважением к этому человеку?,Do you feel respect to this person?,Bu kişiye saygı duyuyor musun?,
+с1_125,Да,Yes,Evet,3
+с1_126,Не особо,Not really,Pek sayılmaz,5
+с1_127,"Часты ли у вас непонимание, ссоры?","Are you frequent misunderstanding, quarrels?","Sık sık yanlış anlaşılıyor musunuz, kavga ediyor musunuz?",
+с1_128,"Часты, а вообще я редко ссорюсь","Frequent, but in general I rarely preside","Sık, ancak genel olarak nadiren baştandalar",3
+с1_129,"Часты, я и с другими часто ссорюсь","Frequently, I and others often sink","Sık sık, ben ve diğerleri sık sık batıyor",4
+с1_130,Редки,Rare,Nadir,3
+с1_131,"Бывают, но его мне легче прощать, чем других","Happen, but it is easier for me to forgive than others","Olur, ama benim için diğerlerinden daha affetmek daha kolaydır.",3
+с1_132,"Можете ли Вы прожить с этим человеком жизнь, мирясь с его недостатками?","Can you live life with this man, mighting with his shortcomings?",Onun eksiklikleri ile birlikte bu adamla hayatı yaşayabilir misin?,
+с1_133,Да,Yes,Evet,3
+с1_134,Нет. Он должен измениться,No. He must change,Numara. Değiştirmeli,5
+с1_135,Вряд ли,Unlikely,Olası olmayan,2
+с1_136,Ваши отношения со временем становятся…,Your relationship with time becomes ...,Zamanla ilişkiniz olur ...,
+с1_137,"Лучше, теплее","Better, warmer","Daha iyi, daha sıcak",3
+с1_138,"Хуже, хотя Вы работаете над собой",Worse although you work on yourself,"Daha da kötüsü, kendiniz üzerinde çalışmanıza rağmen",2
+с1_139,"Хуже, и Вы не работаете над собой",Worse and you don't work on yourself,Daha da kötüsü ve kendin üzerinde çalışmıyorsun,5
+с1_140,Всегда ли вы понимаете шутки друг друга?,Do you always understand each other's jokes?,Her zaman birbirlerinin şakalarını anlar mısın?,
+с1_141,Всегда,Is always,Her zaman,3
+с1_142,Редко,Rarely,Seyrek,4
+с1_143,Не знаю,Do not know,Bilmemek,5
+с1_144,Принадлежите ли вы с этим человеком к одной религии?,Do you belong to this person to one religion?,Bir dine bu kişiye ait misiniz?,
+с1_145,Да,Yes,Evet,3
+с1_146,Нет,Not,Değil,3
+с1_147,Не знаю,Do not know,Bilmemek,5
+с1_148,Я атеист,I'm an atheist,ben bir ateistim,2
+с1_149,Сходитесь ли вы в вашем отношении к деньгам?,Will you go in your attitude to money?,Paraya karşı tavrına girecek misin?,
+с1_150,В основном да,Mostly yes,Çoğunlukla evet,3
+с1_151,В основном нет,Mainly not,Çoğunlukla,4
+с1_152,Не знаю,Do not know,Bilmemek,5
+с1_153,Близок ли ваш уровень образования?,Is your level of education close?,Eğitim seviyeniz yakın mı?,
+с1_154,Да,Yes,Evet,3
+с1_155,Нет,Not,Değil,4
+с1_156,Не знаю,Do not know,Bilmemek,5
+с1_157,Сходитесь ли вы в вашем представлении о браке?,Are you going in your marriage presentation?,Evlilik sunumuna mı gidiyorsun?,
+с1_158,В основном да,Mostly yes,Çoğunlukla evet,3
+с1_159,В основном нет,Mainly not,Çoğunlukla,4
+с1_160,Не знаю,Do not know,Bilmemek,5
+с1_161,Сходитесь ли вы в вашем представлении о желательном количестве детей в семье?,Are you converge in your presentation about the desired number of children in the family?,Sunumunuzda ailedeki istenen sayıda çocuk hakkında mı katılıyorsunuz?,
+с1_162,Да,Yes,Evet,3
+с1_163,Нет,Not,Değil,4
+с1_164,Не знаю,Do not know,Bilmemek,5
+с1_165,Сходитесь ли вы в вашем представлении о женской и мужской роли в семье?,Are you converge in your presentation about the feminine and male role in the family?,Ailendeki kadınsı ve erkek rolüyle ilgili sunumunuzda mı katılıyorsunuz?,
+с1_166,В основном да,Mostly yes,Çoğunlukla evet,3
+с1_167,В основном нет,Mainly not,Çoğunlukla,4
+с1_168,Не знаю,Do not know,Bilmemek,5

@@ -8,6 +8,6 @@ public class QuestionHolder : MonoBehaviour
 	[SerializeField] private TMP_Text _questionText;
 	public void SetQuestion(Question question)
 	{
-		_questionText.text = question.QuestionText;
+		_questionText.text = Localization.Instance.Localize(question.QuestionText);
 	}
 }

@@ -55,4 +55,9 @@ public class Localization : SingletonMono<Localization>
 	{
 		return LocalizationManager.Localize($"{id}");
 	}
+
+	public string GetParameter(string id, string massa = "Massa")
+	{
+		return LocalizationManager.GetParam(id, massa);
+	}
 }

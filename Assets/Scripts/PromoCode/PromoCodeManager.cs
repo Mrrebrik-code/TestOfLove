@@ -19,7 +19,7 @@ public class PromoCodeManager : SingletonMono<PromoCodeManager>
 				Debug.Log("100");
 				break;
 			case Love1000:
-				Debug.Log("1000");
+				Debug.Log(Localization.Instance.GetParameter("с2_012", "Massa"));
 				break;
 		}
 	}

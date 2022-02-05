@@ -14,7 +14,7 @@ public class AnswerHolder : MonoBehaviour
 	public void SetAnswer(Question.Answer answer)
 	{
 		_answer = answer;
-		_anserText.text = answer.AnswerText;
+		_anserText.text = Localization.Instance.Localize(answer.AnswerText);
 		if (_button == null) _button = GetComponent<Button>();
 
 		_button.ListenerButton(Click);

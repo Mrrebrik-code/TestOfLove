@@ -88,6 +88,11 @@ namespace Assets.SimpleLocalization
 		    return Dictionary[Language].ContainsKey(localizationKey);
 	    }
 
+		public static string GetParam(string id, string group)
+		{
+			return Dictionary[group][id];
+		}
+
 	    /// <summary>
 		/// Get localized value by localization key.
 		/// </summary>
