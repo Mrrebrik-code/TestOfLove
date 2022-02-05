@@ -6,7 +6,6 @@ using UnityEngine;
 public class TestHandler : SingletonMono<TestHandler>
 {
 	private History _history = new History();
-	private Result _result = new Result();
 	private Category _categoryCurrent;
 	private List<Question> _questions = new List<Question>();
 	private Question _currentQuestion;
@@ -18,10 +17,11 @@ public class TestHandler : SingletonMono<TestHandler>
 	[SerializeField] private QuestionHolder _question;
 	private List<AnswerHolder> _answers = new List<AnswerHolder>();
 
-
+	[SerializeField] private Result _result;
 	private void Start()
 	{
 		_categoryCurrent = GameManager.Category;
+		_result.Init(_categoryCurrent.Categorys);
 		foreach (var question in _categoryCurrent.Questions)
 		{
 			_questions.Add(question);
@@ -47,6 +47,12 @@ public class TestHandler : SingletonMono<TestHandler>
 			GenerationAnswer(_currentQuestion.Answers.Count);
 			return;
 		}
+		if(_questions.Count <= 0)
+		{
+			Debug.LogError("Закончились вопросы!");
+			_result.Show();
+			return;
+		}
 		_currentQuestion = _questions[_questions.Count - 1];
 		_numberQuestion++;
 
@@ -56,6 +62,7 @@ public class TestHandler : SingletonMono<TestHandler>
 
 		_questions.Remove(_currentQuestion);
 	}
+
 	private void GenerationAnswer(int count)
 	{
 		for (int i = 0; i < count; i++)
@@ -86,10 +93,25 @@ public class TestHandler : SingletonMono<TestHandler>
 	}
 
 	[Serializable]
-	private class Result
+	public class Result
 	{
 		public int ResultTest { get; private set; }
+		private Categorys _category;
+		[SerializeField] private ResultHolder _resultHolder;
 
+		public void Init(Categorys category)
+		{
+			_category = category;
+		}
+		public void Show()
+		{
+			_resultHolder.Show(this);
+		}
+		public string GetResult()
+		{
+			var result = "Результат"; //Прописать систему выборки результата за счет количества массы ответов
+			return result;
+		}
 		public void Add(int count)
 		{
 			ResultTest += count;
