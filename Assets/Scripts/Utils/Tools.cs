@@ -4,12 +4,12 @@ using UnityEngine.UI;
 
 public static class Tools
 {
-	public static void ListenerButton(this Button button, UnityEngine.Events.UnityAction call, bool isRemove = false)
-	{
-		if (isRemove) button.onClick.RemoveAllListeners();
+    public static void ListenerButton(this Button button, UnityEngine.Events.UnityAction call, bool isRemove = false)
+    {
+        if (isRemove) button.onClick.RemoveAllListeners();
 
-		button.onClick.AddListener(call);
-	}
+        button.onClick.AddListener(call);
+    }
 
     public static void RandomSorting<T>(this List<T> list)
     {
