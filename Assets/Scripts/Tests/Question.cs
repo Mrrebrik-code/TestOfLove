@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,6 +12,7 @@ public class Question : ScriptableObject
 	public string QuestionText { get { return _questionText; } }
 	public List<Answer> Answers { get { return _answers; } }
 
+	[Serializable]
 	public class Answer
 	{
 		public string AnswerText;

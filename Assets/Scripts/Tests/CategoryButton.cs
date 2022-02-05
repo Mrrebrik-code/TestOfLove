@@ -13,7 +13,8 @@ public class CategoryButton : MonoBehaviour
 		_button = GetComponent<Button>();
 		_button.onClick.AddListener(() =>
 		{
-
+			var successful = GameManager.SetCategory(_category);
+			if (successful) SceneLoader.Instance.Load("_Game");
 		});
 	}
 }

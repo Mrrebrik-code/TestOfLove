@@ -4,5 +4,9 @@ using UnityEngine;
 
 public enum Categorys
 {
-
+	Love,
+	Confidence,
+	Mutually,
+	Values,
+	Friends
 }
