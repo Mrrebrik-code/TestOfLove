@@ -82,6 +82,7 @@ public class TestHandler : SingletonMono<TestHandler>
 		_history.Undo();
 	}
 
+	[Serializable]
 	private class History
 	{
 		private Dictionary<Question, Question.Answer> _questionToSelectedAnswer = new Dictionary<Question,Question.Answer>();

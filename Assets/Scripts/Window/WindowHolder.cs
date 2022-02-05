@@ -31,9 +31,10 @@ public class WindowHolder : MonoBehaviour
 			WindowManager.Instance.SubscribeWindow(this);
 		}
 	}
-	public void Close()
+	public void Close(bool isTarget = false)
 	{
 		gameObject.SetActive(false);
+		if(isTarget == true) WindowManager.Instance.CurrentWindow = Window.None;
 	}
 	public void Open()
 	{

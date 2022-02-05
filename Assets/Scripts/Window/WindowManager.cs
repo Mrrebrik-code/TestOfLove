@@ -6,6 +6,14 @@ using System;
 public class WindowManager : SingletonMono<WindowManager>
 {
 	[SerializeField] private Window _currentWindow;
+	public Window CurrentWindow 
+	{ 
+		get { return _currentWindow; } 
+		set 
+		{ 
+			if(value == Window.None) _currentWindow = value;
+		} 
+	}
 	[SerializeField] private List<WindowHolder> _windowsInitilization = new List<WindowHolder>();
 	private Dictionary<Window, WindowHolder> _windows = new Dictionary<Window, WindowHolder>();
 
@@ -29,15 +37,20 @@ public class WindowManager : SingletonMono<WindowManager>
 	{
 		if (_currentWindow == window) return;
 
-		var currentWindow = _windows[window];
 		_currentWindow = window;
 
-		if (currentWindow.IsOpen == false) currentWindow.Open();
-
-		foreach (var windowTemp in _windows.Values)
+		if (_windows.ContainsKey(window))
 		{
-			if(windowTemp != currentWindow) windowTemp.Close();
+			var currentWindow = _windows[window];
+
+			if (currentWindow.IsOpen == false) currentWindow.Open();
+
+			foreach (var windowTemp in _windows.Values)
+			{
+				if (windowTemp != currentWindow) windowTemp.Close();
+			}
 		}
+		
 	}
 
 }
