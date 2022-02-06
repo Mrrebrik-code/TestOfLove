@@ -13,5 +13,11 @@ MonoBehaviour:
   m_Name: Confidence
   m_EditorClassIdentifier: 
   _categorys: 0
-  _questions: []
+  _questions:
+  - {fileID: 11400000, guid: 761cee39452a4994c97f8ffd667bd4d8, type: 2}
+  - {fileID: 11400000, guid: 7c1a0699acbc3c848b117336e2e5ea99, type: 2}
+  - {fileID: 11400000, guid: 8c6ef75b5839b324494b041f2946d954, type: 2}
+  - {fileID: 11400000, guid: f788ffc4f98365c4d8946191ce04b4f6, type: 2}
+  - {fileID: 11400000, guid: 74db708f8f0b3a14d9fcaf59ce3bdb45, type: 2}
+  - {fileID: 11400000, guid: be29dd51c12ce1a4d97a5f7e4ad67e5f, type: 2}
   _additionalQuestions: []

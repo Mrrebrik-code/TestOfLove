@@ -13,5 +13,13 @@ MonoBehaviour:
   m_Name: Values
   m_EditorClassIdentifier: 
   _categorys: 0
-  _questions: []
+  _questions:
+  - {fileID: 11400000, guid: 64d971d07653a904c9eadbea4de168a1, type: 2}
+  - {fileID: 11400000, guid: 5006ffa88f7bfdc438ffb57e2321a5f9, type: 2}
+  - {fileID: 11400000, guid: 20b6eb4bde22ae941a76e9bf885cacc5, type: 2}
+  - {fileID: 11400000, guid: 83414ce80a2a5d74e91008ccb9cf195b, type: 2}
+  - {fileID: 11400000, guid: 76826621c07f2d340a9aad3fb1144bcb, type: 2}
+  - {fileID: 11400000, guid: 3a7ef4a0bd2ee5e4d90e892c9f2c8c39, type: 2}
+  - {fileID: 11400000, guid: 6deda33b808efa8428fd054d79d0413d, type: 2}
+  - {fileID: 11400000, guid: 58982f8404294164d90e177cbaeaeb0c, type: 2}
   _additionalQuestions: []
