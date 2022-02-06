@@ -5,11 +5,12 @@ using UnityEngine.UI;
 
 public class CategoryButton : MonoBehaviour
 {
-	[SerializeField] private Categorys _category;
+	private Categorys _category;
 	private Button _button;
 
-	private void Start()
+	public void Init(Categorys category)
 	{
+		_category = category;
 		_button = GetComponent<Button>();
 		_button.onClick.AddListener(() =>
 		{
