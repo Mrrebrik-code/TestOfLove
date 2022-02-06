@@ -52,7 +52,9 @@ public class TestHandler : SingletonMono<TestHandler>
 		}
 
 		_currentQuestion = _questions[_questions.Count - 1];
+
 		_numberQuestion++;
+		_question.UpdateCounter(_numberQuestion);
 
 		GenerationAnswer(_currentQuestion.Answers.Count);
 		
@@ -131,7 +133,6 @@ public class TestHandler : SingletonMono<TestHandler>
 	{
 		private Dictionary<Question, Question.Answer> _questionToSelectedAnswer = new Dictionary<Question,Question.Answer>();
 		private List<Question> _questions = new List<Question>();
-
 		public void Enqueue(Question.Answer answer)
 		{
 			_questions.Add(Instance._currentQuestion);
@@ -167,6 +168,7 @@ public class TestHandler : SingletonMono<TestHandler>
 				_questionToSelectedAnswer.Remove(question);
 
 				Instance._numberQuestion--;
+				Instance._question.UpdateCounter(Instance._numberQuestion);
 				Instance.Init(question);
 			}
 		}
