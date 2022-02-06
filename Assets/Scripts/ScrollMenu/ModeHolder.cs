@@ -23,15 +23,21 @@ public class ModeHolder : MonoBehaviour
 			case TypeMode.VIPTestNames:
 				_objectsToIcon[0].SetActive(true);
 				_objectsToIcon[1].SetActive(false);
+				_categoryButton.Init(scrollObject.TypeMode, "_ModeNames");
 				break;
 			case TypeMode.VIPNamesToTree:
 				_objectsToIcon[0].SetActive(false);
-				_objectsToIcon[1].SetActive(true);
+				_objectsToIcon[1].SetActive(true); 
+				_categoryButton.Init(scrollObject.TypeMode, "_ModeTree");
 				break;
 		}
 		_nameText.text = scrollObject.NameMode;
 		_status.SetStyle(scrollObject.Type);
-		_categoryButton.Init(scrollObject.Category);
+		if(scrollObject.TypeMode == TypeMode.Default)
+		{
+			_categoryButton.Init(scrollObject.Category);
+		}
+		
 		_icon.sprite = scrollObject.Icon;
 	}
 }
