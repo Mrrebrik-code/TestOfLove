@@ -18,6 +18,7 @@ public class TestHandler : SingletonMono<TestHandler>
 	private List<AnswerHolder> _answers = new List<AnswerHolder>();
 
 	[SerializeField] private Result _result;
+
 	private void Start()
 	{
 		_categoryCurrent = GameManager.Category;
@@ -35,24 +36,21 @@ public class TestHandler : SingletonMono<TestHandler>
 	{
 		if(question != null)
 		{
-			_answers.ForEach(answerTemp =>
-			{
-				answerTemp.onClick -= HandleClickAnswer;
-				answerTemp.Delete();
-			});
-			_answers.Clear();
+			ClearAnswers();
 
 			_currentQuestion = question;
 			_question.SetQuestion(_currentQuestion);
+
 			GenerationAnswer(_currentQuestion.Answers.Count);
 			return;
 		}
+
 		if(_questions.Count <= 0)
 		{
-			Debug.LogError("Закончились вопросы!");
 			_result.Show();
 			return;
 		}
+
 		_currentQuestion = _questions[_questions.Count - 1];
 		_numberQuestion++;
 
@@ -61,6 +59,16 @@ public class TestHandler : SingletonMono<TestHandler>
 		_question.SetQuestion(_currentQuestion);
 
 		_questions.Remove(_currentQuestion);
+	}
+
+	private void ClearAnswers()
+	{
+		_answers.ForEach(answerTemp =>
+		{
+			answerTemp.onClick -= HandleClickAnswer;
+			answerTemp.Delete();
+		});
+		_answers.Clear();
 	}
 
 	private void GenerationAnswer(int count)
@@ -78,12 +86,8 @@ public class TestHandler : SingletonMono<TestHandler>
 	{
 		_history.Enqueue(answer);
 		_result.Add(answer.Massa);
-		_answers.ForEach(answerTemp =>
-		{
-			answerTemp.onClick -= HandleClickAnswer;
-			answerTemp.Delete();
-		});
-		_answers.Clear();
+
+		ClearAnswers();
 		Init();
 	}
 
@@ -127,6 +131,7 @@ public class TestHandler : SingletonMono<TestHandler>
 	{
 		private Dictionary<Question, Question.Answer> _questionToSelectedAnswer = new Dictionary<Question,Question.Answer>();
 		private List<Question> _questions = new List<Question>();
+
 		public void Enqueue(Question.Answer answer)
 		{
 			_questions.Add(Instance._currentQuestion);
@@ -155,12 +160,14 @@ public class TestHandler : SingletonMono<TestHandler>
 			{
 				Instance._questions.Add(Instance._currentQuestion);
 
-				var question = Dequeue(false);
+				var question = Dequeue(isDictionary: false);
+
 				Instance._result.Subtract(_questionToSelectedAnswer[question].Massa);
+
 				_questionToSelectedAnswer.Remove(question);
 
+				Instance._numberQuestion--;
 				Instance.Init(question);
-				//Логика отмены
 			}
 		}
 	}
