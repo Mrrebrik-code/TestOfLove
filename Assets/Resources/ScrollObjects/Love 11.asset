@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec27284fd0fe094a89f70afdf6322a5, type: 3}
+  m_Name: Love 11
+  m_EditorClassIdentifier: 
+  _nameMode: "\u0412\u0437\u0430\u0438\u043C\u043D\u043E?"
+  _icon: {fileID: 21300000, guid: 1c998af0684e9f1448ddcaf18353375a, type: 3}
+  _category: 3
+  _modePrefab: {fileID: 7577549171891839196, guid: f44d58c4489b8594cbffe8f4734bbaf2,
+    type: 3}
+  _type: 2
