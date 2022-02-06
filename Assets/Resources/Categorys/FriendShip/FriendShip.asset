@@ -13,5 +13,28 @@ MonoBehaviour:
   m_Name: FriendShip
   m_EditorClassIdentifier: 
   _categorys: 4
-  _questions: []
+  _questions:
+  - {fileID: 11400000, guid: ff32bbc0a7f6cd849bd9abffd09c0a07, type: 2}
+  - {fileID: 11400000, guid: 4d2292dde616804449f9e427e95e06b2, type: 2}
+  - {fileID: 11400000, guid: d480f3b03817c3b4da680a3717337167, type: 2}
+  - {fileID: 11400000, guid: 92acb820cada9a5438a8f5bdfba1fa11, type: 2}
+  - {fileID: 11400000, guid: e6c2448aead0ab8409eadb98a4a52289, type: 2}
+  - {fileID: 11400000, guid: 070dd40ee3b40614d929b30cba4845d5, type: 2}
+  - {fileID: 11400000, guid: e708c89aa6600b849a512cbb6cc48df9, type: 2}
+  - {fileID: 11400000, guid: 6aa55b68dd1fb57498c81e44c620b11c, type: 2}
+  - {fileID: 11400000, guid: 55578eab20b0fc54da8828a5eb9652fd, type: 2}
+  - {fileID: 11400000, guid: e59ecde33bba6c94d8707a47b3d1ae35, type: 2}
+  - {fileID: 11400000, guid: 4e3c8e3736b056749b8a3d36c81f874a, type: 2}
+  - {fileID: 11400000, guid: e2d1f8c4bc7191e419faa1b64cb76b9d, type: 2}
+  - {fileID: 11400000, guid: 23c595062b0ffb2488c76dabd3a8676c, type: 2}
+  - {fileID: 11400000, guid: d5a48d0f1332f724f8cc3509c92aa708, type: 2}
+  - {fileID: 11400000, guid: 7bab1a77ada8f7841ad991adbdb80756, type: 2}
+  - {fileID: 11400000, guid: 2abad74135e45ec4bb0dee93578a6647, type: 2}
+  - {fileID: 11400000, guid: 7bd98c46c61eb6d4984112ffcdb016d4, type: 2}
+  - {fileID: 11400000, guid: 4e7eb6b3db517044085525f46b1900f5, type: 2}
+  - {fileID: 11400000, guid: 688096c3bd72f944187c0dccfa24163a, type: 2}
+  - {fileID: 11400000, guid: dece21c7407464c4ebfa7cc2d4dee323, type: 2}
+  - {fileID: 11400000, guid: df175715537035f42a4ed9da5ea68035, type: 2}
+  - {fileID: 11400000, guid: 892c4cab5d0bc0e4bb26106e6cd3bd6d, type: 2}
+  - {fileID: 11400000, guid: 44e5e32591dcb944e91d23398303b664, type: 2}
   _additionalQuestions: []
