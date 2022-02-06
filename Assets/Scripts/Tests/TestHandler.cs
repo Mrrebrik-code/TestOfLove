@@ -8,6 +8,7 @@ public class TestHandler : SingletonMono<TestHandler>
 	private History _history = new History();
 	private Category _categoryCurrent;
 	private List<Question> _questions = new List<Question>();
+	private List<Question> _additionalQuestions = new List<Question>();
 	private Question _currentQuestion;
 	private int _numberQuestion;
 
@@ -19,6 +20,8 @@ public class TestHandler : SingletonMono<TestHandler>
 
 	[SerializeField] private Result _result;
 
+	[SerializeField] private GameObject _additionalPanel;
+
 	private void Start()
 	{
 		_categoryCurrent = GameManager.Category;
@@ -29,20 +32,37 @@ public class TestHandler : SingletonMono<TestHandler>
 		}
 		_questions.RandomSorting();
 
+		foreach (var question in _categoryCurrent.AdditionalQuestions)
+		{
+			_additionalQuestions.Add(question);
+		}
+		_additionalQuestions.RandomSorting();
+
 		Init();
 	}
 
-	private void Init(Question question = null)
+	private void Init(Question question = null, bool isAdditional = false)
 	{
 		if(question != null)
 		{
-			ClearAnswers();
+			if(isAdditional == false)
+			{
+				ClearAnswers();
 
-			_currentQuestion = question;
-			_question.SetQuestion(_currentQuestion);
+				_currentQuestion = question;
+				_question.SetQuestion(_currentQuestion);
 
-			GenerationAnswer(_currentQuestion.Answers.Count);
-			return;
+				GenerationAnswer(_currentQuestion.Answers.Count);
+				return;
+			}
+			else
+			{
+				ClearAnswers();
+				_currentQuestion = question;
+				_question.SetQuestion(_currentQuestion);
+				GenerationAnswer(_currentQuestion.Answers.Count);
+				return;
+			}
 		}
 
 		if(_questions.Count <= 0)
@@ -56,6 +76,8 @@ public class TestHandler : SingletonMono<TestHandler>
 		_numberQuestion++;
 		_question.UpdateCounter(_numberQuestion);
 
+		if (_numberQuestion == 3) _additionalPanel.SetActive(true);
+
 		GenerationAnswer(_currentQuestion.Answers.Count);
 		
 		_question.SetQuestion(_currentQuestion);
@@ -63,6 +85,17 @@ public class TestHandler : SingletonMono<TestHandler>
 		_questions.Remove(_currentQuestion);
 	}
 
+	public void SetAdditionalQuestion()
+	{
+
+		if (_additionalQuestions.Count <= 0) return;
+
+		_questions.Add(Instance._currentQuestion);
+		var question = _additionalQuestions[_additionalQuestions.Count - 1];
+
+		Init(question, true);
+		_additionalPanel.SetActive(false);
+	}
 	private void ClearAnswers()
 	{
 		_answers.ForEach(answerTemp =>
