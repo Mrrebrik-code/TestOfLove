@@ -22,4 +22,30 @@ public static class Tools
             list[j] = tmp;
         }
     }
+
+    //метод обмена элементов
+    private static void Swap(ref ScrollObejct e1, ref ScrollObejct e2)
+    {
+        var temp = e1;
+        e1 = e2;
+        e2 = temp;
+    }
+
+    //сортировка пузырьком
+    public static ScrollObejct[] BubbleSort(ScrollObejct[] array)
+    {
+        var len = array.Length;
+        for (var i = 1; i < len; i++)
+        {
+            for (var j = 0; j < len - i; j++)
+            {
+                if (array[j].Id > array[j + 1].Id)
+                {
+                    Swap(ref array[j], ref array[j + 1]);
+                }
+            }
+        }
+
+        return array;
+    }
 }

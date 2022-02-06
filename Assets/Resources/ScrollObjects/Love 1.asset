@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ec27284fd0fe094a89f70afdf6322a5, type: 3}
   m_Name: Love 1
   m_EditorClassIdentifier: 
-  _nameMode: "\u041A\u0430\u043A \u0442\u044B?"
-  _icon: {fileID: 21300000, guid: 4a6c5340cd2cf0347b5f27c6beccfb77, type: 3}
+  _id: 4
+  _typeMode: 1
+  _nameMode: "\u041F\u0440\u043E\u0432\u0435\u0440\u044C \u0438\u043C\u0435\u043D\u0430"
+  _icon: {fileID: 21300000, guid: 55e1f4cf406189f4e99d7a105d257a62, type: 3}
   _category: 1
-  _modePrefab: {fileID: 7577549171891839196, guid: f44d58c4489b8594cbffe8f4734bbaf2,
+  _modePrefab: {fileID: 6148728931356064539, guid: 85ec1e267fdf74742a67579e4bf10b14,
     type: 3}
   _type: 0

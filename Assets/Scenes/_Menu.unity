@@ -10260,7 +10260,7 @@ MonoBehaviour:
   _content: {fileID: 612815772}
   _modesHodler: []
   _positions: []
-  _spacing: 50
+  _spacing: 10
   _smooth: 15
 --- !u!4 &2007513687
 Transform:

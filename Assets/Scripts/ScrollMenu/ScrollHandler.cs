@@ -23,6 +23,7 @@ public class ScrollHandler : SingletonMono<ScrollHandler>
 	private List<ScrollObejct> LoadScrollObjcts()
 	{
 		var objects = Resources.LoadAll<ScrollObejct>("ScrollObjects");
+		Tools.BubbleSort(objects);
 		return objects.ToList();
 	}
 
@@ -40,7 +41,12 @@ public class ScrollHandler : SingletonMono<ScrollHandler>
 			if (i != 0)
 			{
 				ModeHolder modeHolderOld = _modesHodler[i - 1];
-				Vector2 position = new Vector2(modeHolderOld.transform.localPosition.x + mode.GetComponent<RectTransform>().sizeDelta.x + _spacing, mode.transform.localPosition.y);
+				var deltaOld = (modeHolderOld.RectTransform.sizeDelta.x / 2);
+				var delta = (mode.RectTransform.sizeDelta.x / 2);
+
+					Vector2 position = new Vector2(modeHolderOld.RectTransform.anchoredPosition.x + deltaOld + delta + _spacing, mode.transform.localPosition.y);
+				
+					/*new Vector2(modeHolderOld.transform.localPosition.x + mode.GetComponent<RectTransform>().sizeDelta.x + _spacing, mode.transform.localPosition.y);*/
 				mode.transform.localPosition = position;
 				_positions.Add(-mode.transform.localPosition);
 			}
