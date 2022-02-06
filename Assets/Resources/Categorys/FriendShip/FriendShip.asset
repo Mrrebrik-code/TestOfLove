@@ -10,12 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff085d72ffe490c46afd0fa791d33837, type: 3}
-  m_Name: Category
+  m_Name: FriendShip
   m_EditorClassIdentifier: 
-  _categorys: 0
-  _questions:
-  - {fileID: 11400000, guid: 764f0f2f6e6479c478e59effd7ab6f4b, type: 2}
-  - {fileID: 11400000, guid: e110f51eec303bc48bcc60056d55dfc2, type: 2}
-  - {fileID: 11400000, guid: ec1bef68a16c94341afa4db1be36088f, type: 2}
-  _additionalQuestions:
-  - {fileID: 11400000, guid: 42a180775461d244f90beeb9079d8017, type: 2}
+  _categorys: 4
+  _questions: []
+  _additionalQuestions: []

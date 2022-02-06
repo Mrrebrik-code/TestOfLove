@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d27e06cd2584d54498ee741a16a81ca, type: 3}
-  m_Name: Question
+  m_Name: 32
   m_EditorClassIdentifier: 
-  _questionText: "\u04411_010"
+  _questionText: "\u04411_124"
   _answers:
-  - AnswerText: "\u04411_011"
-  - AnswerText: "\u04411_012"
+  - AnswerText: "\u04411_125"
+  - AnswerText: "\u04411_126"
