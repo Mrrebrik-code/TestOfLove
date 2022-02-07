@@ -2488,6 +2488,7 @@ MonoBehaviour:
   _bonusHolderPrefab: {fileID: 3697427546406286204, guid: 4c41a6abbdd041e40979a0bc07c4a8c8,
     type: 3}
   _content: {fileID: 234620105}
+  _timerDayToButton: {fileID: 801950036}
 --- !u!4 &451889919
 Transform:
   m_ObjectHideFlags: 0
@@ -4164,6 +4165,7 @@ GameObject:
   - component: {fileID: 801950034}
   - component: {fileID: 801950033}
   - component: {fileID: 801950035}
+  - component: {fileID: 801950036}
   m_Layer: 5
   m_Name: Take_btn
   m_TagString: Untagged
@@ -4282,6 +4284,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &801950036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 801950031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2b1dd447fb00a54bbf3d245ecfe5527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _button: {fileID: 801950035}
+  _buttonText: {fileID: 1859333234}
 --- !u!1 &814802424
 GameObject:
   m_ObjectHideFlags: 0

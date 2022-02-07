@@ -15,7 +15,7 @@ public class DailyBonusManager : SingletonMono<DailyBonusManager>
 
 	private int _currentStreak
 	{
-		get => PlayerPrefs.GetInt("currentStreak", 0);
+		get => PlayerPrefs.GetInt("currentStreak", 1);
 		set => PlayerPrefs.SetInt("currentStreak", value);
 	}
 	private DateTime? _dataTime
@@ -37,13 +37,14 @@ public class DailyBonusManager : SingletonMono<DailyBonusManager>
 
 	private bool _isTakeReward;
 	private int _maxStreakCount = 5;
-	private float _takeColldown = 24f / 24 / 60;
-	private float _takeDeadline = 48f / 24 / 60;
+	private float _takeColldown = 24f / 24 / 60 / 6;
+	private float _takeDeadline = 48f / 24 / 60 / 6;
 
 	public override void Awake()
 	{
 		base.Awake();
 		Init();
+		Debug.Log(_currentStreak);
 		SetCurrentDayBonus(_currentStreak);
 		StartCoroutine(UpdateStateRewards());
 	}
@@ -70,7 +71,7 @@ public class DailyBonusManager : SingletonMono<DailyBonusManager>
 				ResetBonuses();
 				
 				_dataTime = null;
-				_currentStreak = 0;
+				_currentStreak = 1;
 				SetCurrentDayBonus(_currentStreak);
 			}
 			else if(time.TotalHours < _takeColldown)
@@ -140,13 +141,20 @@ public class DailyBonusManager : SingletonMono<DailyBonusManager>
 	
 	public void Take()
 	{
-
-
-		_dataTime = DateTime.UtcNow;
-		_currentStreak = (_currentStreak + 1) % _maxStreakCount;
 		if (_isTakeReward != false)
 		{
 			_currentBonusDay.Take();
+			_dataTime = DateTime.UtcNow;
+			if (_currentStreak == _maxStreakCount)
+			{
+				_currentStreak = 1;
+				ResetBonuses();
+				SetCurrentDayBonus(_currentStreak);
+			}
+			else
+			{
+				_currentStreak++;
+			}
 			SetCurrentDayBonus(_currentStreak);
 		}
 
