@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff085d72ffe490c46afd0fa791d33837, type: 3}
   m_Name: Confidence
   m_EditorClassIdentifier: 
-  _categorys: 0
+  _categorys: 1
   _questions:
   - {fileID: 11400000, guid: 761cee39452a4994c97f8ffd667bd4d8, type: 2}
   - {fileID: 11400000, guid: 7c1a0699acbc3c848b117336e2e5ea99, type: 2}

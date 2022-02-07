@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff085d72ffe490c46afd0fa791d33837, type: 3}
   m_Name: Mutually
   m_EditorClassIdentifier: 
-  _categorys: 0
+  _categorys: 2
   _questions:
   - {fileID: 11400000, guid: 19fc17fdc2e1438428ea75c292f7024a, type: 2}
   - {fileID: 11400000, guid: 62592ccc1a6321946839798507e01fd3, type: 2}

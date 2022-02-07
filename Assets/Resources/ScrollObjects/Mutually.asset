@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ec27284fd0fe094a89f70afdf6322a5, type: 3}
-  m_Name: Love 6
+  m_Name: Mutually
   m_EditorClassIdentifier: 
-  _id: 5
-  _typeMode: 3
-  _nameMode: "\u0421\u043A\u0430\u043D\u0435\u0440 \u0441\u043E\u0432\u043C\u0435\u0441\u0442\u0438\u043C\u043E\u0441\u0442\u0438"
-  _icon: {fileID: 21300000, guid: b1384b5aa7de9bb4cb677658e1db8a98, type: 3}
-  _category: 1
-  _modePrefab: {fileID: 6148728931356064539, guid: 85ec1e267fdf74742a67579e4bf10b14,
+  _id: 0
+  _typeMode: 0
+  _nameMode: "\u0412\u0437\u0430\u0438\u043C\u043D\u043E?"
+  _icon: {fileID: 21300000, guid: b679ea5d6df63e14abfeab2da2c7db04, type: 3}
+  _category: 2
+  _modePrefab: {fileID: 7577549171891839196, guid: f44d58c4489b8594cbffe8f4734bbaf2,
     type: 3}
-  _type: 0
+  _type: 2

@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ec27284fd0fe094a89f70afdf6322a5, type: 3}
-  m_Name: Love 4
+  m_Name: VIP Names To Tree
   m_EditorClassIdentifier: 
-  _id: 2
-  _typeMode: 0
-  _nameMode: "\u0412\u0437\u0430\u0438\u043C\u043D\u043E?"
-  _icon: {fileID: 21300000, guid: 1c998af0684e9f1448ddcaf18353375a, type: 3}
-  _category: 3
-  _modePrefab: {fileID: 7577549171891839196, guid: f44d58c4489b8594cbffe8f4734bbaf2,
+  _id: 3
+  _typeMode: 2
+  _nameMode: "\u0410 \u043F\u043E\u043C\u043D\u0438\u0448\u044C \u043B\u0435\u0442\u043E?"
+  _icon: {fileID: 21300000, guid: f2f514c815a1f1d429c8d04e76a49bc4, type: 3}
+  _category: 1
+  _modePrefab: {fileID: 6148728931356064539, guid: 85ec1e267fdf74742a67579e4bf10b14,
     type: 3}
-  _type: 2
+  _type: 0

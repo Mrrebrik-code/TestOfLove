@@ -2286,6 +2286,16 @@ MonoBehaviour:
     Id: 315172416
   - Name: Core
     Id: 1602408327
+  - Name: Result
+    Id: 470642102
+  - Name: Mutually
+    Id: 1697345579
+  - Name: Confidence
+    Id: 1385577202
+  - Name: 'Friendship '
+    Id: 892850464
+  - Name: Scaner
+    Id: 1639195619
   SaveFolder: {fileID: 102900000, guid: c392831e85f928548b8494fefd912562, type: 3}
 --- !u!4 &895904326
 Transform:
