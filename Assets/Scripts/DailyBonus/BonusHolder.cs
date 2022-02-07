@@ -37,7 +37,14 @@ public class BonusHolder : MonoBehaviour
 		_isTake = true;
 		_checkTake.SetActive(true);
 		SetStyle(Style.Type.Take);
-		Bonus.SaveReward();
+		Bonus.SaveReward(1);
+	}
+	public void ResetBonus()
+	{
+		_checkTake.SetActive(false);
+		_isTake = false;
+		Bonus.SaveReward(0);
+		_imageBody.sprite = _style.GetStyle(Style.Type.Default);
 	}
 
 	[System.Serializable]

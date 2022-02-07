@@ -30,8 +30,8 @@ public class Bonus : ScriptableObject
 	}
 
 
-	public void SaveReward()
+	public void SaveReward(int save)
 	{
-		PlayerPrefs.SetInt($"Bonus_day_{_id}", 1);
+		PlayerPrefs.SetInt($"Bonus_day_{_id}", save);
 	}
 }
