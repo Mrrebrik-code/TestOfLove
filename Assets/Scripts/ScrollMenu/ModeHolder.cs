@@ -30,6 +30,11 @@ public class ModeHolder : MonoBehaviour
 				_objectsToIcon[1].SetActive(true); 
 				_categoryButton.Init(scrollObject.TypeMode, "_ModeTree");
 				break;
+			case TypeMode.VIPScaner:
+				_objectsToIcon[0].SetActive(false);
+				_objectsToIcon[1].SetActive(false);
+				_categoryButton.Init(scrollObject.TypeMode, "_ModeScaner");
+				break;
 		}
 		_nameText.text = scrollObject.NameMode;
 		_status.SetStyle(scrollObject.Type);
