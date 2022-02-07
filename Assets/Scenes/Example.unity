@@ -2284,6 +2284,8 @@ MonoBehaviour:
     Id: 0
   - Name: Values
     Id: 315172416
+  - Name: Core
+    Id: 1602408327
   SaveFolder: {fileID: 102900000, guid: c392831e85f928548b8494fefd912562, type: 3}
 --- !u!4 &895904326
 Transform:

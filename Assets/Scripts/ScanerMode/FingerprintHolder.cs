@@ -12,12 +12,14 @@ public class FingerprintHolder : MonoBehaviour
 	public bool IsStartScaning = false;
 	public void Init()
 	{
+
 		_animator.SetTrigger("ScanerOn");
 	}
 
 	public void On()
 	{
 		_isScanerOn = true;
+		ScanerModeHandler.Instance.SetMessage("core_001");
 		Debug.LogError("_isScanerOn");
 	}
 
@@ -36,10 +38,11 @@ public class FingerprintHolder : MonoBehaviour
 
 	public void Complet()
 	{
+		ScanerModeHandler.Instance.SetMessage("core_005");
 		_isPressed = false;
 		_isScanerOn = false;
 		IsStartScaning = false;
-
+		ScanerModeHandler.Instance.StartProgression();
 	}
 
 	public void Pressed(bool isPressed)
