@@ -14,10 +14,12 @@ public class ScrollHandler : SingletonMono<ScrollHandler>
 	private Vector2 _vectorPosition;
 	private bool _isScrolling;
 	private int test = 0;
+	private bool _isInit = false;
 	public override void Awake()
 	{
 		base.Awake();
 		Initialization();
+		_isInit = true;
 	}
 
 	private List<ScrollObejct> LoadScrollObjcts()
@@ -44,9 +46,8 @@ public class ScrollHandler : SingletonMono<ScrollHandler>
 				var deltaOld = (modeHolderOld.RectTransform.sizeDelta.x / 2);
 				var delta = (mode.RectTransform.sizeDelta.x / 2);
 
-					Vector2 position = new Vector2(modeHolderOld.RectTransform.anchoredPosition.x + deltaOld + delta + _spacing, mode.transform.localPosition.y);
+				Vector2 position = new Vector2(modeHolderOld.RectTransform.anchoredPosition.x + deltaOld + delta + _spacing, mode.transform.localPosition.y);
 				
-					/*new Vector2(modeHolderOld.transform.localPosition.x + mode.GetComponent<RectTransform>().sizeDelta.x + _spacing, mode.transform.localPosition.y);*/
 				mode.transform.localPosition = position;
 				_positions.Add(-mode.transform.localPosition);
 			}
@@ -56,23 +57,29 @@ public class ScrollHandler : SingletonMono<ScrollHandler>
 			}
 
 		}
+		_content.GetComponent<RectTransform>().anchoredPosition = new Vector2(_positions[3].x, _positions[3].y);
+
 	}
 
 	private void FixedUpdate()
 	{
-		float nearestPosition = float.MaxValue;
-		for (int i = 0; i < _positions.Count; i++)
+		if (_isInit)
 		{
-			float distance = Mathf.Abs(_content.GetComponent<RectTransform>().anchoredPosition.x - _positions[i].x);
-			if(distance < nearestPosition)
+			float nearestPosition = float.MaxValue;
+			for (int i = 0; i < _positions.Count; i++)
 			{
-				nearestPosition = distance;
-				test = i;
+				float distance = Mathf.Abs(_content.GetComponent<RectTransform>().anchoredPosition.x - _positions[i].x);
+				if (distance < nearestPosition)
+				{
+					nearestPosition = distance;
+					test = i;
+				}
 			}
+			if (_isScrolling) return;
+			_vectorPosition.x = Mathf.SmoothStep(_content.GetComponent<RectTransform>().anchoredPosition.x, _positions[test].x, _smooth * Time.fixedDeltaTime);
+			_content.GetComponent<RectTransform>().anchoredPosition = _vectorPosition;
 		}
-		if (_isScrolling) return;
-		_vectorPosition.x = Mathf.SmoothStep(_content.GetComponent<RectTransform>().anchoredPosition.x, _positions[test].x, _smooth * Time.fixedDeltaTime);
-		_content.GetComponent<RectTransform>().anchoredPosition = _vectorPosition;
+		
 	}
 
 	public void Scrolling(bool isScroll)
