@@ -148,7 +148,25 @@ public class TestHandler : SingletonMono<TestHandler>
 		}
 		public string GetResult()
 		{
-			var result = "Результат"; //Прописать систему выборки результата за счет количества массы ответов
+			var result = "Результат";
+			var max = _category.Value.Max;
+			var min = _category.Value.Min;
+			var sred = max / 2;
+			var minGood = 0;
+			var maxGood = 0;
+			var delta = 0;
+			var deltaMin = sred - min;
+
+			if (deltaMin > 10) delta = 10;
+			else if (deltaMin > 20) delta = 15;
+			else delta = 3;
+
+			minGood = sred - delta;
+			maxGood = sred + delta;
+
+			if (ResultTest > sred && ResultTest < maxGood || ResultTest < sred && ResultTest > minGood) result = $"{_category.Categorys}_result_good";
+			else if (ResultTest > maxGood) result = $"{_category.Categorys}_result_great";
+			else result = $"{_category.Categorys}_result_bad";
 
 			return result;
 		}

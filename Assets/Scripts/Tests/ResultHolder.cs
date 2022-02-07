@@ -10,7 +10,7 @@ public class ResultHolder : MonoBehaviour
 	public void Show(TestHandler.Result result)
 	{
 		gameObject.SetActive(true);
-		_resultText.text = result.GetResult();
-		_resultCountText.text = $"Баллы:{result.ResultTest.ToString()}";
+		_resultText.text = Localization.Instance.Localize(result.GetResult());
+		_resultCountText.text = $"Баллы:{result.ResultTest}";
 	}
 }
