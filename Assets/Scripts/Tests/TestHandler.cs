@@ -25,7 +25,7 @@ public class TestHandler : SingletonMono<TestHandler>
 	private void Start()
 	{
 		_categoryCurrent = GameManager.Category;
-		_result.Init(_categoryCurrent.Categorys);
+		_result.Init(_categoryCurrent);
 		foreach (var question in _categoryCurrent.Questions)
 		{
 			_questions.Add(question);
@@ -135,10 +135,10 @@ public class TestHandler : SingletonMono<TestHandler>
 	public class Result
 	{
 		public int ResultTest { get; private set; }
-		private Categorys _category;
+		private Category _category;
 		[SerializeField] private ResultHolder _resultHolder;
 
-		public void Init(Categorys category)
+		public void Init(Category category)
 		{
 			_category = category;
 		}
@@ -149,6 +149,7 @@ public class TestHandler : SingletonMono<TestHandler>
 		public string GetResult()
 		{
 			var result = "Результат"; //Прописать систему выборки результата за счет количества массы ответов
+
 			return result;
 		}
 		public void Add(int count)

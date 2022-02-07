@@ -13,4 +13,7 @@ MonoBehaviour:
   m_Name: 6
   m_EditorClassIdentifier: 
   _questionText: "\u04414_022"
-  _answers: []
+  _answers:
+  - AnswerText: "\u04414_023"
+  - AnswerText: "\u04414_024"
+  - AnswerText: "\u04414_025"

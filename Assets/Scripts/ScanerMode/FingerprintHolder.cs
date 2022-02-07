@@ -20,7 +20,6 @@ public class FingerprintHolder : MonoBehaviour
 	{
 		_isScanerOn = true;
 		ScanerModeHandler.Instance.SetMessage("core_001");
-		Debug.LogError("_isScanerOn");
 	}
 
 	private void Update()
