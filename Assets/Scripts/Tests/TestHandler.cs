@@ -76,7 +76,7 @@ public class TestHandler : SingletonMono<TestHandler>
 		_numberQuestion++;
 		_question.UpdateCounter(_numberQuestion);
 
-		if (_numberQuestion == 3) _additionalPanel.SetActive(true);
+		/*if (_numberQuestion == 3) _additionalPanel.SetActive(true);*/ //Прописать систему показа доп вопроса!
 
 		GenerationAnswer(_currentQuestion.Answers.Count);
 		
