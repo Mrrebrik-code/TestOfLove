@@ -5,5 +5,7 @@ public enum Window
 	Settings,
 	PromoCode,
 	Review,
-	Shop
+	Shop,
+	Leaderboard,
+	DailyBonus
 }

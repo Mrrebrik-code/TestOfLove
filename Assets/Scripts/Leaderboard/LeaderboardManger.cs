@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LeaderboardManger : SingletonMono<LeaderboardManger>
 {
-	private const string _nameLeaderboard = "name";
+	private const string _nameLeaderboard = "LiderboardTestOfLove";
 	public void SetLeaderboardScore(int score, string description)
 	{
 
