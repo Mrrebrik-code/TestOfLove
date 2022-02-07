@@ -2152,6 +2152,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2071908525}
     m_Modifications:
+    - target: {fileID: 405789549, guid: 88a957b6c347b3949af0deabf78781d9, type: 3}
+      propertyPath: _maxCount
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 529782600928435614, guid: 88a957b6c347b3949af0deabf78781d9,
         type: 3}
       propertyPath: m_Pivot.x
@@ -2262,12 +2266,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dailybonus_btn
       objectReference: {fileID: 0}
-    - target: {fileID: 5920101069087338328, guid: 88a957b6c347b3949af0deabf78781d9,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: fac305641c1f54048abf913bb48715ef,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88a957b6c347b3949af0deabf78781d9, type: 3}
 --- !u!224 &405789544 stripped
@@ -2276,80 +2274,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 405789543}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &405789545 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 529782600928435615, guid: 88a957b6c347b3949af0deabf78781d9,
+--- !u!114 &405789549 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 405789549, guid: 88a957b6c347b3949af0deabf78781d9,
     type: 3}
   m_PrefabInstance: {fileID: 405789543}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &405789546 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 529782600928435601, guid: 88a957b6c347b3949af0deabf78781d9,
-    type: 3}
-  m_PrefabInstance: {fileID: 405789543}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 405789545}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Script: {fileID: 11500000, guid: 3cbcff57409e37d41b66549a28b2052b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &405789547
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 405789545}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 405789546}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &405789548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 405789545}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 590ab62c8f9c6b348abe7075361b17b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _windowOpen: 7
 --- !u!1 &407409879
 GameObject:
   m_ObjectHideFlags: 0
@@ -2489,6 +2425,7 @@ MonoBehaviour:
     type: 3}
   _content: {fileID: 234620105}
   _timerDayToButton: {fileID: 801950036}
+  _notificationButton: {fileID: 405789549}
 --- !u!4 &451889919
 Transform:
   m_ObjectHideFlags: 0
@@ -14863,6 +14800,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Leaderboard_btn
       objectReference: {fileID: 0}
+    - target: {fileID: 5920101069087338328, guid: 88a957b6c347b3949af0deabf78781d9,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 711e5c8ddc7524f4b8c02d39191f971e,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88a957b6c347b3949af0deabf78781d9, type: 3}
 --- !u!1001 &658895823156433625

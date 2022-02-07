@@ -12,6 +12,7 @@ public class DailyBonusManager : SingletonMono<DailyBonusManager>
 	[SerializeField] private Transform _content;
 	private BonusHolder _currentBonusDay;
 	[SerializeField] private TimerDayToButton _timerDayToButton;
+	[SerializeField] private NotificationButton _notificationButton;
 
 	private int _currentStreak
 	{
@@ -90,14 +91,21 @@ public class DailyBonusManager : SingletonMono<DailyBonusManager>
 			bonus.ResetBonus();
 		}
 	}
+	private bool _isNotification = false;
 	private void UpdateRewardUI()
 	{
 		if (_isTakeReward)
 		{
 			_timerDayToButton.SetButtonStatus("Забрать награду", true);
+			if(_isNotification == false)
+			{
+				_isNotification = true;
+				_notificationButton.ShowNotification();
+			}
 		}
 		else
 		{
+			
 			var nextTimeTake = _dataTime.Value.AddHours(_takeColldown);
 			var currentTakeCooldown = nextTimeTake - DateTime.UtcNow;
 
@@ -143,6 +151,8 @@ public class DailyBonusManager : SingletonMono<DailyBonusManager>
 	{
 		if (_isTakeReward != false)
 		{
+			_isNotification = false;
+			_notificationButton.HideNotification();
 			_currentBonusDay.Take();
 			_dataTime = DateTime.UtcNow;
 			if (_currentStreak == _maxStreakCount)
