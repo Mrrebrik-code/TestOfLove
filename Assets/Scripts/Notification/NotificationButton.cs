@@ -17,9 +17,9 @@ public class NotificationButton : MonoBehaviour
 		set => PlayerPrefs.SetInt($"Notification_{_type}", value);
 	}
 
-	public void ShowNotification()
+	public void ShowNotification(bool isAdd = true)
 	{
-		CountNotification++;
+		if(isAdd) CountNotification++;
 		if (CountNotification >= _maxCount) CountNotification = _maxCount;
 		_countText.text = CountNotification.ToString();
 		_countText.DOFade(1, 1f);
@@ -32,6 +32,7 @@ public class NotificationButton : MonoBehaviour
 		{
 			CountNotification = 0;
 		}
+
 		_countText.text = CountNotification.ToString();
 		if(CountNotification <= 0)
 		{

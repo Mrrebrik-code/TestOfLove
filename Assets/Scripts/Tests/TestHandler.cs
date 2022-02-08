@@ -67,6 +67,7 @@ public class TestHandler : SingletonMono<TestHandler>
 
 		if(_questions.Count <= 0)
 		{
+			if (_categoryCurrent.Categorys == Categorys.Love) MailManager.Instance.AddLetter(Letters.CompletLoveTest);
 			_result.Show();
 			return;
 		}

@@ -6,7 +6,7 @@ using SimpleJSON;
 
 public class LeaderboardManger : SingletonMono<LeaderboardManger>
 {
-	private const string _nameLeaderboard = "LiderboardTestOfLove";
+	private const string _nameLeaderboard = "LiderboardLove";
 	[SerializeField] private LeaderHolder _leaderHolderPrefab;
 	[SerializeField] private Transform _content;
 	private List<LeaderHolder> _leaders = new List<LeaderHolder>();

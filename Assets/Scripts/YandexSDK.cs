@@ -77,9 +77,6 @@ public class YandexSDK : SingletonMono<YandexSDK>
         onDataLeaderboardScorePlayerEntry(data);
     }
 
-
-
-
     public void ShowInterstitial() 
     {
         ShowFullscreenAd();

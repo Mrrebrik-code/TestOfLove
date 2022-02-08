@@ -10,13 +10,6 @@ public class TimerDayToButton : MonoBehaviour
 	[SerializeField] private TMP_Text _buttonText;
 	private bool _isTimer = false;
 
-	private void FixedUpdate()
-	{
-		if (_isTimer)
-		{
-
-		}
-	}
 	public void SetButtonStatus(string text, bool interactable)
 	{
 		_buttonText.text = text;

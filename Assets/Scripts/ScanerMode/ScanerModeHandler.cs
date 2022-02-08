@@ -15,7 +15,8 @@ public class ScanerModeHandler : SingletonMono<ScanerModeHandler>
 	[SerializeField] private TMP_Text _valueProgression;
 	private bool _isComplet = false;
 	[SerializeField] private Button _buttonScanning;
-	[SerializeField] private GameObject _result;
+	[SerializeField] private ResultScaner _result;
+	
 
 	private void Start()
 	{
@@ -31,9 +32,15 @@ public class ScanerModeHandler : SingletonMono<ScanerModeHandler>
 	{
 		_message.DOFade(0, 1f);
 		yield return new WaitForSeconds(1f);
-		_message.text = Localization.Instance.Localize(id);
+		if (id == "") _message.text = id;
+		else
+		{
+			_message.text = Localization.Instance.Localize(id);
+			_message.DOFade(1, 0.8f);
+		}
 		
-		_message.DOFade(1, 0.8f);
+		
+		
 	}
 	public void Scaning()
 	{
@@ -79,7 +86,8 @@ public class ScanerModeHandler : SingletonMono<ScanerModeHandler>
 					}
 					_progression.value = 0;
 
-					_result.SetActive(true);
+					_result.Init();
+					SetMessage("core_002");
 				}
 			});
 			_progression.DOValue(1, 8f);
