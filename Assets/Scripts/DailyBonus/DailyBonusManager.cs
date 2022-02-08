@@ -39,8 +39,8 @@ public class DailyBonusManager : SingletonMono<DailyBonusManager>
 
 	private bool _isTakeReward;
 	private int _maxStreakCount = 5;
-	private float _takeColldown = 24f / 24 / 60 / 6;
-	private float _takeDeadline = 48f / 24 / 60 / 6;
+	private float _takeColldown = 24f / 24 / 60;
+	private float _takeDeadline = 48f / 24 / 60;
 
 	public override void Awake()
 	{
@@ -156,6 +156,7 @@ public class DailyBonusManager : SingletonMono<DailyBonusManager>
 	{
 		if (_isTakeReward != false)
 		{
+			_timerDayToButton.SetButtonStatus($"Забрать награду", false);
 			_isNotification = false;
 			_notificationButton.HideNotification();
 			_currentBonusDay.Take();
