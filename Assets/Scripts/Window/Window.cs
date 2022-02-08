@@ -7,5 +7,6 @@ public enum Window
 	Review,
 	Shop,
 	Leaderboard,
-	DailyBonus
+	DailyBonus,
+	Mail
 }
