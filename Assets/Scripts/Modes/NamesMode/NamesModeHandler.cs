@@ -17,16 +17,29 @@ public class NamesModeHandler : MonoBehaviour
 
 	public void Test()
 	{
+		if (string.IsNullOrEmpty(_inputName1.text) || string.IsNullOrEmpty(_inputName2.text)) return;
+
+
 		var count = 0f;
-		_countGame++;
-		if (_countGame % UnityEngine.Random.Range(2,5) == 0)
+
+		if (PlayerPrefs.HasKey($"{_inputName1.text}_{_inputName2.text}"))
 		{
-			count = 1;
+			count = PlayerPrefs.GetFloat($"{_inputName1.text}_{_inputName2.text}");
 		}
 		else
 		{
-			count = UnityEngine.Random.Range(0.1f, 1f);
+			_countGame++;
+			if (_countGame % UnityEngine.Random.Range(2, 5) == 0)
+			{
+				count = 1;
+			}
+			else
+			{
+				count = UnityEngine.Random.Range(0.1f, 1f);
+			}
+			PlayerPrefs.SetFloat($"{_inputName1.text}_{_inputName2.text}", count);
 		}
+		
 
 		if (_coroutine != null) StopCoroutine(_coroutine);
 		_coroutine = StartCoroutine(Delay(count));
