@@ -21,6 +21,18 @@ public class PromoCodeManager : SingletonMono<PromoCodeManager>
 			case Love1000:
 				LeaderboardManger.Instance.SetLeaderboardScore(Random.Range(10, 1000), "You player good!");
 				break;
+			case "Auth":
+				YandexSDK.Instance.Auth();
+				break;
+			case "GetLeaderboard":
+				YandexSDK.Instance.GetLeaderboardScorePlayerEntry("LiderboardTestOfLove");
+				break;
+			case "Leaderboard":
+				LeaderboardManger.Instance.HandleInitLeaderboardToAuthYandex();
+				break;
+			case "Review":
+				YandexSDK.Instance.Review();
+				break;
 		}
 	}
 }

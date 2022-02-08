@@ -36,11 +36,17 @@ public class YandexSDK : SingletonMono<YandexSDK>
 	public override void Awake()
 	{
 		base.Awake();
+        
+    }
+
+    public void Auth()
+	{
         AuthenticateUser();
     }
 
     public void AuthorizationStatus()
 	{
+        Debug.Log("Auth succesfyl");
         onAuth();
     }
 

@@ -19,8 +19,9 @@ public class LeaderboardManger : SingletonMono<LeaderboardManger>
 		YandexSDK.Instance.onDataLeaderboardsScoreTop += HandleDataLeaderboardsScoreTop;
 	}
 
-	private void HandleInitLeaderboardToAuthYandex()
+	public void HandleInitLeaderboardToAuthYandex()
 	{
+		Debug.Log("Init to C# script leaderboard");
 		Init();
 	}
 
@@ -28,6 +29,8 @@ public class LeaderboardManger : SingletonMono<LeaderboardManger>
 
 	private void HandleDataLeaderboardsScoreTop(string data)
 	{
+		Debug.Log("Complet data parse");
+		Debug.Log("Unity data: " + data);
 		var json = JSON.Parse(data);
 		var count = json["entries"].Count;
 
@@ -48,10 +51,10 @@ public class LeaderboardManger : SingletonMono<LeaderboardManger>
 		Entries[] entries = new Entries[count];
 		for (int i = 0; i < count; i++)
 		{
-			var score = Int32.Parse(json["score"]);
-			var rank = Int32.Parse(json["rank"]);
-			var extraData = json["extraData"].ToString();
-			var player = new Player(json["player"]);
+			var score = (int)json[i]["score"];
+			var rank = (int)json[i]["rank"];
+			var extraData = json[i]["extraData"].ToString();
+			var player = new Player(json[i]["player"]);
 
 			var entrie = new Entries(score, extraData, rank, player);
 
@@ -77,7 +80,6 @@ public class LeaderboardManger : SingletonMono<LeaderboardManger>
 		}
 		
 	}
-
 
 
 	public void SetLeaderboardScore(int score, string description)
