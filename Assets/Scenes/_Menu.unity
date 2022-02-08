@@ -1084,6 +1084,7 @@ GameObject:
   - component: {fileID: 130191281}
   - component: {fileID: 130191284}
   - component: {fileID: 130191283}
+  - component: {fileID: 130191285}
   m_Layer: 5
   m_Name: Score_heart
   m_TagString: Untagged
@@ -1206,6 +1207,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _windowOpen: 5
+--- !u!114 &130191285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130191279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc44aa7b055922c439dfad9928446d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _cookiesCountText: {fileID: 1418817648}
 --- !u!1 &135702828
 GameObject:
   m_ObjectHideFlags: 0
@@ -11034,6 +11048,64 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1639531566}
   m_CullTransparentMesh: 0
+--- !u!1 &1652814406
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1652814408}
+  - component: {fileID: 1652814407}
+  - component: {fileID: 1652814409}
+  m_Layer: 0
+  m_Name: BankManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1652814407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652814406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa35b4aea8419ea45b067dd4c5104b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsDontDestroyOnLoad: 0
+--- !u!4 &1652814408
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652814406}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.42362916, y: -0.047551252, z: 125.161}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1652814409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652814406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9497125f9cb65d4594712bab8ef477f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _heartsHolder: {fileID: 130191285}
 --- !u!1 &1658891559
 GameObject:
   m_ObjectHideFlags: 0

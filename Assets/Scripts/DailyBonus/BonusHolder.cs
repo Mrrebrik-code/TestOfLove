@@ -36,6 +36,7 @@ public class BonusHolder : MonoBehaviour
 	{
 		_isTake = true;
 		_checkTake.SetActive(true);
+		Bank.BankManager.Instance.Heart.Put(Bonus.CountReward);
 		SetStyle(Style.Type.Take);
 		Bonus.SaveReward(1);
 	}
