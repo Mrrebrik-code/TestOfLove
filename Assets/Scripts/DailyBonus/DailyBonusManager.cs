@@ -13,6 +13,7 @@ public class DailyBonusManager : SingletonMono<DailyBonusManager>
 	private BonusHolder _currentBonusDay;
 	[SerializeField] private TimerDayToButton _timerDayToButton;
 	[SerializeField] private NotificationButton _notificationButton;
+	private bool _isDayOneOpen = false;
 
 	private int _currentStreak
 	{
@@ -48,6 +49,10 @@ public class DailyBonusManager : SingletonMono<DailyBonusManager>
 		Debug.Log(_currentStreak);
 		SetCurrentDayBonus(_currentStreak);
 		StartCoroutine(UpdateStateRewards());
+		if(_isTakeReward == true)
+		{
+			WindowManager.Instance.HandleCurrentActiveWindow(Window.DailyBonus);
+		}
 	}
 
 	private IEnumerator UpdateStateRewards()

@@ -10829,19 +10829,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1716383146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1716383142}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 590ab62c8f9c6b348abe7075361b17b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _windowOpen: 6
 --- !u!1 &1722305019
 GameObject:
   m_ObjectHideFlags: 0
@@ -14690,6 +14677,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2071908525}
     m_Modifications:
+    - target: {fileID: 405789548, guid: 88a957b6c347b3949af0deabf78781d9, type: 3}
+      propertyPath: _windowOpen
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 405789549, guid: 88a957b6c347b3949af0deabf78781d9, type: 3}
+      propertyPath: _type
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 529782600928435614, guid: 88a957b6c347b3949af0deabf78781d9,
         type: 3}
       propertyPath: m_Pivot.x
