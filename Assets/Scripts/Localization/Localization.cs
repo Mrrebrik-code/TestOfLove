@@ -6,7 +6,7 @@ using System.Collections.Generic;
 public class Localization : SingletonMono<Localization>
 {
 	public event Action onLocalizationChanged;
-	private Languages _language;
+	[SerializeField] private Languages _language;
 	public Languages Language { get { return _language; } set { _language = value; onLocalizationChanged?.Invoke(); } }
 	public List<LocalizationObject> LocalizationList = new List<LocalizationObject>();
 	public override void Awake()

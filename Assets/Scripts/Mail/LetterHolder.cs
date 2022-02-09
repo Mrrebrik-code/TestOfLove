@@ -18,9 +18,16 @@ public class LetterHolder : MonoBehaviour
 	public void Init(Letter letter)
 	{
 		_letter = letter;
-		_tittleText.text = letter.Tittle;
-		_temaText.text = letter.Tema;
-		_descriptionText.text = letter.Description;
+		_tittleText.text = Localization.Instance.Localize(_letter.Tittle);
+		_temaText.text = Localization.Instance.Localize(_letter.Tema);
+		_descriptionText.text = Localization.Instance.Localize((_letter.Description));
+		Localization.Instance.Subscribe(() =>
+		{
+			_tittleText.text = Localization.Instance.Localize(_letter.Tittle);
+			_temaText.text = Localization.Instance.Localize(_letter.Tema);
+			_descriptionText.text = Localization.Instance.Localize((_letter.Description));
+		});
+		
 		_icon.sprite = letter.Icon;
 		_lenta.SetActive(letter.IsLenta);
 		_dateText.text = letter.Data.ToShortDateString();

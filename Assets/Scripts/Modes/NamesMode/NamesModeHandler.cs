@@ -55,5 +55,7 @@ public class NamesModeHandler : MonoBehaviour
 			_countText.text = $"{i}%";
 			yield return new WaitForSeconds(0.01f);
 		}
+
+		MailManager.Instance.AddLetter(Letters.CompletTestOfNamesMode, false);
 	}
 }

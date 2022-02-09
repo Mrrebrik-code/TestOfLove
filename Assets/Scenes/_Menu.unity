@@ -420,7 +420,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e77fdd9c91543e459da4c0847d886c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsDontDestroyOnLoad: 1
+  IsDontDestroyOnLoad: 0
   _notificationButton: {fileID: 456520475}
   _letterHolderPrefab: {fileID: 3379397389337939484, guid: 9a20bce2dca370748b44a2fe31fc26db,
     type: 3}

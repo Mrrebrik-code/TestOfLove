@@ -28,7 +28,45 @@ public static class GameManager
 	public static void CompletCategory()
 	{
 		_currentScrollObject.Type = StatusMode.Style.Type.Yellow;
-		if (Category.Categorys == Categorys.Love) MailManager.Instance.AddLetter(Letters.CompletLoveTest, false);
+		switch (Category.Categorys)
+		{
+			case Categorys.Love:
+				
+				MailManager.Instance.AddLetter(Letters.CompletLoveTest, false);
+				break;
+			case Categorys.Confidence:
+				MailManager.Instance.AddLetter(Letters.CompletConfidenceTest, false);
+				break;
+			case Categorys.Mutually:
+				MailManager.Instance.AddLetter(Letters.CompletMutuallyTest, false);
+				break;
+			case Categorys.Values:
+				MailManager.Instance.AddLetter(Letters.CompletValuesTest, false);
+				break;
+			case Categorys.Friends:
+				MailManager.Instance.AddLetter(Letters.CompletFriendshipTest, false);
+				break;
+		}
+		PlayerPrefs.SetInt($"{Category.Categorys}_complet", 1);
+
+		if(CheckCompletTestAll()) MailManager.Instance.AddLetter(Letters.CompletAllTests, false);
+	}
+
+	private static bool CheckCompletTestAll()
+	{
+		var categorys = new Categorys[5] { Categorys.Friends, Categorys.Love, Categorys.Mutually, Categorys.Values, Categorys.Confidence };
+		var indexes = new List<int>();
+		foreach (var category in categorys)
+		{
+			indexes.Add(PlayerPrefs.GetInt($"{category}_complet"));
+		}
+		var complets = 0;
+		foreach (var index in indexes)
+		{
+			complets += index;
+		}
+
+		return complets == 5;
 	}
 
 	private static void LoadCategorys()

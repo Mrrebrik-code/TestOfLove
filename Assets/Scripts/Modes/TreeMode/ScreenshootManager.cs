@@ -31,6 +31,7 @@ public class ScreenshootManager : MonoBehaviour
 		_inputName2.text = null;
 		_screenTree.gameObject.SetActive(true);
 		_screenCreating.gameObject.SetActive(false);
+		MailManager.Instance.AddLetter(Letters.CompletTreeMode, false);
 	}
 
 	IEnumerator TakeScreenShot()

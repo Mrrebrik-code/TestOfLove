@@ -12,6 +12,7 @@ public class NotificationButton : MonoBehaviour
 	private Coroutine _animationFader;
 	[SerializeField] private bool _isAutoSaving = true;
 	private int _countNotification = 0;
+
 	public int CountNotification
 	{
 		get

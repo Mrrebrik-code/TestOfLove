@@ -22,19 +22,19 @@ public class LetterReadHolder : MonoBehaviour
 	public void Init(Letter letter)
 	{
 		_letter = letter;
-		_tiitleText.text = letter.Tittle;
-		_temaText.text = letter.Tema;
+		_tiitleText.text = Localization.Instance.Localize(letter.Tittle);
+		_temaText.text = Localization.Instance.Localize(letter.Tema);
 
 		switch (letter.TypeLetter)
 		{
 			case TypeLetter.Default:
 				_rewardTextGameObject.SetActive(false);
 				_defaultText.gameObject.SetActive(true);
-				_defaultText.text = letter.FullDescription; 
+				_defaultText.text = Localization.Instance.Localize(letter.FullDescription); 
 				break;
 			case TypeLetter.RewardPromoCode:
 				_rewardTextGameObject.SetActive(true);
-				_rewardTextGameObject.GetComponent<TMP_Text>().text = letter.FullDescription;
+				_rewardTextGameObject.GetComponent<TMP_Text>().text = Localization.Instance.Localize(letter.FullDescription);
 				_promoCodeText.gameObject.SetActive(true);
 				_heartText.gameObject.SetActive(false);
 				_promoCodeText.text = letter.PromoCode;
@@ -43,7 +43,7 @@ public class LetterReadHolder : MonoBehaviour
 				break;
 			case TypeLetter.RewardHeart:
 				_rewardTextGameObject.SetActive(true);
-				_rewardTextGameObject.GetComponent<TMP_Text>().text = letter.FullDescription;
+				_rewardTextGameObject.GetComponent<TMP_Text>().text = Localization.Instance.Localize(letter.FullDescription);
 				_heartText.gameObject.SetActive(true);
 				_promoCodeText.gameObject.SetActive(false);
 				_heartText.text = "Получить " + letter.CountRewardHeart.ToString();

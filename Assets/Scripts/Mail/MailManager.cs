@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -15,6 +16,11 @@ public class MailManager : SingletonMono<MailManager>
 	public override void Awake()
 	{
 		base.Awake();
+		
+	}
+
+	public void Start()
+	{
 		Init();
 	}
 	private void Init()
@@ -42,18 +48,20 @@ public class MailManager : SingletonMono<MailManager>
 		{
 			if(letter.Type == letters)
 			{
-				if (isCreate)
+				if(letter.IsCreating == false)
 				{
-					letter.IsCreating = true;
-					CreateMessage(letter);
-					return;
+					if (isCreate)
+					{
+						letter.IsCreating = true;
+						CreateMessage(letter);
+						return;
+					}
+					else
+					{
+						letter.IsCreating = true;
+						return;
+					}
 				}
-				else
-				{
-					letter.IsCreating = true;
-					return;
-				}
-				
 			}
 		}
 	}

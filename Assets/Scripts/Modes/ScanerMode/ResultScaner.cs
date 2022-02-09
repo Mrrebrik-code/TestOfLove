@@ -13,5 +13,6 @@ public class ResultScaner : MonoBehaviour
 
 		var result = _results[Random.Range(0, _results.Count - 1)];
 		_resultText.text = Localization.Instance.Localize(result);
+		MailManager.Instance.AddLetter(Letters.CompletScanerMode, false);
 	}
 }

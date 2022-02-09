@@ -39,17 +39,22 @@ public class DailyBonusManager : SingletonMono<DailyBonusManager>
 
 	private bool _isTakeReward;
 	private int _maxStreakCount = 5;
-	private float _takeColldown = 24f /*/ 24 / 60 / 6 / 2*/;
-	private float _takeDeadline = 48f /*/ 24 / 60 / 6 / 2*/;
+	private float _takeColldown = 24f / 24 / 60 / 6 / 2;
+	private float _takeDeadline = 48f / 24 / 60 / 6 / 2;
 
 	public override void Awake()
 	{
 		base.Awake();
+		
+
+	}
+	private void Start()
+	{
 		Init();
 		Debug.Log(_currentStreak);
 		SetCurrentDayBonus(_currentStreak);
 		StartCoroutine(UpdateStateRewards());
-		if(_isTakeReward == true)
+		if (_isTakeReward == true)
 		{
 			WindowManager.Instance.HandleCurrentActiveWindow(Window.DailyBonus);
 		}
@@ -79,6 +84,10 @@ public class DailyBonusManager : SingletonMono<DailyBonusManager>
 				_dataTime = null;
 				_currentStreak = 1;
 				SetCurrentDayBonus(_currentStreak);
+
+				MailManager.Instance.AddLetter(Letters.SkipDailyBinus, UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "_Menu");
+
+				
 			}
 			else if(time.TotalHours < _takeColldown)
 			{
@@ -163,6 +172,7 @@ public class DailyBonusManager : SingletonMono<DailyBonusManager>
 			_dataTime = DateTime.UtcNow;
 			if (_currentStreak == _maxStreakCount)
 			{
+				MailManager.Instance.AddLetter(Letters.FirstDay5Complet, UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "_Menu");
 				_currentStreak = 1;
 				ResetBonuses();
 				SetCurrentDayBonus(_currentStreak);

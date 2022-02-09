@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d401a0a9cc87be47b25703ab376e454, type: 3}
+  m_Name: CompletAllTests
+  m_EditorClassIdentifier: 
+  _id: 16
+  _type: 16
+  _tittle: letter_057
+  _tema: letter_058
+  _discription: letter_059
+  _fullDescription: letter_060
+  _icon: {fileID: 0}
+  _isLenta: 0
+  _isCreatingStart: 0
+  _typeLetter: 2
+  PromoCode: Live100
+  CountRewardHeart: 500
