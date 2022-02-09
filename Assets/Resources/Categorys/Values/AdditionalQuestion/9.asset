@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d27e06cd2584d54498ee741a16a81ca, type: 3}
   m_Name: 9
   m_EditorClassIdentifier: 
-  _questionText: "\u0441d2_061"
+  _questionText: "\u0441d2_065"
   _answers:
-  - AnswerText: "\u0441d2_062"
-  - AnswerText: "\u0441d2_063"
-  - AnswerText: "\u0441d2_064"
+  - AnswerText: "\u0441d2_066"
+  - AnswerText: "\u0441d2_067"
+  - AnswerText: "\u0441d2_068"
