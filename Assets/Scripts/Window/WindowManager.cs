@@ -33,6 +33,7 @@ public class WindowManager : SingletonMono<WindowManager>
 		
 	}
 
+
 	public void HandleCurrentActiveWindow(Window window)
 	{
 		if (_currentWindow == window) return;

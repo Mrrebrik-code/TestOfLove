@@ -9,5 +9,6 @@ public enum Window
 	Leaderboard,
 	DailyBonus,
 	Mail,
-	Popup_buy_mode
+	Popup_buy_mode,
+	Popup_letter_read
 }

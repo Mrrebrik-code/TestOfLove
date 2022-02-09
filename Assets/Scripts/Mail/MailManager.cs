@@ -10,6 +10,7 @@ public class MailManager : SingletonMono<MailManager>
 	[SerializeField] private LetterHolder _letterHolderPrefab;
 	[SerializeField] private Transform _content;
 	[SerializeField] private List<LetterHolder> _letterHolders = new List<LetterHolder>();
+	[SerializeField] private LetterReadHolder _letterReadHolder;
 
 	public override void Awake()
 	{
@@ -35,19 +36,40 @@ public class MailManager : SingletonMono<MailManager>
 		return letters.ToList();
 	}
 
-	public void AddLetter(Letters letters)
+	public void AddLetter(Letters letters, bool isCreate = true)
 	{
 		foreach (var letter in _letterList)
 		{
 			if(letter.Type == letters)
 			{
-				letter.IsCreating = true;
-				CreateMessage(letter);
-				return;
+				if (isCreate)
+				{
+					letter.IsCreating = true;
+					CreateMessage(letter);
+					return;
+				}
+				else
+				{
+					letter.IsCreating = true;
+					return;
+				}
+				
 			}
 		}
 	}
 
+	public void Read(Letter letter)
+	{
+		if(letter.IsView == false)
+		{
+			letter.IsView = true;
+			_notificationButton.CountNotification = -1;
+			
+		}
+		_letterReadHolder.Init(letter);
+		WindowManager.Instance.HandleCurrentActiveWindow(Window.Popup_letter_read);
+
+	}
 	public void CreateMessage(Letter letter)
 	{
 		if (!letter.IsView)
@@ -57,6 +79,7 @@ public class MailManager : SingletonMono<MailManager>
 
 		var letterTemp = Instantiate(_letterHolderPrefab, _content);
 		letterTemp.Init(letter);
+		letterTemp.onReadLetter += Read;
 		_letterHolders.Add(letterTemp);
 	}
 }

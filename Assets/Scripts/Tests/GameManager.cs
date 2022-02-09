@@ -28,6 +28,7 @@ public static class GameManager
 	public static void CompletCategory()
 	{
 		_currentScrollObject.Type = StatusMode.Style.Type.Yellow;
+		if (Category.Categorys == Categorys.Love) MailManager.Instance.AddLetter(Letters.CompletLoveTest, false);
 	}
 
 	private static void LoadCategorys()

@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using System;
 
 public class LetterHolder : MonoBehaviour
 {
+	public event Action<Letter> onReadLetter;
 	private Letter _letter;
 	[SerializeField] private TMP_Text _tittleText;
 	[SerializeField] private TMP_Text _temaText;
@@ -22,5 +24,10 @@ public class LetterHolder : MonoBehaviour
 		_icon.sprite = letter.Icon;
 		_lenta.SetActive(letter.IsLenta);
 		_dateText.text = letter.Data.ToShortDateString();
+	}
+
+	public void Read()
+	{
+		onReadLetter?.Invoke(_letter);
 	}
 }

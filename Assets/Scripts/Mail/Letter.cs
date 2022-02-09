@@ -11,9 +11,13 @@ public class Letter : ScriptableObject
 	[SerializeField] private string _tittle;
 	[SerializeField] private string _tema;
 	[SerializeField] private string _discription;
+	[SerializeField] private string _fullDescription;
 	[SerializeField] private Sprite _icon;
 	[SerializeField] private bool _isLenta;
 	[SerializeField, Range(0, 1)] private int _isCreatingStart;
+	[SerializeField] private TypeLetter _typeLetter;
+	public string PromoCode;
+	public int CountRewardHeart;
  	public bool IsView 
 	{ 
 		get 
@@ -64,7 +68,9 @@ public class Letter : ScriptableObject
 	public string Tittle { get { return _tittle; } }
 	public string Tema { get { return _tema; } }
 	public string Description { get { return _discription; } }
+	public string FullDescription { get { return _fullDescription; } }
 	public Sprite Icon { get { return _icon; } }
 	public bool IsLenta { get { return _isLenta; } }
+	public TypeLetter TypeLetter { get { return _typeLetter; } }
 
 }
