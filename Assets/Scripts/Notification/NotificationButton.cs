@@ -8,48 +8,76 @@ public class NotificationButton : MonoBehaviour
 {
 	[SerializeField] private TypeNotification _type;
 	[SerializeField] private TMP_Text _countText;
-	[SerializeField] private Image _notificationIcon;
+	[SerializeField] private CanvasGroup _notificationCanvasGroup;
 	private Coroutine _animationFader;
-	[SerializeField] private int _maxCount;
-	private int CountNotification
+	[SerializeField] private bool _isAutoSaving = true;
+	private int _countNotification = 0;
+	public int CountNotification
 	{
-		get => PlayerPrefs.GetInt($"Notification_{_type}", 0);
-		set => PlayerPrefs.SetInt($"Notification_{_type}", value);
+		get
+		{
+			if (_isAutoSaving)
+			{
+				return PlayerPrefs.GetInt($"Notification_{_type}", 0);
+			}
+			else
+			{
+				return _countNotification;
+			}
+			
+		}
+		set 
+		{
+			if (_isAutoSaving)
+			{
+				var count = PlayerPrefs.GetInt($"Notification_{_type}");
+				count += value;
+
+				if (count <= 0)
+				{
+					count = 0;
+					HideNotification();
+				}
+				else ShowNotification();
+
+				_countText.text = CountNotification.ToString();
+
+				PlayerPrefs.SetInt($"Notification_{_type}", count);
+			}
+			else
+			{
+				_countNotification += value;
+				if (_countNotification <= 0) HideNotification();
+				else
+				{
+					_countText.text = _countNotification.ToString();
+					ShowNotification();
+				}
+			}
+		}
 	}
 
-	public void ShowNotification(bool isAdd = true)
+	public void ShowNotification()
 	{
-		if(isAdd) CountNotification++;
-		if (CountNotification >= _maxCount) CountNotification = _maxCount;
-		_countText.text = CountNotification.ToString();
-		_countText.DOFade(1, 1f);
-		if(_animationFader != null) _animationFader = StartCoroutine(Show());
+		if (_animationFader != null) StopCoroutine(_animationFader);
+
+		_animationFader = StartCoroutine(Show());
 	}
 	public void HideNotification()
 	{
-		CountNotification--;
-		if(CountNotification < 0)
-		{
-			CountNotification = 0;
-		}
+		if (_animationFader != null) StopCoroutine(_animationFader);
 
-		_countText.text = CountNotification.ToString();
-		if(CountNotification <= 0)
-		{
-			_countText.DOFade(0, 1f);
-			if (_animationFader != null) _animationFader = StartCoroutine(Hide());
-		}
-		
+		_animationFader = StartCoroutine(Hide());
 	}
 
 	private IEnumerator Show()
 	{
-		_notificationIcon.DOFade(1f, 1f);
+		_notificationCanvasGroup.DOFade(1f, 1f);
 		yield return new WaitForSeconds(1f);
 	}
 	private IEnumerator Hide()
 	{
-		_notificationIcon.DOFade(0f, 1f);
+		_notificationCanvasGroup.DOFade(0f, 1f);
 		yield return new WaitForSeconds(1f);
 	}
 }

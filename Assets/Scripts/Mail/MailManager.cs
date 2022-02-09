@@ -41,6 +41,7 @@ public class MailManager : SingletonMono<MailManager>
 		{
 			if(letter.Type == letters)
 			{
+				letter.IsCreating = true;
 				CreateMessage(letter);
 				return;
 			}
@@ -49,9 +50,9 @@ public class MailManager : SingletonMono<MailManager>
 
 	public void CreateMessage(Letter letter)
 	{
-		if(!letter.IsView)
+		if (!letter.IsView)
 		{
-			_notificationButton.ShowNotification(!letter.IsCreating);
+			_notificationButton.CountNotification = 1;
 		}
 
 		var letterTemp = Instantiate(_letterHolderPrefab, _content);

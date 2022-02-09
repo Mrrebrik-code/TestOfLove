@@ -17,8 +17,12 @@ public class Letter : ScriptableObject
  	public bool IsView 
 	{ 
 		get 
-		{ 
-			return Convert.ToBoolean(PlayerPrefs.GetInt($"View_{_tittle}_{_id}", 0));
+		{
+			if (PlayerPrefs.HasKey($"View_{_tittle}_{_id}") == false)
+			{
+				PlayerPrefs.SetInt($"View_{_tittle}_{_id}", 0);
+			}
+			return Convert.ToBoolean(PlayerPrefs.GetInt($"View_{_tittle}_{_id}"));
 		}
 		set
 		{
@@ -29,7 +33,11 @@ public class Letter : ScriptableObject
 	{
 		get
 		{
-			return Convert.ToBoolean(PlayerPrefs.GetInt($"Creating{_tittle}_{_id}", _isCreatingStart));
+			if (PlayerPrefs.HasKey($"Creating{_tittle}_{_id}") == false)
+			{
+				PlayerPrefs.SetInt($"Creating{_tittle}_{_id}", _isCreatingStart);
+			}
+			return Convert.ToBoolean(PlayerPrefs.GetInt($"Creating{_tittle}_{_id}"));
 		}
 		set
 		{
@@ -40,7 +48,11 @@ public class Letter : ScriptableObject
 	{ 
 		get 
 		{
-			return Convert.ToDateTime(PlayerPrefs.GetString($"Date_{_tittle}_{_id}", DateTime.Now.ToShortDateString())); 
+			if(PlayerPrefs.HasKey($"Date_{_tittle}_{_id}") == false)
+			{
+				PlayerPrefs.SetString($"Date_{_tittle}_{_id}", DateTime.Now.ToShortDateString());
+			}
+			return Convert.ToDateTime(PlayerPrefs.GetString($"Date_{_tittle}_{_id}")); 
 		}
 		set
 		{

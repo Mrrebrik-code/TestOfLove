@@ -13,13 +13,13 @@ public class PromoCodeManager : SingletonMono<PromoCodeManager>
 		switch (code)
 		{
 			case Love10:
-				Debug.Log("10");
+				Bank.BankManager.Instance.Heart.Put(10);
 				break;
 			case Love100:
-				Debug.Log("100");
+				Bank.BankManager.Instance.Heart.Put(100);
 				break;
 			case Love1000:
-				LeaderboardManger.Instance.SetLeaderboardScore(Random.Range(10, 1000), "You player good!");
+				Bank.BankManager.Instance.Heart.Put(1000);
 				break;
 			case "Auth":
 				YandexSDK.Instance.Auth();
@@ -32,6 +32,12 @@ public class PromoCodeManager : SingletonMono<PromoCodeManager>
 				break;
 			case "Review":
 				YandexSDK.Instance.Review();
+				break;
+			case "SetLeaderboard":
+				LeaderboardManger.Instance.SetLeaderboardScore(Random.Range(10, 1000), "You player good!");
+				break;
+			case "1":
+				MailManager.Instance.AddLetter(Letters.Update);
 				break;
 		}
 	}

@@ -2871,6 +2871,10 @@ PrefabInstance:
       propertyPath: _maxCount
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 405789549, guid: 88a957b6c347b3949af0deabf78781d9, type: 3}
+      propertyPath: _notificationCanvasGroup
+      value: 
+      objectReference: {fileID: 405789545}
     - target: {fileID: 529782600928435614, guid: 88a957b6c347b3949af0deabf78781d9,
         type: 3}
       propertyPath: m_Pivot.x
@@ -2986,6 +2990,12 @@ PrefabInstance:
 --- !u!224 &405789544 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 529782600928435614, guid: 88a957b6c347b3949af0deabf78781d9,
+    type: 3}
+  m_PrefabInstance: {fileID: 405789543}
+  m_PrefabAsset: {fileID: 0}
+--- !u!225 &405789545 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 2580266436000665655, guid: 88a957b6c347b3949af0deabf78781d9,
     type: 3}
   m_PrefabInstance: {fileID: 405789543}
   m_PrefabAsset: {fileID: 0}
@@ -3248,6 +3258,14 @@ PrefabInstance:
       propertyPath: _maxCount
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 405789549, guid: 88a957b6c347b3949af0deabf78781d9, type: 3}
+      propertyPath: _isAutoSaving
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 405789549, guid: 88a957b6c347b3949af0deabf78781d9, type: 3}
+      propertyPath: _notificationCanvasGroup
+      value: 
+      objectReference: {fileID: 456520476}
     - target: {fileID: 529782600928435614, guid: 88a957b6c347b3949af0deabf78781d9,
         type: 3}
       propertyPath: m_Pivot.x
@@ -3455,6 +3473,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cbcff57409e37d41b66549a28b2052b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!225 &456520476 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 2580266436000665655, guid: 88a957b6c347b3949af0deabf78781d9,
+    type: 3}
+  m_PrefabInstance: {fileID: 456520470}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &465837713
 GameObject:
   m_ObjectHideFlags: 0
@@ -11261,7 +11285,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Itibsoft | \u0422\u0435\u0441\u0442 \u043D\u0430 \u043B\u044E\u0431\u043E\u0432\u044C
-    v0.0.1 (2022\u0433)"
+    v0.1.15 (2022\u0433)"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4165cf4da0e2f8d4590ca466e33f5417, type: 2}
   m_sharedMaterial: {fileID: 1620879106942219808, guid: 4165cf4da0e2f8d4590ca466e33f5417,
