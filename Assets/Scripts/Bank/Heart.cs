@@ -14,6 +14,7 @@ namespace Bank
 				_count += value;
 				if (_count <= 0) _count = 0;
 
+				if(_count >= 500) MailManager.Instance.AddLetter(Letters.MagnateHearts, UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "_Menu");
 				PlayerPrefs.SetInt("Heart_count", _count);
 				BankManager.Instance.OnUpdateValueUI?.Invoke();
 			}

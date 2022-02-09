@@ -16,25 +16,23 @@ public class MailManager : SingletonMono<MailManager>
 	public override void Awake()
 	{
 		base.Awake();
-		
-	}
-
-	public void Start()
-	{
 		Init();
 	}
 	private void Init()
 	{
 		_letterList = LoadLetters();
 		if (_letterList == null) return;
-
-		_letterList.ForEach(letter =>
+		if(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "_Menu")
 		{
-			if (letter.IsCreating)
+			_letterList.ForEach(letter =>
 			{
-				CreateMessage(letter);
-			}
-		});
+				if (letter.IsCreating)
+				{
+					CreateMessage(letter);
+				}
+			});
+		}
+		
 	}
 	private List<Letter> LoadLetters()
 	{

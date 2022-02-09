@@ -17,10 +17,10 @@ public enum Letters
 	OpenVIPModeTestOfNames, //Вы открыли режим совместимости имен 
 	OpenVIPModeScaner, //Вы открыли режим сканера
 	OpenVIPModeTree, //Вы открыли режим воспоминание о лете
-	FirstBuyDonateHeart, //Вы совершили покупку сердец в маазине
+	FirstBuyDonateHeart, //Вы совершили покупку сердец в маазине !!!!!!!!!!
 	FirstDay5Complet, //Вы уже посещаете нашу игру 5 дней подрят -
-	HelperVIPModesMore, //В игре присутствую вип режимы, нужно их открывать как бы!
-	CompletAllTests, //Вы прошли все тесты!
-	MagnateHearts, //Вы заработалии боле5 500 сердечек на свой счет!
+	HelperVIPModesMore, //В игре присутствую вип режимы, нужно их открывать как бы! -
+	CompletAllTests, //Вы прошли все тесты! - 
+	MagnateHearts, //Вы заработалии более 500 сердечек на свой счет! -
 	SkipDailyBinus //Вы пропустили день в котором могли получить ежедневный бонус :( -
 }

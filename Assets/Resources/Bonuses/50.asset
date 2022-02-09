@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _id: 4
   _icon: {fileID: 21300000, guid: 473ada3bc420d19488d2dfe836fc147d, type: 3}
-  _countReward: 50
+  _countReward: 150
   _type: 0

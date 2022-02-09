@@ -31,7 +31,6 @@ public static class GameManager
 		switch (Category.Categorys)
 		{
 			case Categorys.Love:
-				
 				MailManager.Instance.AddLetter(Letters.CompletLoveTest, false);
 				break;
 			case Categorys.Confidence:
@@ -65,6 +64,8 @@ public static class GameManager
 		{
 			complets += index;
 		}
+
+		if(complets == 3) MailManager.Instance.AddLetter(Letters.HelperVIPModesMore, false);
 
 		return complets == 5;
 	}
