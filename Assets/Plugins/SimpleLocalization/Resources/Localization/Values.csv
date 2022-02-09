@@ -31,3 +31,41 @@ ID,Russian,English,Turkish,Massa
 с2_030,В отместку ему привлечете к себе внимание симпатичного мужчины,"In retaliation, he will attract the attention of a pretty man","Misillemede, güzel bir adamın dikkatini çekecek",5
 с2_031,"Уйдете домой, потому что поведение партнера испортило вам настроение",Go home because the behavior of the partner ruined you the mood,"Eve git, çünkü ortağın davranışı seni ruh halini mahvetti",3
 с2_032,"Будете сохранять полное спокойствие, потому что в его чувствах нисколько не сомневаетесь","You will keep full calm, because in his feelings do not doubt","Sakin olacağını, çünkü duygularında şüphe etmiyor",5
+,,,,
+,,,,
+сd2_033, Пытаетесь ли вы переделать своего партнера?, Are you trying to remake your partner?, Eşinizi yeniden yapmaya mı çalışıyorsunuz?,
+сd2_034,Да,Yes,Evet,3
+сd2_035,Возможно,Maybe,Belki,5
+сd2_036,Нет,Not,Değil,5
+сd2_037,Занимаетесь ли вы саморазвитием?,Do you do self-development?,Kendini geliştirmek mi istiyorsun?,
+сd2_038,Да,Yes,Evet,5
+сd2_039,Иногда,Sometimes,Ara sıra,3
+сd2_040,Нет,Not,Değil,1
+сd2_041, Сравниваете ли вы своего мужчину с бывшими?, Do you compare your man with former?, Adamını eski ile karşılaştırıyor musun?,
+сd2_042,Да,Yes,Evet,1
+сd2_043,Иногда,Sometimes,Ara sıra,3
+сd2_044,Нет,Not,Değil,5
+сd2_045,Должен ли мужчина решать ваши проблемы?,Should a man solve your problems?,Bir erkek problemlerinizi çözer mi?,
+сd2_046,Да,Yes,Evet,5
+сd2_047,Иногда,Sometimes,Ara sıra,3
+сd2_048,Нет,Not,Değil,3
+сd2_049,Нравится ли вам вызывать ревность у своего мужчины?,Do you like to call jealousy from your man?,Adamınızdan kıskançlık aramak ister misiniz?,
+сd2_050,Да,Yes,Evet,3
+сd2_051,Иногда,Sometimes,Ara sıra,3
+сd2_052,Нет,Not,Değil,5
+сd2_053,Кидаете ли вы претензии своему мужчине?,Do you throw claims to your man?,Adamınıza iddialar mı atıyorsun?,
+сd2_054,Да,Yes,Evet,3
+сd2_055,Нет,Not,Değil,5
+сd2_056,Иногда,Sometimes,Ara sıra,3
+сd2_057,"Вы поддерживаете своего партнера эмоционально, когда это необходимо?",Do you support your partner emotionally when necessary?,Gerektiğinde eşinizi duygusal olarak destekliyor musunuz?,
+сd2_058,Да,Yes,Evet,5
+сd2_059,Иногда,Sometimes,Ara sıra,3
+сd2_060,Нет,Not,Değil,1
+сd2_061,Контролируете ли вы своего мужчину?,Are you controlling your man?,Adamını mı kontrol ediyorsun?,
+сd2_062,Да,Yes,Evet,5
+сd2_063,Иногда,Sometimes,Ara sıra,3
+сd2_064,Нет,Not,Değil,3
+сd2_065,Требуете ли вы любви от своего мужчины?,Do you require love from your man?,Adamından sevgiye mi ihtiyacınız var?,
+сd2_066,Да,Yes,Evet,3
+сd2_067,Иногда,Sometimes,Ara sıra,3
+сd2_068,Нет,Not,Değil,1

@@ -2296,6 +2296,8 @@ MonoBehaviour:
     Id: 892850464
   - Name: Scaner
     Id: 1639195619
+  - Name: Letters
+    Id: 641810651
   SaveFolder: {fileID: 102900000, guid: c392831e85f928548b8494fefd912562, type: 3}
 --- !u!4 &895904326
 Transform:

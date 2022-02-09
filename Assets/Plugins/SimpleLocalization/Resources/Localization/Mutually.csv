@@ -6,7 +6,7 @@ ID,Russian,English,Turkish,Massa
 с3_005,Не бывало подобного,There was no similar,Benzer olmadı,1
 с3_006,Он часто смотрит на тебя застенчивым взглядом?,Does he often look at you with a shy look?,Size biraz utangaç bir görünüme bakar mı?,
 с3_007,"Ну, частенько кидает застенчивый взгляд, немного опустив голову....Это так мило*.*","Well, often throws a shy glance, slightly lowering his head .... It's so cute *. *","Peki, genellikle kafasını hafifçe düşüren utangaç bir bakış atar .... çok tatlı *. *",5
-с3_008,"Смотрит, но его взгляд равнодушен.","It looks, but his view is indifferent.","Görünüyor, ama görünümü kayıtsız.",3
+с3_008,"Смотрит, но его взгляд равнодушен.","It looks, but his view is indifferent.","Görünüyor, ama onun görüşü kayıtsız.",3
 с3_009,"Он вообще на меня не смотрит. Если я только кончено не подбегу и не дам ему пакетом по башке, при этом упав с лестницы...мм...тог¬¬да думаю, что посмотрит","He does not look at me at all. If I'm just over the package and do not give him a package in the head, while falling from the stairs ... mm ... Togo think it looks",Bana hiç bakmıyor. Sadece paketin üzerinde olsam ve ona merdivenlerden düşerken ona bir paket vermeyin ... mm ... GOGO baktığını düşünüyorum,1
 с3_010,Вы с ним общаетесь?,Do you communicate with him?,Onunla iletişim kuruyor musun?,
 с3_011,"Да, мы друзья/знакомые","Yes, we are friends / acquaintances","Evet, biz arkadaşız / tanıdıklarız",5
@@ -44,7 +44,7 @@ ID,Russian,English,Turkish,Massa
 с3_043,"Да сто пудов! Я уже проверяла. Взгляд, как у злобной гиены.","Yes, one hundred pounds! I have already checked. Look, like an evil hyena.","Evet, yüz lirası! Ben zaten kontrol ettim. Bak, kötü bir sırtlan gibi.",3
 с3_044,"Навряд ли бы ревновал, даже присоединился бы к беседе","It would hardly be jealous, even joined the conversation","Çok kıskanç olmazdı, hatta konuşmaya bile katıldı",5
 с3_045,Ему все равно,He does not care,Umursamıyor,2
-с3_046,"Вы идете по коридору с подругой. Видите его, ты просишь подругу посмотреть на него. Она смотрит на его реакцию при твоем присутствии. Какая у него реакция на тебя?","You walk along the corridor with a girlfriend. See him, you ask for a girlfriend to look at it. She looks at his reaction in your presence. What is his reaction to you?","Koridor boyunca bir kız arkadaşıyla yürürsün. Onu gör, bir kız arkadaşının buna bakmasını isteyin. Varlığınızdaki tepkisine bakar. Sana verilen tepki nedir?",
+с3_046,"Вы идете по коридору с подругой. Видите его, ты просишь подругу посмотреть на него. Она смотрит на его реакцию при твоем присутствии. Какая у него реакция на тебя?","You walk along the corridor with a girlfriend. See him, you ask for a girlfriend to look at him. She looks at his reaction in your presence. What is his reaction to you?","Koridor boyunca bir kız arkadaşıyla yürürsün. Onu gör, bir kız arkadaşının buna bakmasını isteyin. Varlığınızdaki tepkisine bakar. Sana verilen tepki nedir?",
 с3_047,"Подруга говорит, что он смотрит на меня без палева, или выглядывая из под челки, застенчиво улыбаясь...","Girlfriend says he looks at me without a toilet, or peeping from under the bangs, smiling shyly ...","Kız arkadaşım bana bir tuvalet olmadan baktığını ya da patlamaların altından gözetlendiğini söylüyor, utangaç bir şekilde gülümsüyor ...",5
 с3_048,"Смотрит, в принципе таким же взглядом как и на твою подругу. Бабник вообщем-то((",It looks in principle the same look like your girlfriend. The womanik in general ((,"Prensipte, kız arkadaşın gibi görünür. Genel olarak womanik ((",1
 с3_049,"Говорит, что вообще не смотрит",Says that does not look at all,Bu hiç bakmadığını söylüyor,3
@@ -56,3 +56,44 @@ ID,Russian,English,Turkish,Massa
 с3_055,Когда как. Но чаще всего мне пишет он.,It depends. But most often he writes.,Değişir. Ama çoğu zaman yazıyor.,5
 с3_056,"Скорее чаще от меня, чем от него.",Rather often from me than from him.,Benden sık sık ondan daha fazla.,3
 с3_057,От него вообще не исходит ни какой инициативы.,From him does not proceed any initiative.,Ondan herhangi bir inisiyatif devam etmiyor.,1
+,,,,
+,,,,
+сd3_058,В последнее время он стал меньше звонить и писать вам?,"Recently, he began to call less and write to you?","Son zamanlarda, daha az aramaya başladı ve sana yazmaya başladı?",
+сd3_059,Да,Yes,Evet,5
+сd3_060,Нет,Not,Değil,3
+сd3_061,У вас нет общих тем для разговора?,You do not have undergoes for conversation?,Konuşma için geçtiniz yok mu?,
+сd3_062,Да,Yes,Evet,3
+сd3_063,Нет,Not,Değil,5
+сd3_064,Он не посвящает вас в свои планы?,He does not devote you to his plans?,Seni planlarına ayırmıyor mu?,
+сd3_065,Да,Yes,Evet,3
+сd3_066,Нет,Not,Değil,5
+сd3_067,Его поведение по отношению к вам стало безразличным?,His behavior in relation to you has become indifferent?,Sizinle ilgili davranışı kayıtsız hale geldi mi?,
+сd3_068,Да,Yes,Evet,3
+сd3_069,Нет,Not,Değil,5
+сd3_070," Он задерживается допоздна на работе, у друзей и т.д.?"," He delayed late at work, friends, etc.?"," İş, arkadaş, vb geç gecikti?",
+сd3_071,Да,Yes,Evet,3
+сd3_072,Нет,Not,Değil,5
+сd3_073,Теперь вы меньше времени проводите вместе?,Now you spend less time together?,Şimdi birlikte daha az zaman harcıyorsun?,
+сd3_074,Да,Yes,Evet,3
+сd3_075,Нет,Not,Değil,5
+сd3_076, Вы почти не занимаетесь кексом?, Do you almost do not do the cupcake?, Neredeyse cupcake yapmıyor musun?,
+сd3_077,Да,Yes,Evet,3
+сd3_078,Нет,Not,Değil,5
+сd3_079, Он ссорится с вами из-за любого пустяка?, Does he quarrel with you because of any trifle?, Herhangi bir önemsememden dolayı seninle kavga ediyor mu?,
+сd3_080,Да,Yes,Evet,3
+сd3_081,Нет,Not,Değil,5
+сd3_082,У него появились секреты от вас?,Does he have secrets from you?,Sizden sırları var mı?,
+сd3_083,Да,Yes,Evet,3
+сd3_084,Нет,Not,Değil,5
+сd3_085, В последнее время он стал вас больше критиковать?," Recently, has he become more criticized?"," Son zamanlarda, daha eleştirildi mi?",
+сd3_086,Да,Yes,Evet,3
+сd3_087,Нет,Not,Değil,5
+сd3_088,Ему не интересно ваше мнение?,He is not interested in your opinion?,Senin fikrinle ilgilenmiyor mu?,
+сd3_089,Да,Yes,Evet,3
+сd3_090,Нет,Not,Değil,5
+сd3_091, Его желания стоят выше ваших?, His desires are taller than yours?, Arzuları seninkinden daha uzun?,
+сd3_092,Да,Yes,Evet,5
+сd3_093,Нет,Not,Değil,5
+сd3_094,Часто ли импульсивность переростает в агрессию?,Is impulsiveness often begoving in aggression?,Dürtüsellik genellikle saldırganlıkta yalvarır mı?,
+сd3_095,Да,Yes,Evet,3
+сd3_096,Нет,Not,Değil,5

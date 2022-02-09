@@ -22,6 +22,8 @@ public class TestHandler : SingletonMono<TestHandler>
 
 	[SerializeField] private GameObject _additionalPanel;
 
+	[SerializeField] private List<int> _indexAdditionQuestion = new List<int>();
+
 	private void Start()
 	{
 		_categoryCurrent = GameManager.Category;
@@ -32,6 +34,8 @@ public class TestHandler : SingletonMono<TestHandler>
 		}
 		_questions.RandomSorting();
 
+		GenerationIndexAdditionQuestion(_questions.Count);
+
 		foreach (var question in _categoryCurrent.AdditionalQuestions)
 		{
 			_additionalQuestions.Add(question);
@@ -40,6 +44,35 @@ public class TestHandler : SingletonMono<TestHandler>
 
 		Init();
 	}
+
+	private void GenerationIndexAdditionQuestion(int count)
+	{
+		var countQuestion = Convert.ToInt32(Math.Round(Convert.ToSingle(count / 4)));
+
+		for (int i = 0; i < countQuestion; i++)
+		{
+			var index = UnityEngine.Random.Range(3, _questions.Count - 1);
+
+			while (_indexAdditionQuestion.Contains(index))
+			{
+				index = UnityEngine.Random.Range(3, _questions.Count - 1);
+			}
+
+			_indexAdditionQuestion.Add(index);
+		}
+		_indexAdditionQuestion.Sort();
+
+		for (int i = 0; i < _indexAdditionQuestion.Count; i++)
+		{
+			if (i + 1 == _indexAdditionQuestion.Count) return;
+
+			if (_indexAdditionQuestion[i + 1] - _indexAdditionQuestion[i] <= 2)
+			{
+				_indexAdditionQuestion.Remove(i);
+			}
+		}
+	}
+
 
 	private void Init(Question question = null, bool isAdditional = false)
 	{
@@ -76,7 +109,11 @@ public class TestHandler : SingletonMono<TestHandler>
 		_numberQuestion++;
 		_question.UpdateCounter(_numberQuestion);
 
-		/*if (_numberQuestion == 3) _additionalPanel.SetActive(true);*/ //Прописать систему показа доп вопроса!
+		if(_indexAdditionQuestion.Contains(_numberQuestion))
+		{
+			_indexAdditionQuestion.Remove(_numberQuestion);
+			_additionalPanel.SetActive(true);
+		}
 
 		GenerationAnswer(_currentQuestion.Answers.Count);
 		
@@ -95,6 +132,8 @@ public class TestHandler : SingletonMono<TestHandler>
 
 		Init(question, true);
 		_additionalPanel.SetActive(false);
+
+		_additionalQuestions.Remove(question);
 	}
 	private void ClearAnswers()
 	{
