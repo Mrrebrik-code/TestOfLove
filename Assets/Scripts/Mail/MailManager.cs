@@ -26,7 +26,7 @@ public class MailManager : SingletonMono<MailManager>
 		{
 			_letterList.ForEach(letter =>
 			{
-				if (letter.IsCreating)
+				if (letter.IsCreating && letter.IsDelete == false)
 				{
 					CreateMessage(letter);
 				}
@@ -46,7 +46,7 @@ public class MailManager : SingletonMono<MailManager>
 		{
 			if(letter.Type == letters)
 			{
-				if(letter.IsCreating == false)
+				if(letter.IsCreating == false && letter.IsDelete == false)
 				{
 					if (isCreate)
 					{
@@ -64,17 +64,17 @@ public class MailManager : SingletonMono<MailManager>
 		}
 	}
 
-	public void Read(Letter letter)
+	public void Read(Letter letter, Action callback)
 	{
 		if(letter.IsView == false)
 		{
 			letter.IsView = true;
 			_notificationButton.CountNotification = -1;
-			
 		}
 		_letterReadHolder.Init(letter);
 		WindowManager.Instance.HandleCurrentActiveWindow(Window.Popup_letter_read);
 
+		callback?.Invoke();
 	}
 	public void CreateMessage(Letter letter)
 	{
@@ -84,8 +84,26 @@ public class MailManager : SingletonMono<MailManager>
 		}
 
 		var letterTemp = Instantiate(_letterHolderPrefab, _content);
+		if(letter.IsView == false)
+		{
+			letterTemp.GetComponent<RectTransform>().SetAsFirstSibling();
+		}
+		
 		letterTemp.Init(letter);
 		letterTemp.onReadLetter += Read;
+		letterTemp.onDeleteLetter += Delete;
 		_letterHolders.Add(letterTemp);
+	}
+
+	private void Delete(Letter letter, Action callback)
+	{
+		if (letter.IsView)
+		{
+			if(letter.IsTakeReward == true)
+			{
+				letter.IsDelete = true;
+				callback?.Invoke();
+			}
+		}
 	}
 }

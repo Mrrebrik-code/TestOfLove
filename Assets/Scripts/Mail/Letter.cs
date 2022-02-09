@@ -18,6 +18,7 @@ public class Letter : ScriptableObject
 	[SerializeField] private TypeLetter _typeLetter;
 	public string PromoCode;
 	public int CountRewardHeart;
+	
  	public bool IsView 
 	{ 
 		get 
@@ -31,6 +32,40 @@ public class Letter : ScriptableObject
 		set
 		{
 			PlayerPrefs.SetInt($"View_{_tittle}_{_id}", Convert.ToInt32(value));
+		}
+	}
+
+	public bool IsTakeReward
+	{
+		get
+		{
+			if (_typeLetter == TypeLetter.Default || _typeLetter == TypeLetter.RewardPromoCode) return true;
+
+			if (PlayerPrefs.HasKey($"TakeReward_{_tittle}_{_id}") == false)
+			{
+				PlayerPrefs.SetInt($"TakeReward_{_tittle}_{_id}", 0);
+			}
+			return Convert.ToBoolean(PlayerPrefs.GetInt($"TakeReward_{_tittle}_{_id}"));
+		}
+		set
+		{
+			PlayerPrefs.SetInt($"TakeReward_{_tittle}_{_id}", Convert.ToInt32(value));
+		}
+	}
+
+	public bool IsDelete
+	{
+		get
+		{
+			if (PlayerPrefs.HasKey($"Delete_{_tittle}_{_id}") == false)
+			{
+				PlayerPrefs.SetInt($"Delete_{_tittle}_{_id}", 0);
+			}
+			return Convert.ToBoolean(PlayerPrefs.GetInt($"Delete_{_tittle}_{_id}"));
+		}
+		set
+		{
+			PlayerPrefs.SetInt($"Delete_{_tittle}_{_id}", Convert.ToInt32(value));
 		}
 	}
 	public bool IsCreating

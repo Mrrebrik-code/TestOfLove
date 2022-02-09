@@ -66,6 +66,7 @@ public class LetterReadHolder : MonoBehaviour
 	{
 		if(PlayerPrefs.HasKey($"{_letter.Tittle}_{_letter.Tema}_take") == false)
 		{
+			_letter.IsTakeReward = true;
 			Bank.BankManager.Instance.Heart.Put(_letter.CountRewardHeart);
 			PlayerPrefs.SetInt($"{_letter.Tittle}_{_letter.Tema}_take", 1);
 			_button.interactable = false;
