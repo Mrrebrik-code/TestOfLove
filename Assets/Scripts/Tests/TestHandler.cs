@@ -111,7 +111,7 @@ public class TestHandler : SingletonMono<TestHandler>
 		for (int i = 0; i < count; i++)
 		{
 			AnswerHolder answerHolder = Instantiate(_answerHolderPrefab, _contentToAnswers);
-			answerHolder.SetAnswer(_currentQuestion.Answers[i]);
+			answerHolder.SetAnswer(_currentQuestion.Answers[i], i + 1);
 			answerHolder.onClick += HandleClickAnswer;
 			_answers.Add(answerHolder);
 		}

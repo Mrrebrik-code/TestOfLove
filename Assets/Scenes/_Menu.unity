@@ -12193,7 +12193,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Itibsoft | \u0422\u0435\u0441\u0442 \u043D\u0430 \u043B\u044E\u0431\u043E\u0432\u044C
-    v0.1.15 (2022\u0433)"
+    v0.1.16 (2022\u0433)"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4165cf4da0e2f8d4590ca466e33f5417, type: 2}
   m_sharedMaterial: {fileID: 1620879106942219808, guid: 4165cf4da0e2f8d4590ca466e33f5417,

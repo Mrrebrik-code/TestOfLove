@@ -11,10 +11,12 @@ public class AnswerHolder : MonoBehaviour
 	private Question.Answer _answer;
 	private Button _button;
 	[SerializeField] private TMP_Text _anserText;
-	public void SetAnswer(Question.Answer answer)
+	[SerializeField] private TMP_Text _countText;
+	public void SetAnswer(Question.Answer answer, int index)
 	{
 		_answer = answer;
 		_anserText.text = Localization.Instance.Localize(answer.AnswerText);
+		_countText.text = index.ToString();
 		if (_button == null) _button = GetComponent<Button>();
 
 		_button.ListenerButton(Click);
