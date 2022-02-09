@@ -36,6 +36,24 @@ public class CategoryButton : MonoBehaviour
 			{
 				SceneLoader.Instance.Load(_sceneName);
 			}
+			else
+			{
+				if(_modeHolder.ScrollObject.Price > Bank.BankManager.Instance.Heart.Count)
+				{
+					_modeHolder.ShowPopupLock();
+				}
+				else
+				{
+					StackProductBuy.Instance.Init(_modeHolder.ScrollObject.Price, () =>
+					{
+						_modeHolder.ScrollObject.Locker(false);
+						_modeHolder.Locker(false);
+					});
+					WindowManager.Instance.HandleCurrentActiveWindow(Window.Popup_buy_mode);
+
+				}
+				
+			}
 		});
 	}
 }

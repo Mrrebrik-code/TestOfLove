@@ -8,5 +8,6 @@ public enum Window
 	Shop,
 	Leaderboard,
 	DailyBonus,
-	Mail
+	Mail,
+	Popup_buy_mode
 }

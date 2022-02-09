@@ -14,6 +14,7 @@ public partial class ScrollObejct : ScriptableObject
 	[SerializeField] private ModeHolder _modePrefab;
 	[SerializeField] private bool _isLock;
 	private StatusMode.Style.Type _type;
+	[SerializeField] private int _priceUnLock;
 	
 	
 
@@ -22,6 +23,8 @@ public partial class ScrollObejct : ScriptableObject
 	public Sprite Icon { get { return _icon;} }
 	public Categorys Category { get { return _category; } }
 	public ModeHolder ModePrefab { get { return _modePrefab;} }
+
+	public int Price { get { return _priceUnLock; } }
 	public bool IsLock 
 	{ 
 		get 
@@ -63,7 +66,7 @@ public partial class ScrollObejct : ScriptableObject
 					_type = StatusMode.Style.Type.Yellow;
 					break;
 			}
-			if (_isLock)
+			if (IsLock)
 			{
 				return StatusMode.Style.Type.Red;
 			}
@@ -78,7 +81,7 @@ public partial class ScrollObejct : ScriptableObject
 
 	public void Locker(bool isLock)
 	{
-		_isLock = isLock;
-		Type = StatusMode.Style.Type.Red;
+		IsLock = isLock;
+		Type =  isLock ? StatusMode.Style.Type.Red : StatusMode.Style.Type.Green;
 	}
 }

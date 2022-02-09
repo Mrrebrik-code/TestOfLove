@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class ModeHolder : MonoBehaviour
 {
 	public ScrollObejct ScrollObject { get; private set; }
+	[SerializeField] private Animator _animator;
+	[SerializeField] private TMP_Text _priceText;
 	public RectTransform RectTransform { get { return _rectTransform; } }
 	[SerializeField] private RectTransform _rectTransform;
 	[SerializeField] private TMP_Text _nameText;
@@ -15,12 +17,14 @@ public class ModeHolder : MonoBehaviour
 	[SerializeField] private Image _icon;
 
 	[SerializeField] private GameObject[] _objectsToIcon;
+	[SerializeField] private LockerScrollObject _lockObject;
 
 
 	public void Init(ScrollObejct scrollObject)
 	{
 		ScrollObject = scrollObject;
 
+		
 		switch (scrollObject.TypeMode)
 		{
 			case TypeMode.VIPTestNames:
@@ -45,10 +49,36 @@ public class ModeHolder : MonoBehaviour
 		{
 			_categoryButton.Init(scrollObject.Category);
 		}
+		else
+		{
+			Locker(scrollObject.IsLock);
+			_priceText.text = scrollObject.Price.ToString();
+		}
 		
+
+
 		_icon.sprite = scrollObject.Icon;
 	}
 
+	public void ShowPopupLock()
+	{
+		_animator.SetTrigger("Show");
+	}
+
+	public void Locker(bool isLock)
+	{
+		if (isLock)
+		{
+			_lockObject.gameObject.SetActive(true);
+		}
+		else
+		{
+			_lockObject.UnLock();
+		}
+		UpdateStatus();
+
+
+	}
 	public void UpdateStatus()
 	{
 		_status.SetStyle(ScrollObject.Type);
