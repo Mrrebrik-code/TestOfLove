@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class ModeHolder : MonoBehaviour
 {
+	public ScrollObejct ScrollObject { get; private set; }
 	public RectTransform RectTransform { get { return _rectTransform; } }
 	[SerializeField] private RectTransform _rectTransform;
 	[SerializeField] private TMP_Text _nameText;
@@ -18,6 +19,8 @@ public class ModeHolder : MonoBehaviour
 
 	public void Init(ScrollObejct scrollObject)
 	{
+		ScrollObject = scrollObject;
+
 		switch (scrollObject.TypeMode)
 		{
 			case TypeMode.VIPTestNames:
@@ -44,5 +47,10 @@ public class ModeHolder : MonoBehaviour
 		}
 		
 		_icon.sprite = scrollObject.Icon;
+	}
+
+	public void UpdateStatus()
+	{
+		_status.SetStyle(ScrollObject.Type);
 	}
 }

@@ -23,7 +23,7 @@ public class NotificationButton : MonoBehaviour
 		if (CountNotification >= _maxCount) CountNotification = _maxCount;
 		_countText.text = CountNotification.ToString();
 		_countText.DOFade(1, 1f);
-		_animationFader = StartCoroutine(Show());
+		if(_animationFader != null) _animationFader = StartCoroutine(Show());
 	}
 	public void HideNotification()
 	{
@@ -37,7 +37,7 @@ public class NotificationButton : MonoBehaviour
 		if(CountNotification <= 0)
 		{
 			_countText.DOFade(0, 1f);
-			_animationFader = StartCoroutine(Hide());
+			if (_animationFader != null) _animationFader = StartCoroutine(Hide());
 		}
 		
 	}

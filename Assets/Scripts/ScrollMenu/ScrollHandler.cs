@@ -18,8 +18,12 @@ public class ScrollHandler : SingletonMono<ScrollHandler>
 	public override void Awake()
 	{
 		base.Awake();
-		Initialization();
-		_isInit = true;
+		if(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "_Menu")
+		{
+			Initialization();
+			_isInit = true;
+		}
+		
 	}
 
 	private List<ScrollObejct> LoadScrollObjcts()
@@ -57,7 +61,11 @@ public class ScrollHandler : SingletonMono<ScrollHandler>
 			}
 
 		}
-		_content.GetComponent<RectTransform>().anchoredPosition = new Vector2(_positions[3].x, _positions[3].y);
+		if(_content != null)
+		{
+			_content.GetComponent<RectTransform>().anchoredPosition = new Vector2(_positions[3].x, _positions[3].y);
+		}
+		
 
 	}
 

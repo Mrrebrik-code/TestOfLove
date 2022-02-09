@@ -9,6 +9,7 @@ public class ResultHolder : MonoBehaviour
 	[SerializeField] private TMP_Text _resultCountText;
 	public void Show(TestHandler.Result result)
 	{
+		GameManager.CompletCategory();
 		gameObject.SetActive(true);
 		_resultText.text = Localization.Instance.Localize(result.GetResult());
 		_resultCountText.text = $"Баллы:{result.ResultTest}";

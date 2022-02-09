@@ -20,4 +20,4 @@ MonoBehaviour:
   _category: 1
   _modePrefab: {fileID: 6148728931356064539, guid: 85ec1e267fdf74742a67579e4bf10b14,
     type: 3}
-  _type: 0
+  _isLock: 1

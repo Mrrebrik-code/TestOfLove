@@ -39,8 +39,8 @@ public class DailyBonusManager : SingletonMono<DailyBonusManager>
 
 	private bool _isTakeReward;
 	private int _maxStreakCount = 5;
-	private float _takeColldown = 24f / 24 / 60;
-	private float _takeDeadline = 48f / 24 / 60;
+	private float _takeColldown = 24f / 24;
+	private float _takeDeadline = 48f / 24;
 
 	public override void Awake()
 	{

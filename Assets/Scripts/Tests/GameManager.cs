@@ -4,11 +4,14 @@ using UnityEngine;
 
 public static class GameManager 
 {
+	private static ScrollObejct _currentScrollObject;
 	public static Category Category { get; private set; }
 	private static Dictionary<Categorys, Category> _categories = new Dictionary<Categorys, Category>();
 
-	public static bool SetCategory(Categorys category)
+	public static bool SetCategory(Categorys category, ScrollObejct scrollObject)
 	{
+		_currentScrollObject = scrollObject;
+
 		if (_categories.Count <= 0) LoadCategorys();
 
 		if (_categories.ContainsKey(category) == false) return false; 
@@ -20,6 +23,11 @@ public static class GameManager
 		}
 		
 		return Category != null;
+	}
+
+	public static void CompletCategory()
+	{
+		_currentScrollObject.Type = StatusMode.Style.Type.Yellow;
 	}
 
 	private static void LoadCategorys()
