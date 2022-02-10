@@ -41,6 +41,7 @@ public class NotificationButton : MonoBehaviour
 				}
 				else ShowNotification();
 
+				
 				_countText.text = CountNotification.ToString();
 
 				PlayerPrefs.SetInt($"Notification_{_type}", count);
@@ -55,6 +56,7 @@ public class NotificationButton : MonoBehaviour
 					ShowNotification();
 				}
 			}
+			AudioManager.Instance.PlaySound(Sounds.Notification);
 		}
 	}
 

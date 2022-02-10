@@ -1492,7 +1492,7 @@ PrefabInstance:
     - target: {fileID: 1700714054472895526, guid: 90b2091dd59d9c24dbca6ad0bd5b95b4,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -95.7
+      value: -95.70001
       objectReference: {fileID: 0}
     - target: {fileID: 1700714054472895526, guid: 90b2091dd59d9c24dbca6ad0bd5b95b4,
         type: 3}
@@ -3547,6 +3547,7 @@ GameObject:
   - component: {fileID: 2054818658}
   - component: {fileID: 2054818657}
   - component: {fileID: 2054818659}
+  - component: {fileID: 2054818660}
   m_Layer: 5
   m_Name: Create_btn
   m_TagString: Untagged
@@ -3668,6 +3669,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2054818660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054818655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f47642ea51d19a45a7091a41143f658, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _type: 0
 --- !u!1001 &6514559002049638877
 PrefabInstance:
   m_ObjectHideFlags: 0

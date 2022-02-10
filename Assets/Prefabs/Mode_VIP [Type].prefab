@@ -656,6 +656,7 @@ GameObject:
   - component: {fileID: 6148728931356064539}
   - component: {fileID: 8206867956486323696}
   - component: {fileID: 3215664685757041382}
+  - component: {fileID: 3415105121934231427}
   m_Layer: 5
   m_Name: Mode_VIP [Type]
   m_TagString: Untagged
@@ -801,6 +802,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3415105121934231427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4567981286460685009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f47642ea51d19a45a7091a41143f658, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _type: 0
 --- !u!1 &5537614824468222951
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,7 +12,7 @@ public static class GameManager
 	{
 		_currentScrollObject = scrollObject;
 
-		if (_categories.Count <= 0) LoadCategorys();
+		if (_categories.Count <= 0) _categories = ResourcesManager.Instance.Categories;
 
 		if (_categories.ContainsKey(category) == false) return false; 
 
@@ -70,14 +70,7 @@ public static class GameManager
 		return complets == 5;
 	}
 
-	private static void LoadCategorys()
-	{
-		var categorys = Resources.LoadAll<Category>("Categorys");
-		foreach (var categoryTemp in categorys)
-		{
-			_categories.Add(categoryTemp.Categorys, categoryTemp);
-		}
-	}
+	
 
 	private static void ResultCalculationMaxAndMin()
 	{

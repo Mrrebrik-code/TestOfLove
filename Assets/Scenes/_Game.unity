@@ -1147,6 +1147,7 @@ GameObject:
   - component: {fileID: 370564709}
   - component: {fileID: 370564711}
   - component: {fileID: 370564712}
+  - component: {fileID: 370564713}
   m_Layer: 5
   m_Name: Return_btn
   m_TagString: Untagged
@@ -1267,6 +1268,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed8e3f7f4915bf64881834a8e9f816a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &370564713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370564707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f47642ea51d19a45a7091a41143f658, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _type: 0
 --- !u!1 &397596665
 GameObject:
   m_ObjectHideFlags: 0
@@ -1304,6 +1318,7 @@ MonoBehaviour:
   _result:
     _resultHolder: {fileID: 898109361}
   _additionalPanel: {fileID: 2024144242}
+  _indexAdditionQuestion: 
 --- !u!4 &397596667
 Transform:
   m_ObjectHideFlags: 0
@@ -1422,6 +1437,7 @@ GameObject:
   - component: {fileID: 483069323}
   - component: {fileID: 483069325}
   - component: {fileID: 483069326}
+  - component: {fileID: 483069327}
   m_Layer: 5
   m_Name: Back_btn
   m_TagString: Untagged
@@ -1542,6 +1558,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _nameScene: _Menu
+--- !u!114 &483069327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483069321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f47642ea51d19a45a7091a41143f658, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _type: 0
 --- !u!1 &533052461
 GameObject:
   m_ObjectHideFlags: 0
@@ -1747,6 +1776,7 @@ GameObject:
   - component: {fileID: 567144290}
   - component: {fileID: 567144289}
   - component: {fileID: 567144291}
+  - component: {fileID: 567144292}
   m_Layer: 5
   m_Name: Open_btn
   m_TagString: Untagged
@@ -1866,6 +1896,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &567144292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 567144287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f47642ea51d19a45a7091a41143f658, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _type: 0
 --- !u!1 &764963618
 GameObject:
   m_ObjectHideFlags: 0
@@ -3098,6 +3141,7 @@ GameObject:
   - component: {fileID: 1074247083}
   - component: {fileID: 1074247082}
   - component: {fileID: 1074247084}
+  - component: {fileID: 1074247085}
   m_Layer: 5
   m_Name: Close_btn
   m_TagString: Untagged
@@ -3216,6 +3260,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1074247085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1074247080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f47642ea51d19a45a7091a41143f658, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _type: 0
 --- !u!1 &1085547920
 GameObject:
   m_ObjectHideFlags: 0

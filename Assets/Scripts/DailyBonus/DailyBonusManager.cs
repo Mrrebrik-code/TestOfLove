@@ -132,7 +132,7 @@ public class DailyBonusManager : SingletonMono<DailyBonusManager>
 
 	private void Init()
 	{
-		_bonuses = LoadBonuses();
+		_bonuses = ResourcesManager.Instance.Bonuses;
 		if (_bonuses == null) return;
 
 		_bonuses.ForEach(bonus =>
@@ -185,9 +185,5 @@ public class DailyBonusManager : SingletonMono<DailyBonusManager>
 		}
 
 	}
-	private List<Bonus> LoadBonuses()
-	{
-		var bonuses = Tools.BubbleSort(Resources.LoadAll<Bonus>("Bonuses"));
-		return bonuses.ToList();
-	}
+	
 }

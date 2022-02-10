@@ -26,16 +26,11 @@ public class ScrollHandler : SingletonMono<ScrollHandler>
 		
 	}
 
-	private List<ScrollObejct> LoadScrollObjcts()
-	{
-		var objects = Resources.LoadAll<ScrollObejct>("ScrollObjects");
-		Tools.BubbleSort(objects);
-		return objects.ToList();
-	}
+
 
 	private void Initialization()
 	{
-		_scrollObjects = LoadScrollObjcts();
+		_scrollObjects = ResourcesManager.Instance.ScrollObjects;
 		if (_scrollObjects == null) return;
 
 		for (int i = 0; i < _scrollObjects.Count; i++)

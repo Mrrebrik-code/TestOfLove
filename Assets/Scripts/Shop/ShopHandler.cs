@@ -16,7 +16,8 @@ public class ShopHandler : MonoBehaviour
 	}
 	private void Initialization()
 	{
-		_products = LoadProducts();
+		_products = ResourcesManager.Instance.Products;
+		if (_products == null) return;
 
 		_products.ForEach(product =>
 		{
@@ -26,11 +27,7 @@ public class ShopHandler : MonoBehaviour
 			_productsHolder.Add(productHolder);
 		});
 	}
-	private List<Product> LoadProducts()
-	{
-		var products = Resources.LoadAll<Product>("Products");
-		return products.ToList();
-	}
+
 	public void Buy(Product product)
 	{
 		Debug.Log("Buy product: " + product.Price + " YAN");

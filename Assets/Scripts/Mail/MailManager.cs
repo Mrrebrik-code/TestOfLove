@@ -20,8 +20,9 @@ public class MailManager : SingletonMono<MailManager>
 	}
 	private void Init()
 	{
-		_letterList = LoadLetters();
+		_letterList = ResourcesManager.Instance.Letters;
 		if (_letterList == null) return;
+
 		if(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "_Menu")
 		{
 			_letterList.ForEach(letter =>
@@ -34,11 +35,7 @@ public class MailManager : SingletonMono<MailManager>
 		}
 		
 	}
-	private List<Letter> LoadLetters()
-	{
-		var letters = Resources.LoadAll<Letter>("Letters");
-		return letters.ToList();
-	}
+	
 
 	public void AddLetter(Letters letters, bool isCreate = true)
 	{
