@@ -2,18 +2,58 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using DG.Tweening;
 
 public class SplashLoader : MonoBehaviour
 {
+	[SerializeField] private Animator _logo;
 	[SerializeField] private FaderLoading _fader;
+	[SerializeField] private CanvasGroup _auth;
+	[SerializeField] private bool _isAuth;
 
+	private void Start()
+	{
+		YandexSDK.Instance.onAuth += HandleAuthStatus;
+		StartCoroutine(AuthStatus());
+	}
 	public void Init()
 	{
+
 		ResourcesManager.Instance.Initialization(() =>
 		{
 			StartCoroutine(Loading());
 		});
-		
+
+	}
+
+	public void Auth()
+	{
+		//YandexSDK.Instance.Auth();
+		_isAuth = true;
+	}
+
+	private void HandleAuthStatus()
+	{
+		_isAuth = true;
+	}
+
+	private IEnumerator AuthStatus()
+	{
+		if (_isAuth == false)
+		{
+			_auth.gameObject.SetActive(true);
+			_auth.DOFade(1f, 1f);
+		}
+		while (_isAuth == false)
+		{
+			yield return new WaitForEndOfFrame();
+		}
+		_auth.DOFade(1f, 1f).onComplete += () =>
+		{
+			_logo.SetTrigger("LogoStart");
+			_auth.gameObject.SetActive(false);
+
+		};
 	}
 
 	private IEnumerator Loading()
