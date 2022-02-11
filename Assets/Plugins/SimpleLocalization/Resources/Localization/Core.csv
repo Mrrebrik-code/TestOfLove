@@ -4,50 +4,57 @@ core_002,"Чтобы начать сканирование, нажмите на 
 core_003,"Отлично! Теперь держите до тех пор, пока сканеры не соберут данные! ",Fine! Now keep until the scanners are collected!,İyi! Şimdi tarayıcılar toplanana kadar devam edin!
 core_004,"Произошел сбой! Вероятнее всего кото-то убрал палец со сканера! Но ничего страшного, вы можете попробовать еще раз!","There has been a breakdown! Most likely, I could remove the finger from the scanner! But nothing terrible, you can try again!","Bir arıza oldu! Büyük olasılıkla, parmağını tarayıcıdan kaldırabilirim! Ama korkunç bir şey yok, tekrar deneyebilirsiniz!"
 core_005,"Очень хорошо! Сканеры успешно собрали данные. Вы можете убрать пальцы со сканеров. Сейчас некоторое время будет происходить анализ данных, для выявления вашей совместимости!","Very good! Scanners successfully collected data. You can remove your fingers from scanners. For some time, data analysis will occur, to identify your compatibility!","Çok iyi! Tarayıcılar başarıyla veri topladı. Parmaklarınızı tarayıcılardan çıkarabilirsiniz. Bir süredir, uyumluluğunuzu belirlemek için veri analizi gerçekleşecek!"
-core_006,,#VALUE!,#VALUE!
-core_007,,#VALUE!,#VALUE!
-core_008,,#VALUE!,#VALUE!
-core_009,,#VALUE!,#VALUE!
-core_010,,#VALUE!,#VALUE!
-core_011,,#VALUE!,#VALUE!
-core_012,,#VALUE!,#VALUE!
-core_013,,#VALUE!,#VALUE!
-core_014,,#VALUE!,#VALUE!
-core_015,,#VALUE!,#VALUE!
-core_016,,#VALUE!,#VALUE!
-core_017,,#VALUE!,#VALUE!
-core_018,,#VALUE!,#VALUE!
-core_019,,#VALUE!,#VALUE!
-core_020,,#VALUE!,#VALUE!
-core_021,,#VALUE!,#VALUE!
-core_022,,#VALUE!,#VALUE!
-core_023,,#VALUE!,#VALUE!
-core_024,,#VALUE!,#VALUE!
-core_025,,#VALUE!,#VALUE!
-core_026,,#VALUE!,#VALUE!
-core_027,,#VALUE!,#VALUE!
-core_028,,#VALUE!,#VALUE!
-core_029,,#VALUE!,#VALUE!
-,,#VALUE!,#VALUE!
-,,#VALUE!,#VALUE!
-,,#VALUE!,#VALUE!
-,,#VALUE!,#VALUE!
-,,#VALUE!,#VALUE!
-,,#VALUE!,#VALUE!
-,,#VALUE!,#VALUE!
-,,#VALUE!,#VALUE!
-,,#VALUE!,#VALUE!
-,,#VALUE!,#VALUE!
-,,#VALUE!,#VALUE!
-,,#VALUE!,#VALUE!
-,,#VALUE!,#VALUE!
-,,#VALUE!,#VALUE!
-,,#VALUE!,#VALUE!
-,,#VALUE!,#VALUE!
-,,#VALUE!,#VALUE!
-,,#VALUE!,#VALUE!
-,,#VALUE!,#VALUE!
-,,#VALUE!,#VALUE!
-,,#VALUE!,#VALUE!
-,,#VALUE!,#VALUE!
-,,#VALUE!,#VALUE!
+core_006,АВТОРИЗАЦИЯ,Authorization,yetki
+core_007,"Вам нужно пройти авторизацию в ире, через свой аккаунт Яндекс.Игры!","You need to pass authorization in Ira, through your Yandex.Game account!",Yandex.game hesabınız aracılığıyla IRA'da yetkilendirmeyi geçmeniz gerekir!
+core_008,(Это нужно для соревновательной таблицы и сохранений прогресса),(This is necessary for the competitive table and preservation of progress),"(Bu, rekabetçi masa ve ilerlemenin korunması için gereklidir)"
+core_009,ВОЙТИ,LOGIN,GİRİŞ YAPMAK
+core_010,Загрузка,loading,Yükleniyor
+core_011,ТЕСТ НА ЛЮБОВЬ,Test Love,Aşk Test
+core_012,Itibsoft | Тест на любовь v0.2.23 (2022г),Itibsoft | Love Test V0.2.23 (2022g),İtibsoft | Aşk Testi V0.2.23 (2022g)
+core_013,Доступно,Available,Mevcut
+core_014,Взаимно?,Mutually?,Karşılıklı?
+core_015,На доверие,On trust,Güvenmek
+core_016,На дружбу,For friendship,Arkadaşlık için
+core_017,На любовь,On love,Sevgi üzerine
+core_018,Завершено,Completed,Tamamlanmış
+core_019,Ценности,Values,Değerler
+core_020,Совместимость имен,Compatibility of names,İsimlerin Uyumluluğu
+core_021,Закрыто,Closed,Kapalı
+core_022,Сканер притяжения,Scanner attraction,Tarayıcı cazibe
+core_023,А помнишь лето?,Do you remember the summer?,Yaz'ı hatırlıyor musun?
+core_024,ПРОМО,Promo,Promo
+core_025,Музыка:,Music:,Müzik:
+core_026,Звуки:,Sounds:,Sesler:
+core_027,Эффекты:,Effects:,Etkileri:
+core_028,Турецкий,Turkish,Türkçe
+core_029,Английский,English,ingilizce
+core_030,Русский,Russian,Rusça
+core_031,АУДИО,AUDIO,SES
+core_032,ЯЗЫКИ,LANGUAGES,DİLLER
+core_033,Настройки,Settings,Ayarlar
+core_034,Вы можете поиграть в другие наши игры!,You can play our other games!,Diğer oyunlarımızı oynayabilirsiniz!
+core_035,Совершите нажатие ПО ЭКРАНУ ДЛЯ ПЕРЕХОДА НА ДРУГУЮ ВКЛАДКУ С НАШЕЙ ИГРОЙ!,Press the screen to go to another tab with our game!,Oyununumuzla başka bir sekmeye gitmek için ekrana basın!
+core_036,Введите промокод...,Enter the promotional ...,Promosyonu girin ...
+core_037,Как получить промокод?,How to get a promotion?,Bir promosyon nasıl yapılır?
+core_038,АКТИВИРОВАТЬ,ACTIVATE,Aktif hale getirmek
+core_039,ОЦЕНИТЬ,ESTIMATE,TAHMİN ETMEK
+core_040,Покупайте сердечки за яны!,Buy hearts for Yana!,Yana için kalpler satın alın!
+core_041,"Любая покупка, открывает все режимы!","Any purchase, opens all modes!","Herhangi bir satın alma, tüm modları açar!"
+core_042,ЛИДЕРЫ:,Leaders:,Liderler:
+core_043,Ежедневный бонус,Daily bonus,Günlük bonus
+core_044,День,Day,Gün
+core_045,события,events,Etkinlikler
+core_046,Вы хотите открыть данный режим?,Do you want to open this mode?,Bu modu açmak ister misiniz?
+core_047,ОТКРЫТЬ,OPEN,AÇIK
+core_048,ПОЗЖЕ,LATER,SONRA
+core_049,Я + ТЫ,I + you,Ben + sen
+core_050,Настя,Nastya,Nastya
+core_051,Саша,Sasha,Sasha
+core_052,требуется,Required,Gerekli
+core_053,Назад,Back,Geri
+core_054,до получения награды!,Before receiving award!,Ödül almadan önce!
+core_055,Забрать награду,Claim your reward,Ödülünüzü alın
+core_056,Хотите оценить нашу игру?,Want to evaluate our game?,Oyunu değerlendirmek ister misiniz?
+core_057,Это поможет нам улучшить игру!,It will help us improve the game!,Oyunu geliştirmemize yardımcı olacak!
+core_058,Вы уже оценили игру!,You have already rated the game!,Oyunu zaten değerlendirdin!
+core_059,Спасибо вам за это :),Thank you for that :),Bunun için teşekkür ederim :)

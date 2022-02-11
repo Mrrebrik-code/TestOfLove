@@ -110,7 +110,8 @@ public class DailyBonusManager : SingletonMono<DailyBonusManager>
 	{
 		if (_isTakeReward)
 		{
-			_timerDayToButton.SetButtonStatus("Забрать награду", true);
+			Debug.Log(11111);
+			_timerDayToButton.SetButtonStatus("core_055", true);
 			if(_isNotification == false)
 			{
 				_isNotification = true;
@@ -125,7 +126,7 @@ public class DailyBonusManager : SingletonMono<DailyBonusManager>
 
 			string time = $"{currentTakeCooldown.Hours:D2}:{currentTakeCooldown.Minutes:D2}:{currentTakeCooldown.Seconds:D2}";
 
-			_timerDayToButton.SetButtonStatus($"{time} - до получения награды!", false);
+			_timerDayToButton.SetButtonStatus($"{time} - {Localization.Instance.Localize("core_054")}", false);
 
 		}
 	}

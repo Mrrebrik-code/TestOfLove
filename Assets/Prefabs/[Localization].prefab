@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsDontDestroyOnLoad: 1
-  Language: 0
+  _language: 0
   LocalizationList:
   - ID: "\u04414_001"
     Groups:
@@ -450,147 +450,348 @@ MonoBehaviour:
       MASSA: 
   - ID: core_006
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u0410\u0412\u0422\u041E\u0420\u0418\u0417\u0410\u0426\u0418\u042F"
+      EN: Authorization
+      TR: yetki
       MASSA: 
   - ID: core_007
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u0412\u0430\u043C \u043D\u0443\u0436\u043D\u043E \u043F\u0440\u043E\u0439\u0442\u0438
+        \u0430\u0432\u0442\u043E\u0440\u0438\u0437\u0430\u0446\u0438\u044E \u0432
+        \u0438\u0440\u0435, \u0447\u0435\u0440\u0435\u0437 \u0441\u0432\u043E\u0439
+        \u0430\u043A\u043A\u0430\u0443\u043D\u0442 \u042F\u043D\u0434\u0435\u043A\u0441.\u0418\u0433\u0440\u044B!"
+      EN: You need to pass authorization in Ira, through your Yandex.Game account!
+      TR: "Yandex.game hesab\u0131n\u0131z arac\u0131l\u0131\u011F\u0131yla IRA'da
+        yetkilendirmeyi ge\xE7meniz gerekir!"
       MASSA: 
   - ID: core_008
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "(\u042D\u0442\u043E \u043D\u0443\u0436\u043D\u043E \u0434\u043B\u044F
+        \u0441\u043E\u0440\u0435\u0432\u043D\u043E\u0432\u0430\u0442\u0435\u043B\u044C\u043D\u043E\u0439
+        \u0442\u0430\u0431\u043B\u0438\u0446\u044B \u0438 \u0441\u043E\u0445\u0440\u0430\u043D\u0435\u043D\u0438\u0439
+        \u043F\u0440\u043E\u0433\u0440\u0435\u0441\u0441\u0430)"
+      EN: (This is necessary for the competitive table and preservation of progress)
+      TR: "(Bu, rekabet\xE7i masa ve ilerlemenin korunmas\u0131 i\xE7in gereklidir)"
       MASSA: 
   - ID: core_009
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u0412\u041E\u0419\u0422\u0418"
+      EN: LOGIN
+      TR: "G\u0130R\u0130\u015E YAPMAK"
       MASSA: 
   - ID: core_010
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u0417\u0430\u0433\u0440\u0443\u0437\u043A\u0430"
+      EN: loading
+      TR: "Y\xFCkleniyor"
       MASSA: 
   - ID: core_011
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u0422\u0415\u0421\u0422 \u041D\u0410 \u041B\u042E\u0411\u041E\u0412\u042C"
+      EN: Test Love
+      TR: "A\u015Fk Test"
       MASSA: 
   - ID: core_012
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "Itibsoft | \u0422\u0435\u0441\u0442 \u043D\u0430 \u043B\u044E\u0431\u043E\u0432\u044C
+        v0.2.23 (2022\u0433)"
+      EN: Itibsoft | Love Test V0.2.23 (2022g)
+      TR: "\u0130tibsoft | A\u015Fk Testi V0.2.23 (2022g)"
       MASSA: 
   - ID: core_013
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u0414\u043E\u0441\u0442\u0443\u043F\u043D\u043E"
+      EN: Available
+      TR: Mevcut
       MASSA: 
   - ID: core_014
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u0412\u0437\u0430\u0438\u043C\u043D\u043E?"
+      EN: Mutually?
+      TR: "Kar\u015F\u0131l\u0131kl\u0131?"
       MASSA: 
   - ID: core_015
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u041D\u0430 \u0434\u043E\u0432\u0435\u0440\u0438\u0435"
+      EN: On trust
+      TR: "G\xFCvenmek"
       MASSA: 
   - ID: core_016
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u041D\u0430 \u0434\u0440\u0443\u0436\u0431\u0443"
+      EN: For friendship
+      TR: "Arkada\u015Fl\u0131k i\xE7in"
       MASSA: 
   - ID: core_017
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u041D\u0430 \u043B\u044E\u0431\u043E\u0432\u044C"
+      EN: On love
+      TR: "Sevgi \xFCzerine"
       MASSA: 
   - ID: core_018
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u0417\u0430\u0432\u0435\u0440\u0448\u0435\u043D\u043E"
+      EN: Completed
+      TR: "Tamamlanm\u0131\u015F"
       MASSA: 
   - ID: core_019
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u0426\u0435\u043D\u043D\u043E\u0441\u0442\u0438"
+      EN: Values
+      TR: "De\u011Ferler"
       MASSA: 
   - ID: core_020
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u0421\u043E\u0432\u043C\u0435\u0441\u0442\u0438\u043C\u043E\u0441\u0442\u044C
+        \u0438\u043C\u0435\u043D"
+      EN: Compatibility of names
+      TR: "\u0130simlerin Uyumlulu\u011Fu"
       MASSA: 
   - ID: core_021
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u0417\u0430\u043A\u0440\u044B\u0442\u043E"
+      EN: Closed
+      TR: "Kapal\u0131"
       MASSA: 
   - ID: core_022
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u0421\u043A\u0430\u043D\u0435\u0440 \u043F\u0440\u0438\u0442\u044F\u0436\u0435\u043D\u0438\u044F"
+      EN: Scanner attraction
+      TR: "Taray\u0131c\u0131 cazibe"
       MASSA: 
   - ID: core_023
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u0410 \u043F\u043E\u043C\u043D\u0438\u0448\u044C \u043B\u0435\u0442\u043E?"
+      EN: Do you remember the summer?
+      TR: "Yaz'\u0131 hat\u0131rl\u0131yor musun?"
       MASSA: 
   - ID: core_024
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u041F\u0420\u041E\u041C\u041E"
+      EN: Promo
+      TR: Promo
       MASSA: 
   - ID: core_025
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u041C\u0443\u0437\u044B\u043A\u0430:"
+      EN: 'Music:'
+      TR: "M\xFCzik:"
       MASSA: 
   - ID: core_026
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u0417\u0432\u0443\u043A\u0438:"
+      EN: 'Sounds:'
+      TR: 'Sesler:'
       MASSA: 
   - ID: core_027
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u042D\u0444\u0444\u0435\u043A\u0442\u044B:"
+      EN: 'Effects:'
+      TR: 'Etkileri:'
       MASSA: 
   - ID: core_028
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u0422\u0443\u0440\u0435\u0446\u043A\u0438\u0439"
+      EN: Turkish
+      TR: "T\xFCrk\xE7e"
       MASSA: 
   - ID: core_029
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u0410\u043D\u0433\u043B\u0438\u0439\u0441\u043A\u0438\u0439"
+      EN: English
+      TR: ingilizce
+      MASSA: 
+  - ID: core_030
+    Groups:
+      RU: "\u0420\u0443\u0441\u0441\u043A\u0438\u0439"
+      EN: Russian
+      TR: "Rus\xE7a"
+      MASSA: 
+  - ID: core_031
+    Groups:
+      RU: "\u0410\u0423\u0414\u0418\u041E"
+      EN: AUDIO
+      TR: SES
+      MASSA: 
+  - ID: core_032
+    Groups:
+      RU: "\u042F\u0417\u042B\u041A\u0418"
+      EN: LANGUAGES
+      TR: "D\u0130LLER"
+      MASSA: 
+  - ID: core_033
+    Groups:
+      RU: "\u041D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438"
+      EN: Settings
+      TR: Ayarlar
+      MASSA: 
+  - ID: core_034
+    Groups:
+      RU: "\u0412\u044B \u043C\u043E\u0436\u0435\u0442\u0435 \u043F\u043E\u0438\u0433\u0440\u0430\u0442\u044C
+        \u0432 \u0434\u0440\u0443\u0433\u0438\u0435 \u043D\u0430\u0448\u0438 \u0438\u0433\u0440\u044B!"
+      EN: You can play our other games!
+      TR: "Di\u011Fer oyunlar\u0131m\u0131z\u0131 oynayabilirsiniz!"
+      MASSA: 
+  - ID: core_035
+    Groups:
+      RU: "\u0421\u043E\u0432\u0435\u0440\u0448\u0438\u0442\u0435 \u043D\u0430\u0436\u0430\u0442\u0438\u0435
+        \u041F\u041E \u042D\u041A\u0420\u0410\u041D\u0423 \u0414\u041B\u042F \u041F\u0415\u0420\u0415\u0425\u041E\u0414\u0410
+        \u041D\u0410 \u0414\u0420\u0423\u0413\u0423\u042E \u0412\u041A\u041B\u0410\u0414\u041A\u0423
+        \u0421 \u041D\u0410\u0428\u0415\u0419 \u0418\u0413\u0420\u041E\u0419!"
+      EN: Press the screen to go to another tab with our game!
+      TR: "Oyununumuzla ba\u015Fka bir sekmeye gitmek i\xE7in ekrana bas\u0131n!"
+      MASSA: 
+  - ID: core_036
+    Groups:
+      RU: "\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u043F\u0440\u043E\u043C\u043E\u043A\u043E\u0434..."
+      EN: Enter the promotional ...
+      TR: Promosyonu girin ...
+      MASSA: 
+  - ID: core_037
+    Groups:
+      RU: "\u041A\u0430\u043A \u043F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u043F\u0440\u043E\u043C\u043E\u043A\u043E\u0434?"
+      EN: How to get a promotion?
+      TR: "Bir promosyon nas\u0131l yap\u0131l\u0131r?"
+      MASSA: 
+  - ID: core_038
+    Groups:
+      RU: "\u0410\u041A\u0422\u0418\u0412\u0418\u0420\u041E\u0412\u0410\u0422\u042C"
+      EN: ACTIVATE
+      TR: Aktif hale getirmek
+      MASSA: 
+  - ID: core_039
+    Groups:
+      RU: "\u041E\u0426\u0415\u041D\u0418\u0422\u042C"
+      EN: ESTIMATE
+      TR: "TAHM\u0130N ETMEK"
+      MASSA: 
+  - ID: core_040
+    Groups:
+      RU: "\u041F\u043E\u043A\u0443\u043F\u0430\u0439\u0442\u0435 \u0441\u0435\u0440\u0434\u0435\u0447\u043A\u0438
+        \u0437\u0430 \u044F\u043D\u044B!"
+      EN: Buy hearts for Yana!
+      TR: "Yana i\xE7in kalpler sat\u0131n al\u0131n!"
+      MASSA: 
+  - ID: core_041
+    Groups:
+      RU: "\u041B\u044E\u0431\u0430\u044F \u043F\u043E\u043A\u0443\u043F\u043A\u0430,
+        \u043E\u0442\u043A\u0440\u044B\u0432\u0430\u0435\u0442 \u0432\u0441\u0435
+        \u0440\u0435\u0436\u0438\u043C\u044B!"
+      EN: Any purchase, opens all modes!
+      TR: "Herhangi bir sat\u0131n alma, t\xFCm modlar\u0131 a\xE7ar!"
+      MASSA: 
+  - ID: core_042
+    Groups:
+      RU: "\u041B\u0418\u0414\u0415\u0420\u042B:"
+      EN: 'Leaders:'
+      TR: 'Liderler:'
+      MASSA: 
+  - ID: core_043
+    Groups:
+      RU: "\u0415\u0436\u0435\u0434\u043D\u0435\u0432\u043D\u044B\u0439 \u0431\u043E\u043D\u0443\u0441"
+      EN: Daily bonus
+      TR: "G\xFCnl\xFCk bonus"
+      MASSA: 
+  - ID: core_044
+    Groups:
+      RU: "\u0414\u0435\u043D\u044C"
+      EN: Day
+      TR: "G\xFCn"
+      MASSA: 
+  - ID: core_045
+    Groups:
+      RU: "\u0441\u043E\u0431\u044B\u0442\u0438\u044F"
+      EN: events
+      TR: Etkinlikler
+      MASSA: 
+  - ID: core_046
+    Groups:
+      RU: "\u0412\u044B \u0445\u043E\u0442\u0438\u0442\u0435 \u043E\u0442\u043A\u0440\u044B\u0442\u044C
+        \u0434\u0430\u043D\u043D\u044B\u0439 \u0440\u0435\u0436\u0438\u043C?"
+      EN: Do you want to open this mode?
+      TR: "Bu modu a\xE7mak ister misiniz?"
+      MASSA: 
+  - ID: core_047
+    Groups:
+      RU: "\u041E\u0422\u041A\u0420\u042B\u0422\u042C"
+      EN: OPEN
+      TR: "A\xC7IK"
+      MASSA: 
+  - ID: core_048
+    Groups:
+      RU: "\u041F\u041E\u0417\u0416\u0415"
+      EN: LATER
+      TR: SONRA
+      MASSA: 
+  - ID: core_049
+    Groups:
+      RU: "\u042F + \u0422\u042B"
+      EN: I + you
+      TR: Ben + sen
+      MASSA: 
+  - ID: core_050
+    Groups:
+      RU: "\u041D\u0430\u0441\u0442\u044F"
+      EN: Nastya
+      TR: Nastya
+      MASSA: 
+  - ID: core_051
+    Groups:
+      RU: "\u0421\u0430\u0448\u0430"
+      EN: Sasha
+      TR: Sasha
+      MASSA: 
+  - ID: core_052
+    Groups:
+      RU: "\u0442\u0440\u0435\u0431\u0443\u0435\u0442\u0441\u044F"
+      EN: Required
+      TR: Gerekli
+      MASSA: 
+  - ID: core_053
+    Groups:
+      RU: "\u041D\u0430\u0437\u0430\u0434"
+      EN: Back
+      TR: Geri
+      MASSA: 
+  - ID: core_054
+    Groups:
+      RU: "\u0434\u043E \u043F\u043E\u043B\u0443\u0447\u0435\u043D\u0438\u044F \u043D\u0430\u0433\u0440\u0430\u0434\u044B!"
+      EN: Before receiving award!
+      TR: "\xD6d\xFCl almadan \xF6nce!"
+      MASSA: 
+  - ID: core_055
+    Groups:
+      RU: "\u0417\u0430\u0431\u0440\u0430\u0442\u044C \u043D\u0430\u0433\u0440\u0430\u0434\u0443"
+      EN: Claim your reward
+      TR: "\xD6d\xFCl\xFCn\xFCz\xFC al\u0131n"
+      MASSA: 
+  - ID: core_056
+    Groups:
+      RU: "\u0425\u043E\u0442\u0438\u0442\u0435 \u043E\u0446\u0435\u043D\u0438\u0442\u044C
+        \u043D\u0430\u0448\u0443 \u0438\u0433\u0440\u0443?"
+      EN: Want to evaluate our game?
+      TR: "Oyunu de\u011Ferlendirmek ister misiniz?"
+      MASSA: 
+  - ID: core_057
+    Groups:
+      RU: "\u042D\u0442\u043E \u043F\u043E\u043C\u043E\u0436\u0435\u0442 \u043D\u0430\u043C
+        \u0443\u043B\u0443\u0447\u0448\u0438\u0442\u044C \u0438\u0433\u0440\u0443!"
+      EN: It will help us improve the game!
+      TR: "Oyunu geli\u015Ftirmemize yard\u0131mc\u0131 olacak!"
+      MASSA: 
+  - ID: core_058
+    Groups:
+      RU: "\u0412\u044B \u0443\u0436\u0435 \u043E\u0446\u0435\u043D\u0438\u043B\u0438
+        \u0438\u0433\u0440\u0443!"
+      EN: You have already rated the game!
+      TR: "Oyunu zaten de\u011Ferlendirdin!"
+      MASSA: 
+  - ID: core_059
+    Groups:
+      RU: "\u0421\u043F\u0430\u0441\u0438\u0431\u043E \u0432\u0430\u043C \u0437\u0430
+        \u044D\u0442\u043E :)"
+      EN: Thank you for that :)
+      TR: "Bunun i\xE7in te\u015Fekk\xFCr ederim :)"
       MASSA: 
   - ID: "\u04415_001"
     Groups:
@@ -4025,7 +4226,7 @@ MonoBehaviour:
         \u041A\u0430\u043A\u0430\u044F \u0443 \u043D\u0435\u0433\u043E \u0440\u0435\u0430\u043A\u0446\u0438\u044F
         \u043D\u0430 \u0442\u0435\u0431\u044F?"
       EN: You walk along the corridor with a girlfriend. See him, you ask for a girlfriend
-        to look at him. She looks at his reaction in your presence. What is his reaction
+        to look at it. She looks at his reaction in your presence. What is his reaction
         to you?
       TR: "Koridor boyunca bir k\u0131z arkada\u015F\u0131yla y\xFCr\xFCrs\xFCn.
         Onu g\xF6r, bir k\u0131z arkada\u015F\u0131n\u0131n buna bakmas\u0131n\u0131
@@ -5802,147 +6003,348 @@ MonoBehaviour:
       MASSA: 
   - ID: core_006
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u0410\u0412\u0422\u041E\u0420\u0418\u0417\u0410\u0426\u0418\u042F"
+      EN: Authorization
+      TR: yetki
       MASSA: 
   - ID: core_007
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u0412\u0430\u043C \u043D\u0443\u0436\u043D\u043E \u043F\u0440\u043E\u0439\u0442\u0438
+        \u0430\u0432\u0442\u043E\u0440\u0438\u0437\u0430\u0446\u0438\u044E \u0432
+        \u0438\u0440\u0435, \u0447\u0435\u0440\u0435\u0437 \u0441\u0432\u043E\u0439
+        \u0430\u043A\u043A\u0430\u0443\u043D\u0442 \u042F\u043D\u0434\u0435\u043A\u0441.\u0418\u0433\u0440\u044B!"
+      EN: You need to pass authorization in Ira, through your Yandex.Game account!
+      TR: "Yandex.game hesab\u0131n\u0131z arac\u0131l\u0131\u011F\u0131yla IRA'da
+        yetkilendirmeyi ge\xE7meniz gerekir!"
       MASSA: 
   - ID: core_008
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "(\u042D\u0442\u043E \u043D\u0443\u0436\u043D\u043E \u0434\u043B\u044F
+        \u0441\u043E\u0440\u0435\u0432\u043D\u043E\u0432\u0430\u0442\u0435\u043B\u044C\u043D\u043E\u0439
+        \u0442\u0430\u0431\u043B\u0438\u0446\u044B \u0438 \u0441\u043E\u0445\u0440\u0430\u043D\u0435\u043D\u0438\u0439
+        \u043F\u0440\u043E\u0433\u0440\u0435\u0441\u0441\u0430)"
+      EN: (This is necessary for the competitive table and preservation of progress)
+      TR: "(Bu, rekabet\xE7i masa ve ilerlemenin korunmas\u0131 i\xE7in gereklidir)"
       MASSA: 
   - ID: core_009
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u0412\u041E\u0419\u0422\u0418"
+      EN: LOGIN
+      TR: "G\u0130R\u0130\u015E YAPMAK"
       MASSA: 
   - ID: core_010
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u0417\u0430\u0433\u0440\u0443\u0437\u043A\u0430"
+      EN: loading
+      TR: "Y\xFCkleniyor"
       MASSA: 
   - ID: core_011
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u0422\u0415\u0421\u0422 \u041D\u0410 \u041B\u042E\u0411\u041E\u0412\u042C"
+      EN: Test Love
+      TR: "A\u015Fk Test"
       MASSA: 
   - ID: core_012
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "Itibsoft | \u0422\u0435\u0441\u0442 \u043D\u0430 \u043B\u044E\u0431\u043E\u0432\u044C
+        v0.2.23 (2022\u0433)"
+      EN: Itibsoft | Love Test V0.2.23 (2022g)
+      TR: "\u0130tibsoft | A\u015Fk Testi V0.2.23 (2022g)"
       MASSA: 
   - ID: core_013
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u0414\u043E\u0441\u0442\u0443\u043F\u043D\u043E"
+      EN: Available
+      TR: Mevcut
       MASSA: 
   - ID: core_014
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u0412\u0437\u0430\u0438\u043C\u043D\u043E?"
+      EN: Mutually?
+      TR: "Kar\u015F\u0131l\u0131kl\u0131?"
       MASSA: 
   - ID: core_015
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u041D\u0430 \u0434\u043E\u0432\u0435\u0440\u0438\u0435"
+      EN: On trust
+      TR: "G\xFCvenmek"
       MASSA: 
   - ID: core_016
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u041D\u0430 \u0434\u0440\u0443\u0436\u0431\u0443"
+      EN: For friendship
+      TR: "Arkada\u015Fl\u0131k i\xE7in"
       MASSA: 
   - ID: core_017
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u041D\u0430 \u043B\u044E\u0431\u043E\u0432\u044C"
+      EN: On love
+      TR: "Sevgi \xFCzerine"
       MASSA: 
   - ID: core_018
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u0417\u0430\u0432\u0435\u0440\u0448\u0435\u043D\u043E"
+      EN: Completed
+      TR: "Tamamlanm\u0131\u015F"
       MASSA: 
   - ID: core_019
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u0426\u0435\u043D\u043D\u043E\u0441\u0442\u0438"
+      EN: Values
+      TR: "De\u011Ferler"
       MASSA: 
   - ID: core_020
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u0421\u043E\u0432\u043C\u0435\u0441\u0442\u0438\u043C\u043E\u0441\u0442\u044C
+        \u0438\u043C\u0435\u043D"
+      EN: Compatibility of names
+      TR: "\u0130simlerin Uyumlulu\u011Fu"
       MASSA: 
   - ID: core_021
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u0417\u0430\u043A\u0440\u044B\u0442\u043E"
+      EN: Closed
+      TR: "Kapal\u0131"
       MASSA: 
   - ID: core_022
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u0421\u043A\u0430\u043D\u0435\u0440 \u043F\u0440\u0438\u0442\u044F\u0436\u0435\u043D\u0438\u044F"
+      EN: Scanner attraction
+      TR: "Taray\u0131c\u0131 cazibe"
       MASSA: 
   - ID: core_023
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u0410 \u043F\u043E\u043C\u043D\u0438\u0448\u044C \u043B\u0435\u0442\u043E?"
+      EN: Do you remember the summer?
+      TR: "Yaz'\u0131 hat\u0131rl\u0131yor musun?"
       MASSA: 
   - ID: core_024
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u041F\u0420\u041E\u041C\u041E"
+      EN: Promo
+      TR: Promo
       MASSA: 
   - ID: core_025
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u041C\u0443\u0437\u044B\u043A\u0430:"
+      EN: 'Music:'
+      TR: "M\xFCzik:"
       MASSA: 
   - ID: core_026
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u0417\u0432\u0443\u043A\u0438:"
+      EN: 'Sounds:'
+      TR: 'Sesler:'
       MASSA: 
   - ID: core_027
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u042D\u0444\u0444\u0435\u043A\u0442\u044B:"
+      EN: 'Effects:'
+      TR: 'Etkileri:'
       MASSA: 
   - ID: core_028
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u0422\u0443\u0440\u0435\u0446\u043A\u0438\u0439"
+      EN: Turkish
+      TR: "T\xFCrk\xE7e"
       MASSA: 
   - ID: core_029
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u0410\u043D\u0433\u043B\u0438\u0439\u0441\u043A\u0438\u0439"
+      EN: English
+      TR: ingilizce
+      MASSA: 
+  - ID: core_030
+    Groups:
+      RU: "\u0420\u0443\u0441\u0441\u043A\u0438\u0439"
+      EN: Russian
+      TR: "Rus\xE7a"
+      MASSA: 
+  - ID: core_031
+    Groups:
+      RU: "\u0410\u0423\u0414\u0418\u041E"
+      EN: AUDIO
+      TR: SES
+      MASSA: 
+  - ID: core_032
+    Groups:
+      RU: "\u042F\u0417\u042B\u041A\u0418"
+      EN: LANGUAGES
+      TR: "D\u0130LLER"
+      MASSA: 
+  - ID: core_033
+    Groups:
+      RU: "\u041D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438"
+      EN: Settings
+      TR: Ayarlar
+      MASSA: 
+  - ID: core_034
+    Groups:
+      RU: "\u0412\u044B \u043C\u043E\u0436\u0435\u0442\u0435 \u043F\u043E\u0438\u0433\u0440\u0430\u0442\u044C
+        \u0432 \u0434\u0440\u0443\u0433\u0438\u0435 \u043D\u0430\u0448\u0438 \u0438\u0433\u0440\u044B!"
+      EN: You can play our other games!
+      TR: "Di\u011Fer oyunlar\u0131m\u0131z\u0131 oynayabilirsiniz!"
+      MASSA: 
+  - ID: core_035
+    Groups:
+      RU: "\u0421\u043E\u0432\u0435\u0440\u0448\u0438\u0442\u0435 \u043D\u0430\u0436\u0430\u0442\u0438\u0435
+        \u041F\u041E \u042D\u041A\u0420\u0410\u041D\u0423 \u0414\u041B\u042F \u041F\u0415\u0420\u0415\u0425\u041E\u0414\u0410
+        \u041D\u0410 \u0414\u0420\u0423\u0413\u0423\u042E \u0412\u041A\u041B\u0410\u0414\u041A\u0423
+        \u0421 \u041D\u0410\u0428\u0415\u0419 \u0418\u0413\u0420\u041E\u0419!"
+      EN: Press the screen to go to another tab with our game!
+      TR: "Oyununumuzla ba\u015Fka bir sekmeye gitmek i\xE7in ekrana bas\u0131n!"
+      MASSA: 
+  - ID: core_036
+    Groups:
+      RU: "\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u043F\u0440\u043E\u043C\u043E\u043A\u043E\u0434..."
+      EN: Enter the promotional ...
+      TR: Promosyonu girin ...
+      MASSA: 
+  - ID: core_037
+    Groups:
+      RU: "\u041A\u0430\u043A \u043F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u043F\u0440\u043E\u043C\u043E\u043A\u043E\u0434?"
+      EN: How to get a promotion?
+      TR: "Bir promosyon nas\u0131l yap\u0131l\u0131r?"
+      MASSA: 
+  - ID: core_038
+    Groups:
+      RU: "\u0410\u041A\u0422\u0418\u0412\u0418\u0420\u041E\u0412\u0410\u0422\u042C"
+      EN: ACTIVATE
+      TR: Aktif hale getirmek
+      MASSA: 
+  - ID: core_039
+    Groups:
+      RU: "\u041E\u0426\u0415\u041D\u0418\u0422\u042C"
+      EN: ESTIMATE
+      TR: "TAHM\u0130N ETMEK"
+      MASSA: 
+  - ID: core_040
+    Groups:
+      RU: "\u041F\u043E\u043A\u0443\u043F\u0430\u0439\u0442\u0435 \u0441\u0435\u0440\u0434\u0435\u0447\u043A\u0438
+        \u0437\u0430 \u044F\u043D\u044B!"
+      EN: Buy hearts for Yana!
+      TR: "Yana i\xE7in kalpler sat\u0131n al\u0131n!"
+      MASSA: 
+  - ID: core_041
+    Groups:
+      RU: "\u041B\u044E\u0431\u0430\u044F \u043F\u043E\u043A\u0443\u043F\u043A\u0430,
+        \u043E\u0442\u043A\u0440\u044B\u0432\u0430\u0435\u0442 \u0432\u0441\u0435
+        \u0440\u0435\u0436\u0438\u043C\u044B!"
+      EN: Any purchase, opens all modes!
+      TR: "Herhangi bir sat\u0131n alma, t\xFCm modlar\u0131 a\xE7ar!"
+      MASSA: 
+  - ID: core_042
+    Groups:
+      RU: "\u041B\u0418\u0414\u0415\u0420\u042B:"
+      EN: 'Leaders:'
+      TR: 'Liderler:'
+      MASSA: 
+  - ID: core_043
+    Groups:
+      RU: "\u0415\u0436\u0435\u0434\u043D\u0435\u0432\u043D\u044B\u0439 \u0431\u043E\u043D\u0443\u0441"
+      EN: Daily bonus
+      TR: "G\xFCnl\xFCk bonus"
+      MASSA: 
+  - ID: core_044
+    Groups:
+      RU: "\u0414\u0435\u043D\u044C"
+      EN: Day
+      TR: "G\xFCn"
+      MASSA: 
+  - ID: core_045
+    Groups:
+      RU: "\u0441\u043E\u0431\u044B\u0442\u0438\u044F"
+      EN: events
+      TR: Etkinlikler
+      MASSA: 
+  - ID: core_046
+    Groups:
+      RU: "\u0412\u044B \u0445\u043E\u0442\u0438\u0442\u0435 \u043E\u0442\u043A\u0440\u044B\u0442\u044C
+        \u0434\u0430\u043D\u043D\u044B\u0439 \u0440\u0435\u0436\u0438\u043C?"
+      EN: Do you want to open this mode?
+      TR: "Bu modu a\xE7mak ister misiniz?"
+      MASSA: 
+  - ID: core_047
+    Groups:
+      RU: "\u041E\u0422\u041A\u0420\u042B\u0422\u042C"
+      EN: OPEN
+      TR: "A\xC7IK"
+      MASSA: 
+  - ID: core_048
+    Groups:
+      RU: "\u041F\u041E\u0417\u0416\u0415"
+      EN: LATER
+      TR: SONRA
+      MASSA: 
+  - ID: core_049
+    Groups:
+      RU: "\u042F + \u0422\u042B"
+      EN: I + you
+      TR: Ben + sen
+      MASSA: 
+  - ID: core_050
+    Groups:
+      RU: "\u041D\u0430\u0441\u0442\u044F"
+      EN: Nastya
+      TR: Nastya
+      MASSA: 
+  - ID: core_051
+    Groups:
+      RU: "\u0421\u0430\u0448\u0430"
+      EN: Sasha
+      TR: Sasha
+      MASSA: 
+  - ID: core_052
+    Groups:
+      RU: "\u0442\u0440\u0435\u0431\u0443\u0435\u0442\u0441\u044F"
+      EN: Required
+      TR: Gerekli
+      MASSA: 
+  - ID: core_053
+    Groups:
+      RU: "\u041D\u0430\u0437\u0430\u0434"
+      EN: Back
+      TR: Geri
+      MASSA: 
+  - ID: core_054
+    Groups:
+      RU: "\u0434\u043E \u043F\u043E\u043B\u0443\u0447\u0435\u043D\u0438\u044F \u043D\u0430\u0433\u0440\u0430\u0434\u044B!"
+      EN: Before receiving award!
+      TR: "\xD6d\xFCl almadan \xF6nce!"
+      MASSA: 
+  - ID: core_055
+    Groups:
+      RU: "\u0417\u0430\u0431\u0440\u0430\u0442\u044C \u043D\u0430\u0433\u0440\u0430\u0434\u0443"
+      EN: Claim your reward
+      TR: "\xD6d\xFCl\xFCn\xFCz\xFC al\u0131n"
+      MASSA: 
+  - ID: core_056
+    Groups:
+      RU: "\u0425\u043E\u0442\u0438\u0442\u0435 \u043E\u0446\u0435\u043D\u0438\u0442\u044C
+        \u043D\u0430\u0448\u0443 \u0438\u0433\u0440\u0443?"
+      EN: Want to evaluate our game?
+      TR: "Oyunu de\u011Ferlendirmek ister misiniz?"
+      MASSA: 
+  - ID: core_057
+    Groups:
+      RU: "\u042D\u0442\u043E \u043F\u043E\u043C\u043E\u0436\u0435\u0442 \u043D\u0430\u043C
+        \u0443\u043B\u0443\u0447\u0448\u0438\u0442\u044C \u0438\u0433\u0440\u0443!"
+      EN: It will help us improve the game!
+      TR: "Oyunu geli\u015Ftirmemize yard\u0131mc\u0131 olacak!"
+      MASSA: 
+  - ID: core_058
+    Groups:
+      RU: "\u0412\u044B \u0443\u0436\u0435 \u043E\u0446\u0435\u043D\u0438\u043B\u0438
+        \u0438\u0433\u0440\u0443!"
+      EN: You have already rated the game!
+      TR: "Oyunu zaten de\u011Ferlendirdin!"
+      MASSA: 
+  - ID: core_059
+    Groups:
+      RU: "\u0421\u043F\u0430\u0441\u0438\u0431\u043E \u0432\u0430\u043C \u0437\u0430
+        \u044D\u0442\u043E :)"
+      EN: Thank you for that :)
+      TR: "Bunun i\xE7in te\u015Fekk\xFCr ederim :)"
       MASSA: 
   - ID: "\u04415_001"
     Groups:
@@ -9377,7 +9779,7 @@ MonoBehaviour:
         \u041A\u0430\u043A\u0430\u044F \u0443 \u043D\u0435\u0433\u043E \u0440\u0435\u0430\u043A\u0446\u0438\u044F
         \u043D\u0430 \u0442\u0435\u0431\u044F?"
       EN: You walk along the corridor with a girlfriend. See him, you ask for a girlfriend
-        to look at him. She looks at his reaction in your presence. What is his reaction
+        to look at it. She looks at his reaction in your presence. What is his reaction
         to you?
       TR: "Koridor boyunca bir k\u0131z arkada\u015F\u0131yla y\xFCr\xFCrs\xFCn.
         Onu g\xF6r, bir k\u0131z arkada\u015F\u0131n\u0131n buna bakmas\u0131n\u0131
@@ -11154,147 +11556,348 @@ MonoBehaviour:
       MASSA: 
   - ID: core_006
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u0410\u0412\u0422\u041E\u0420\u0418\u0417\u0410\u0426\u0418\u042F"
+      EN: Authorization
+      TR: yetki
       MASSA: 
   - ID: core_007
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u0412\u0430\u043C \u043D\u0443\u0436\u043D\u043E \u043F\u0440\u043E\u0439\u0442\u0438
+        \u0430\u0432\u0442\u043E\u0440\u0438\u0437\u0430\u0446\u0438\u044E \u0432
+        \u0438\u0440\u0435, \u0447\u0435\u0440\u0435\u0437 \u0441\u0432\u043E\u0439
+        \u0430\u043A\u043A\u0430\u0443\u043D\u0442 \u042F\u043D\u0434\u0435\u043A\u0441.\u0418\u0433\u0440\u044B!"
+      EN: You need to pass authorization in Ira, through your Yandex.Game account!
+      TR: "Yandex.game hesab\u0131n\u0131z arac\u0131l\u0131\u011F\u0131yla IRA'da
+        yetkilendirmeyi ge\xE7meniz gerekir!"
       MASSA: 
   - ID: core_008
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "(\u042D\u0442\u043E \u043D\u0443\u0436\u043D\u043E \u0434\u043B\u044F
+        \u0441\u043E\u0440\u0435\u0432\u043D\u043E\u0432\u0430\u0442\u0435\u043B\u044C\u043D\u043E\u0439
+        \u0442\u0430\u0431\u043B\u0438\u0446\u044B \u0438 \u0441\u043E\u0445\u0440\u0430\u043D\u0435\u043D\u0438\u0439
+        \u043F\u0440\u043E\u0433\u0440\u0435\u0441\u0441\u0430)"
+      EN: (This is necessary for the competitive table and preservation of progress)
+      TR: "(Bu, rekabet\xE7i masa ve ilerlemenin korunmas\u0131 i\xE7in gereklidir)"
       MASSA: 
   - ID: core_009
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u0412\u041E\u0419\u0422\u0418"
+      EN: LOGIN
+      TR: "G\u0130R\u0130\u015E YAPMAK"
       MASSA: 
   - ID: core_010
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u0417\u0430\u0433\u0440\u0443\u0437\u043A\u0430"
+      EN: loading
+      TR: "Y\xFCkleniyor"
       MASSA: 
   - ID: core_011
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u0422\u0415\u0421\u0422 \u041D\u0410 \u041B\u042E\u0411\u041E\u0412\u042C"
+      EN: Test Love
+      TR: "A\u015Fk Test"
       MASSA: 
   - ID: core_012
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "Itibsoft | \u0422\u0435\u0441\u0442 \u043D\u0430 \u043B\u044E\u0431\u043E\u0432\u044C
+        v0.2.23 (2022\u0433)"
+      EN: Itibsoft | Love Test V0.2.23 (2022g)
+      TR: "\u0130tibsoft | A\u015Fk Testi V0.2.23 (2022g)"
       MASSA: 
   - ID: core_013
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u0414\u043E\u0441\u0442\u0443\u043F\u043D\u043E"
+      EN: Available
+      TR: Mevcut
       MASSA: 
   - ID: core_014
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u0412\u0437\u0430\u0438\u043C\u043D\u043E?"
+      EN: Mutually?
+      TR: "Kar\u015F\u0131l\u0131kl\u0131?"
       MASSA: 
   - ID: core_015
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u041D\u0430 \u0434\u043E\u0432\u0435\u0440\u0438\u0435"
+      EN: On trust
+      TR: "G\xFCvenmek"
       MASSA: 
   - ID: core_016
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u041D\u0430 \u0434\u0440\u0443\u0436\u0431\u0443"
+      EN: For friendship
+      TR: "Arkada\u015Fl\u0131k i\xE7in"
       MASSA: 
   - ID: core_017
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u041D\u0430 \u043B\u044E\u0431\u043E\u0432\u044C"
+      EN: On love
+      TR: "Sevgi \xFCzerine"
       MASSA: 
   - ID: core_018
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u0417\u0430\u0432\u0435\u0440\u0448\u0435\u043D\u043E"
+      EN: Completed
+      TR: "Tamamlanm\u0131\u015F"
       MASSA: 
   - ID: core_019
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u0426\u0435\u043D\u043D\u043E\u0441\u0442\u0438"
+      EN: Values
+      TR: "De\u011Ferler"
       MASSA: 
   - ID: core_020
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u0421\u043E\u0432\u043C\u0435\u0441\u0442\u0438\u043C\u043E\u0441\u0442\u044C
+        \u0438\u043C\u0435\u043D"
+      EN: Compatibility of names
+      TR: "\u0130simlerin Uyumlulu\u011Fu"
       MASSA: 
   - ID: core_021
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u0417\u0430\u043A\u0440\u044B\u0442\u043E"
+      EN: Closed
+      TR: "Kapal\u0131"
       MASSA: 
   - ID: core_022
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u0421\u043A\u0430\u043D\u0435\u0440 \u043F\u0440\u0438\u0442\u044F\u0436\u0435\u043D\u0438\u044F"
+      EN: Scanner attraction
+      TR: "Taray\u0131c\u0131 cazibe"
       MASSA: 
   - ID: core_023
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u0410 \u043F\u043E\u043C\u043D\u0438\u0448\u044C \u043B\u0435\u0442\u043E?"
+      EN: Do you remember the summer?
+      TR: "Yaz'\u0131 hat\u0131rl\u0131yor musun?"
       MASSA: 
   - ID: core_024
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u041F\u0420\u041E\u041C\u041E"
+      EN: Promo
+      TR: Promo
       MASSA: 
   - ID: core_025
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u041C\u0443\u0437\u044B\u043A\u0430:"
+      EN: 'Music:'
+      TR: "M\xFCzik:"
       MASSA: 
   - ID: core_026
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u0417\u0432\u0443\u043A\u0438:"
+      EN: 'Sounds:'
+      TR: 'Sesler:'
       MASSA: 
   - ID: core_027
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u042D\u0444\u0444\u0435\u043A\u0442\u044B:"
+      EN: 'Effects:'
+      TR: 'Etkileri:'
       MASSA: 
   - ID: core_028
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u0422\u0443\u0440\u0435\u0446\u043A\u0438\u0439"
+      EN: Turkish
+      TR: "T\xFCrk\xE7e"
       MASSA: 
   - ID: core_029
     Groups:
-      RU: 
-      EN: '#VALUE!'
-      TR: '#VALUE!'
+      RU: "\u0410\u043D\u0433\u043B\u0438\u0439\u0441\u043A\u0438\u0439"
+      EN: English
+      TR: ingilizce
+      MASSA: 
+  - ID: core_030
+    Groups:
+      RU: "\u0420\u0443\u0441\u0441\u043A\u0438\u0439"
+      EN: Russian
+      TR: "Rus\xE7a"
+      MASSA: 
+  - ID: core_031
+    Groups:
+      RU: "\u0410\u0423\u0414\u0418\u041E"
+      EN: AUDIO
+      TR: SES
+      MASSA: 
+  - ID: core_032
+    Groups:
+      RU: "\u042F\u0417\u042B\u041A\u0418"
+      EN: LANGUAGES
+      TR: "D\u0130LLER"
+      MASSA: 
+  - ID: core_033
+    Groups:
+      RU: "\u041D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438"
+      EN: Settings
+      TR: Ayarlar
+      MASSA: 
+  - ID: core_034
+    Groups:
+      RU: "\u0412\u044B \u043C\u043E\u0436\u0435\u0442\u0435 \u043F\u043E\u0438\u0433\u0440\u0430\u0442\u044C
+        \u0432 \u0434\u0440\u0443\u0433\u0438\u0435 \u043D\u0430\u0448\u0438 \u0438\u0433\u0440\u044B!"
+      EN: You can play our other games!
+      TR: "Di\u011Fer oyunlar\u0131m\u0131z\u0131 oynayabilirsiniz!"
+      MASSA: 
+  - ID: core_035
+    Groups:
+      RU: "\u0421\u043E\u0432\u0435\u0440\u0448\u0438\u0442\u0435 \u043D\u0430\u0436\u0430\u0442\u0438\u0435
+        \u041F\u041E \u042D\u041A\u0420\u0410\u041D\u0423 \u0414\u041B\u042F \u041F\u0415\u0420\u0415\u0425\u041E\u0414\u0410
+        \u041D\u0410 \u0414\u0420\u0423\u0413\u0423\u042E \u0412\u041A\u041B\u0410\u0414\u041A\u0423
+        \u0421 \u041D\u0410\u0428\u0415\u0419 \u0418\u0413\u0420\u041E\u0419!"
+      EN: Press the screen to go to another tab with our game!
+      TR: "Oyununumuzla ba\u015Fka bir sekmeye gitmek i\xE7in ekrana bas\u0131n!"
+      MASSA: 
+  - ID: core_036
+    Groups:
+      RU: "\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u043F\u0440\u043E\u043C\u043E\u043A\u043E\u0434..."
+      EN: Enter the promotional ...
+      TR: Promosyonu girin ...
+      MASSA: 
+  - ID: core_037
+    Groups:
+      RU: "\u041A\u0430\u043A \u043F\u043E\u043B\u0443\u0447\u0438\u0442\u044C \u043F\u0440\u043E\u043C\u043E\u043A\u043E\u0434?"
+      EN: How to get a promotion?
+      TR: "Bir promosyon nas\u0131l yap\u0131l\u0131r?"
+      MASSA: 
+  - ID: core_038
+    Groups:
+      RU: "\u0410\u041A\u0422\u0418\u0412\u0418\u0420\u041E\u0412\u0410\u0422\u042C"
+      EN: ACTIVATE
+      TR: Aktif hale getirmek
+      MASSA: 
+  - ID: core_039
+    Groups:
+      RU: "\u041E\u0426\u0415\u041D\u0418\u0422\u042C"
+      EN: ESTIMATE
+      TR: "TAHM\u0130N ETMEK"
+      MASSA: 
+  - ID: core_040
+    Groups:
+      RU: "\u041F\u043E\u043A\u0443\u043F\u0430\u0439\u0442\u0435 \u0441\u0435\u0440\u0434\u0435\u0447\u043A\u0438
+        \u0437\u0430 \u044F\u043D\u044B!"
+      EN: Buy hearts for Yana!
+      TR: "Yana i\xE7in kalpler sat\u0131n al\u0131n!"
+      MASSA: 
+  - ID: core_041
+    Groups:
+      RU: "\u041B\u044E\u0431\u0430\u044F \u043F\u043E\u043A\u0443\u043F\u043A\u0430,
+        \u043E\u0442\u043A\u0440\u044B\u0432\u0430\u0435\u0442 \u0432\u0441\u0435
+        \u0440\u0435\u0436\u0438\u043C\u044B!"
+      EN: Any purchase, opens all modes!
+      TR: "Herhangi bir sat\u0131n alma, t\xFCm modlar\u0131 a\xE7ar!"
+      MASSA: 
+  - ID: core_042
+    Groups:
+      RU: "\u041B\u0418\u0414\u0415\u0420\u042B:"
+      EN: 'Leaders:'
+      TR: 'Liderler:'
+      MASSA: 
+  - ID: core_043
+    Groups:
+      RU: "\u0415\u0436\u0435\u0434\u043D\u0435\u0432\u043D\u044B\u0439 \u0431\u043E\u043D\u0443\u0441"
+      EN: Daily bonus
+      TR: "G\xFCnl\xFCk bonus"
+      MASSA: 
+  - ID: core_044
+    Groups:
+      RU: "\u0414\u0435\u043D\u044C"
+      EN: Day
+      TR: "G\xFCn"
+      MASSA: 
+  - ID: core_045
+    Groups:
+      RU: "\u0441\u043E\u0431\u044B\u0442\u0438\u044F"
+      EN: events
+      TR: Etkinlikler
+      MASSA: 
+  - ID: core_046
+    Groups:
+      RU: "\u0412\u044B \u0445\u043E\u0442\u0438\u0442\u0435 \u043E\u0442\u043A\u0440\u044B\u0442\u044C
+        \u0434\u0430\u043D\u043D\u044B\u0439 \u0440\u0435\u0436\u0438\u043C?"
+      EN: Do you want to open this mode?
+      TR: "Bu modu a\xE7mak ister misiniz?"
+      MASSA: 
+  - ID: core_047
+    Groups:
+      RU: "\u041E\u0422\u041A\u0420\u042B\u0422\u042C"
+      EN: OPEN
+      TR: "A\xC7IK"
+      MASSA: 
+  - ID: core_048
+    Groups:
+      RU: "\u041F\u041E\u0417\u0416\u0415"
+      EN: LATER
+      TR: SONRA
+      MASSA: 
+  - ID: core_049
+    Groups:
+      RU: "\u042F + \u0422\u042B"
+      EN: I + you
+      TR: Ben + sen
+      MASSA: 
+  - ID: core_050
+    Groups:
+      RU: "\u041D\u0430\u0441\u0442\u044F"
+      EN: Nastya
+      TR: Nastya
+      MASSA: 
+  - ID: core_051
+    Groups:
+      RU: "\u0421\u0430\u0448\u0430"
+      EN: Sasha
+      TR: Sasha
+      MASSA: 
+  - ID: core_052
+    Groups:
+      RU: "\u0442\u0440\u0435\u0431\u0443\u0435\u0442\u0441\u044F"
+      EN: Required
+      TR: Gerekli
+      MASSA: 
+  - ID: core_053
+    Groups:
+      RU: "\u041D\u0430\u0437\u0430\u0434"
+      EN: Back
+      TR: Geri
+      MASSA: 
+  - ID: core_054
+    Groups:
+      RU: "\u0434\u043E \u043F\u043E\u043B\u0443\u0447\u0435\u043D\u0438\u044F \u043D\u0430\u0433\u0440\u0430\u0434\u044B!"
+      EN: Before receiving award!
+      TR: "\xD6d\xFCl almadan \xF6nce!"
+      MASSA: 
+  - ID: core_055
+    Groups:
+      RU: "\u0417\u0430\u0431\u0440\u0430\u0442\u044C \u043D\u0430\u0433\u0440\u0430\u0434\u0443"
+      EN: Claim your reward
+      TR: "\xD6d\xFCl\xFCn\xFCz\xFC al\u0131n"
+      MASSA: 
+  - ID: core_056
+    Groups:
+      RU: "\u0425\u043E\u0442\u0438\u0442\u0435 \u043E\u0446\u0435\u043D\u0438\u0442\u044C
+        \u043D\u0430\u0448\u0443 \u0438\u0433\u0440\u0443?"
+      EN: Want to evaluate our game?
+      TR: "Oyunu de\u011Ferlendirmek ister misiniz?"
+      MASSA: 
+  - ID: core_057
+    Groups:
+      RU: "\u042D\u0442\u043E \u043F\u043E\u043C\u043E\u0436\u0435\u0442 \u043D\u0430\u043C
+        \u0443\u043B\u0443\u0447\u0448\u0438\u0442\u044C \u0438\u0433\u0440\u0443!"
+      EN: It will help us improve the game!
+      TR: "Oyunu geli\u015Ftirmemize yard\u0131mc\u0131 olacak!"
+      MASSA: 
+  - ID: core_058
+    Groups:
+      RU: "\u0412\u044B \u0443\u0436\u0435 \u043E\u0446\u0435\u043D\u0438\u043B\u0438
+        \u0438\u0433\u0440\u0443!"
+      EN: You have already rated the game!
+      TR: "Oyunu zaten de\u011Ferlendirdin!"
+      MASSA: 
+  - ID: core_059
+    Groups:
+      RU: "\u0421\u043F\u0430\u0441\u0438\u0431\u043E \u0432\u0430\u043C \u0437\u0430
+        \u044D\u0442\u043E :)"
+      EN: Thank you for that :)
+      TR: "Bunun i\xE7in te\u015Fekk\xFCr ederim :)"
       MASSA: 
   - ID: "\u04415_001"
     Groups:
@@ -14729,7 +15332,7 @@ MonoBehaviour:
         \u041A\u0430\u043A\u0430\u044F \u0443 \u043D\u0435\u0433\u043E \u0440\u0435\u0430\u043A\u0446\u0438\u044F
         \u043D\u0430 \u0442\u0435\u0431\u044F?"
       EN: You walk along the corridor with a girlfriend. See him, you ask for a girlfriend
-        to look at him. She looks at his reaction in your presence. What is his reaction
+        to look at it. She looks at his reaction in your presence. What is his reaction
         to you?
       TR: "Koridor boyunca bir k\u0131z arkada\u015F\u0131yla y\xFCr\xFCrs\xFCn.
         Onu g\xF6r, bir k\u0131z arkada\u015F\u0131n\u0131n buna bakmas\u0131n\u0131
@@ -19283,7 +19886,7 @@ MonoBehaviour:
         \u041A\u0430\u043A\u0430\u044F \u0443 \u043D\u0435\u0433\u043E \u0440\u0435\u0430\u043A\u0446\u0438\u044F
         \u043D\u0430 \u0442\u0435\u0431\u044F?"
       EN: You walk along the corridor with a girlfriend. See him, you ask for a girlfriend
-        to look at him. She looks at his reaction in your presence. What is his reaction
+        to look at it. She looks at his reaction in your presence. What is his reaction
         to you?
       TR: "Koridor boyunca bir k\u0131z arkada\u015F\u0131yla y\xFCr\xFCrs\xFCn.
         Onu g\xF6r, bir k\u0131z arkada\u015F\u0131n\u0131n buna bakmas\u0131n\u0131

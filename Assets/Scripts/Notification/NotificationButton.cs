@@ -48,6 +48,10 @@ public class NotificationButton : MonoBehaviour
 			}
 			else
 			{
+				if (value > 0)
+				{
+					AudioManager.Instance.PlaySound(Sounds.Notification);
+				}
 				_countNotification += value;
 				if (_countNotification <= 0) HideNotification();
 				else
@@ -56,7 +60,7 @@ public class NotificationButton : MonoBehaviour
 					ShowNotification();
 				}
 			}
-			AudioManager.Instance.PlaySound(Sounds.Notification);
+			
 		}
 	}
 

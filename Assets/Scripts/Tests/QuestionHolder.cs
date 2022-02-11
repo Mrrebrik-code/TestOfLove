@@ -12,8 +12,8 @@ public class QuestionHolder : MonoBehaviour
 	{
 		_questionText.text = Localization.Instance.Localize(question.QuestionText);
 	}
-	public void UpdateCounter(int count)
+	public void UpdateCounter(int countCurrent, int count)
 	{
-		_counterText.text = $"{count}/{GameManager.Category.Questions.Count}";
+		_counterText.text = $"{countCurrent}/{count}";
 	}
 }

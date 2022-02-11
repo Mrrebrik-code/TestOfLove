@@ -15,6 +15,8 @@ public class YandexSDK : SingletonMono<YandexSDK>
     [DllImport("__Internal")] private static extern void SetLeaderboard(string name, int count, string description);
     [DllImport("__Internal")] private static extern void GetLeaderboard(string name);
     [DllImport("__Internal")] private static extern void GetLeaderboards(string name, int count);
+    [DllImport("__Internal")] private static extern void OpenWindow(string url);
+
 
 
 
@@ -39,6 +41,11 @@ public class YandexSDK : SingletonMono<YandexSDK>
         
     }
 
+    public void OpenURL(string url)
+	{
+        OpenWindow(url);
+
+    }
     public void Auth()
 	{
         AuthenticateUser();

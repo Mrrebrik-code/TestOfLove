@@ -7,7 +7,7 @@ public static class GameManager
 	private static ScrollObejct _currentScrollObject;
 	public static Category Category { get; private set; }
 	private static Dictionary<Categorys, Category> _categories = new Dictionary<Categorys, Category>();
-
+	public static bool IsReview = false;
 	public static bool SetCategory(Categorys category, ScrollObejct scrollObject)
 	{
 		_currentScrollObject = scrollObject;

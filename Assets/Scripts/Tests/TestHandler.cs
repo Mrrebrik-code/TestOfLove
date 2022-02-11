@@ -11,6 +11,7 @@ public class TestHandler : SingletonMono<TestHandler>
 	private List<Question> _additionalQuestions = new List<Question>();
 	private Question _currentQuestion;
 	private int _numberQuestion;
+	private int _questionCount;
 
 	[SerializeField] private AnswerHolder _answerHolderPrefab;
 	[SerializeField] private Transform _contentToAnswers;
@@ -27,6 +28,7 @@ public class TestHandler : SingletonMono<TestHandler>
 	private void Start()
 	{
 		_categoryCurrent = GameManager.Category;
+		_questionCount = _categoryCurrent.Questions.Count;
 		_result.Init(_categoryCurrent);
 		foreach (var question in _categoryCurrent.Questions)
 		{
@@ -107,7 +109,7 @@ public class TestHandler : SingletonMono<TestHandler>
 		_currentQuestion = _questions[_questions.Count - 1];
 
 		_numberQuestion++;
-		_question.UpdateCounter(_numberQuestion);
+		_question.UpdateCounter(_numberQuestion, _questionCount);
 
 		if(_indexAdditionQuestion.Contains(_numberQuestion))
 		{
@@ -127,6 +129,7 @@ public class TestHandler : SingletonMono<TestHandler>
 
 		if (_additionalQuestions.Count <= 0) return;
 
+		_questionCount++;
 		_questions.Add(Instance._currentQuestion);
 		var question = _additionalQuestions[_additionalQuestions.Count - 1];
 
@@ -259,7 +262,7 @@ public class TestHandler : SingletonMono<TestHandler>
 				_questionToSelectedAnswer.Remove(question);
 
 				Instance._numberQuestion--;
-				Instance._question.UpdateCounter(Instance._numberQuestion);
+				Instance._question.UpdateCounter(Instance._numberQuestion, Instance._questionCount);
 				Instance.Init(question);
 			}
 		}

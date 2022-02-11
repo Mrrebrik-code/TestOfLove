@@ -13,5 +13,17 @@ public class ResultHolder : MonoBehaviour
 		gameObject.SetActive(true);
 		_resultText.text = Localization.Instance.Localize(result.GetResult());
 		_resultCountText.text = $"Баллы:{result.ResultTest}";
+		if (PlayerPrefs.HasKey("Result_score"))
+		{
+			var count = PlayerPrefs.GetInt("Result_score");
+			count += result.ResultTest;
+			PlayerPrefs.SetInt("Result_score", count);
+		}
+		else
+		{
+			PlayerPrefs.SetInt("Result_score", result.ResultTest);
+		}
+		YandexSDK.Instance.SetLeaderboardScore("LiderboardLove", PlayerPrefs.GetInt("Result_score"), "Very good!");
+		
 	}
 }

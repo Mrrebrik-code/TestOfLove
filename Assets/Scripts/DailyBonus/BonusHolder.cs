@@ -18,7 +18,11 @@ public class BonusHolder : MonoBehaviour
 	{
 		Bonus = bonus;
 		_icon.sprite = bonus.Icon;
-		_dayText.text = $"День {bonus.Id}";
+		_dayText.text = $"{Localization.Instance.Localize("core_044")} {bonus.Id}";
+		Localization.Instance.Subscribe(() =>
+		{
+			_dayText.text = $"{Localization.Instance.Localize("core_044")} {bonus.Id}";
+		});
 		_countText.text = bonus.CountReward.ToString();
 
 		if (bonus.IsTake)

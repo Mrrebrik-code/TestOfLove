@@ -43,7 +43,12 @@ public class ModeHolder : MonoBehaviour
 				_categoryButton.Init(scrollObject.TypeMode, "_ModeScaner");
 				break;
 		}
-		_nameText.text = scrollObject.NameMode;
+		_nameText.text = Localization.Instance.Localize(scrollObject.NameMode);
+		Localization.Instance.Subscribe(() =>
+		{
+			_nameText.text = Localization.Instance.Localize(scrollObject.NameMode);
+		});
+
 		_status.SetStyle(scrollObject.Type);
 		if(scrollObject.TypeMode == TypeMode.Default)
 		{

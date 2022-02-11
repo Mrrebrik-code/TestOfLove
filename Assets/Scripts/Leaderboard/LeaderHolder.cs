@@ -14,7 +14,7 @@ public partial class LeaderHolder : MonoBehaviour
 	{
 		_leader = leader;
 		_countText.text = leader.Id.ToString();
-		_nameText.text = leader.Name;
+		_nameText.text = leader.Name.Replace("\"", "");
 		_valuesText.text = leader.Values.ToString();
 	}
 }

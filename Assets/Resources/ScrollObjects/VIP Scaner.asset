@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _id: 5
   _typeMode: 3
-  _nameMode: "\u0421\u043A\u0430\u043D\u0435\u0440 \u0441\u043E\u0432\u043C\u0435\u0441\u0442\u0438\u043C\u043E\u0441\u0442\u0438"
+  _nameMode: core_022
   _icon: {fileID: 21300000, guid: b1384b5aa7de9bb4cb677658e1db8a98, type: 3}
   _category: 1
   _modePrefab: {fileID: 6148728931356064539, guid: 85ec1e267fdf74742a67579e4bf10b14,

@@ -1,15 +1,18 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class StackProductBuy : SingletonMono<StackProductBuy>
 {
 	private ProductStack _currentPtoductStack;
 	private Action _buyAction;
+	[SerializeField] private TMP_Text _priceText;
 	public void Init(int price, Action callback)
 	{
 		_currentPtoductStack = new ProductStack(price, callback);
+		_priceText.text = price.ToString();
 	}
 
 	public void Buy()
