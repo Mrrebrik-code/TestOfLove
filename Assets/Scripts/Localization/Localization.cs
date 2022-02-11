@@ -12,6 +12,7 @@ public class Localization : SingletonMono<Localization>
 	public override void Awake()
 	{
 		base.Awake();
+		YandexSDK.Instance.onLanguagesCurrentToDomen += (language) => Language = language;
 		Init();
 	}
 
@@ -25,7 +26,8 @@ public class Localization : SingletonMono<Localization>
 		}
 		else
 		{
-			Instance.SetLanguage(Languages.Russian.ToString());
+			YandexSDK.Instance.GetLanguage();
+			//Instance.SetLanguage(Languages.Russian.ToString());
 		}
 	}
 	public void SetLanguage(string language)

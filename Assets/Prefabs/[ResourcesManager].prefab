@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 481863567774647977}
   - component: {fileID: 481863567774647976}
+  - component: {fileID: 643492583}
   m_Layer: 0
   m_Name: '[ResourcesManager]'
   m_TagString: Untagged
@@ -48,3 +49,19 @@ MonoBehaviour:
   Bonuses: []
   ScrollObjects: []
   Products: []
+--- !u!114 &643492583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 481863567774647983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f718ff14bcae8b4db37eb20136cede4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsDontDestroyOnLoad: 0
+  _isUnity: 0
+  _isDesktop: 1
+  _textInfoDevice: {fileID: 0}

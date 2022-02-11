@@ -37,7 +37,24 @@ public class ResourcesManager : SingletonMono<ResourcesManager>
 	{
 		var objects = Resources.LoadAll<ScrollObejct>("ScrollObjects");
 		Tools.BubbleSort(objects);
-		return objects.ToList();
+
+		ScrollObejct delObj = null;
+		foreach (var obj in objects)
+		{
+			if(obj.TypeMode == TypeMode.VIPScaner)
+			{
+				delObj = obj;
+				break;
+			}
+		}
+		var list = objects.ToList();
+
+		if(DeviceManager.Instance.Type == Devices.Desktop)
+		{
+			list.Remove(delObj);
+		}
+		
+		return list;
 	}
 
 	private List<Product> LoadProducts()

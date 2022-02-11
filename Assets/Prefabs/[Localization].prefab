@@ -20783,3 +20783,16 @@ MonoBehaviour:
       EN: Not
       TR: "De\u011Fil"
       MASSA: 1
+  - ID: core_062
+    Groups:
+      RU: "\u0412\u043D\u0438\u043C\u0430\u043D\u0438\u0435! \u0415\u0441\u043B\u0438
+        \u0438\u0433\u0440\u0430\u0442\u044C \u0432 \u044D\u0442\u0443 \u0438\u0433\u0440\u0443,
+        \u043D\u0430 \u043C\u043E\u0431\u0438\u043B\u044C\u043D\u043E\u043C \u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432\u0435,
+        \u0442\u043E \u0431\u0443\u0434\u0435\u0442 \u0434\u043E\u0441\u0442\u0443\u043F\u043D\u043E
+        \u0431\u043E\u043B\u044C\u0448\u0435 \u0440\u0435\u0436\u0438\u043C\u043E\u0432
+        \u0438 \u0444\u0443\u043D\u043A\u0446\u0438\u043E\u043D\u0430\u043B\u044C\u043D\u043E\u0441\u0442\u0438!"
+      EN: Attention! If you play this game, on your mobile device, more modes and
+        functionality will be available!
+      TR: "Dikkat! Bu oyunu oynarsan\u0131z, mobil cihaz\u0131n\u0131zda, daha fazla
+        mod ve i\u015Flevsellik mevcut olacak!"
+      MASSA: 1

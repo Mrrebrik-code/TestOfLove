@@ -7,6 +7,14 @@ mergeInto(LibraryManager.library, {
     buy(id);
   },
 
+  GetInfoDeviceType: function(){
+    getInfoDeviceType();
+  },
+
+  GetCurrentLanguageToDomen: function(){
+    currentLanguage();
+  },
+
   AuthenticateUser: function() {
     auth();
   },

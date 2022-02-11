@@ -16,6 +16,8 @@ public class YandexSDK : SingletonMono<YandexSDK>
     [DllImport("__Internal")] private static extern void GetLeaderboard(string name);
     [DllImport("__Internal")] private static extern void GetLeaderboards(string name, int count);
     [DllImport("__Internal")] private static extern void OpenWindow(string url);
+    [DllImport("__Internal")] private static extern void GetInfoDeviceType();
+    [DllImport("__Internal")] private static extern void GetCurrentLanguageToDomen();
 
 
 
@@ -26,11 +28,13 @@ public class YandexSDK : SingletonMono<YandexSDK>
     public event Action<string> onRewardedAdReward;
     public event Action<int> onRewardedAdClosed;
     public event Action<string> onRewardedAdError;
+    public event Action<Languages> onLanguagesCurrentToDomen;
 
     public event Action<string> onDataLeaderboardScorePlayerEntry;
     public event Action<string> onDataLeaderboardsScoreTop;
 
     public event Action onAuth;
+    public event Action<string> onDeviceInfo;
 
     public Queue<int> rewardedAdPlacementsAsInt = new Queue<int>();
     public Queue<string> rewardedAdsPlacements = new Queue<string>();
@@ -46,6 +50,41 @@ public class YandexSDK : SingletonMono<YandexSDK>
         OpenWindow(url);
 
     }
+
+    public void GetInfoDevice()
+	{
+        GetInfoDeviceType();
+    }
+
+    public void GetLanguage()
+	{
+        GetCurrentLanguageToDomen();
+
+    }
+
+    public void OnLanguageEnvironment(string domen)
+	{
+        switch (domen)
+		{
+            case "com":
+                onLanguagesCurrentToDomen?.Invoke(Languages.English);
+                break;
+            case "com.tr":
+                onLanguagesCurrentToDomen?.Invoke(Languages.Turkish);
+                break;
+            case "ru":
+                onLanguagesCurrentToDomen?.Invoke(Languages.Russian);
+                break;
+            default:
+                onLanguagesCurrentToDomen?.Invoke(Languages.Russian);
+                break;
+
+        }
+	}
+    public void OnDeviceInfo(string device)
+	{
+        onDeviceInfo?.Invoke(device);
+	}
     public void Auth()
 	{
         AuthenticateUser();
