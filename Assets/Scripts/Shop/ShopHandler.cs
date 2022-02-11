@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 
 public class ShopHandler : MonoBehaviour
@@ -9,10 +10,16 @@ public class ShopHandler : MonoBehaviour
 	[SerializeField] private ProductHolder _productHolderPrefab;
 	[SerializeField] private Transform _content;
 	private List<ProductHolder> _productsHolder = new List<ProductHolder>();
-
+	[SerializeField] private TMP_Text _tittleText;
 	private void Awake()
 	{
 		Initialization();
+
+		_tittleText.text = $"{Localization.Instance.Localize("core_040")}\n{Localization.Instance.Localize("core_041")}";
+		Localization.Instance.Subscribe(() =>
+		{
+			_tittleText.text = $"{Localization.Instance.Localize("core_040")}\n{Localization.Instance.Localize("core_041")}";
+		});
 	}
 	private void Initialization()
 	{

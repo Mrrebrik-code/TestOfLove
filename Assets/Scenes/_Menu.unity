@@ -16001,6 +16001,7 @@ MonoBehaviour:
   _productHolderPrefab: {fileID: 5859314084355348065, guid: 35faf63fb833cb04192f9f9cfe2da7ba,
     type: 3}
   _content: {fileID: 1658891560}
+  _tittleText: {fileID: 11153956}
 --- !u!4 &1803749396
 Transform:
   m_ObjectHideFlags: 0
