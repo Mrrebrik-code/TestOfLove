@@ -61,7 +61,7 @@ public class LeaderboardManger : SingletonMono<LeaderboardManger>
 			var score = eaderboardEntries.entries[i].score;
 			var name = eaderboardEntries.entries[i].player.publicName;
 
-			_leaderList.Add(new Leader(i, name, score));
+			_leaderList.Add(new Leader(i + 1, name, score));
 		}
 
 		foreach (var leader in _leaderList)
@@ -99,7 +99,7 @@ public class LeaderboardManger : SingletonMono<LeaderboardManger>
 		_leaders = new List<LeaderHolder>();
 		_leaderList = new List<Leader>();
 
-		//Init();
+		Init();
 	}
 
 	[System.Serializable]
