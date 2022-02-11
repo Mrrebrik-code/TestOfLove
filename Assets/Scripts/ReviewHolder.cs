@@ -46,7 +46,7 @@ public class ReviewHolder : MonoBehaviour
 	{
 		if (GameManager.IsReview == false)
 		{
-			//YandexSDK.Instance.Review();
+			YandexSDK.Instance.Review();
 			GameManager.IsReview = true;
 			_reviewButton.interactable = false;
 			_reviewText.text = GetString();

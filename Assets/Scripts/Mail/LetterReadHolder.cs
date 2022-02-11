@@ -9,6 +9,7 @@ public class LetterReadHolder : MonoBehaviour
 	private Letter _letter;
 	[SerializeField] private TMP_Text _tiitleText;
 	[SerializeField] private TMP_Text _temaText;
+	[SerializeField] private TMP_Text _dataText;
 
 	[SerializeField] private GameObject _rewardTextGameObject;
 	[SerializeField] private TMP_Text _defaultText;
@@ -24,6 +25,7 @@ public class LetterReadHolder : MonoBehaviour
 		_letter = letter;
 		_tiitleText.text = Localization.Instance.Localize(letter.Tittle);
 		_temaText.text = Localization.Instance.Localize(letter.Tema);
+		_dataText.text = letter.Data.ToShortDateString();
 
 		switch (letter.TypeLetter)
 		{
@@ -46,7 +48,9 @@ public class LetterReadHolder : MonoBehaviour
 				_rewardTextGameObject.GetComponent<TMP_Text>().text = Localization.Instance.Localize(letter.FullDescription);
 				_heartText.gameObject.SetActive(true);
 				_promoCodeText.gameObject.SetActive(false);
-				_heartText.text = "Получить " + letter.CountRewardHeart.ToString();
+
+				_heartText.text = LocalizationText(letter);
+				Localization.Instance.Localize(LocalizationText(letter));
 				if(PlayerPrefs.HasKey($"{_letter.Tittle}_{_letter.Tema}_take") == false)
 				{
 					_button.interactable = true;
@@ -54,6 +58,7 @@ public class LetterReadHolder : MonoBehaviour
 				else
 				{
 					_button.interactable = false;
+
 				}
 				
 
@@ -61,7 +66,18 @@ public class LetterReadHolder : MonoBehaviour
 				break;
 		}
 	}
-
+	private string LocalizationText(Letter letter)
+	{
+		if(PlayerPrefs.HasKey($"{_letter.Tittle}_{_letter.Tema}_take") == false)
+		{
+			return $"{Localization.Instance.Localize("core_060")} " + letter.CountRewardHeart.ToString();
+		}
+		else
+		{
+			return $"{Localization.Instance.Localize("core_061")}";
+		}
+		
+	}
 	public void RewardHeart()
 	{
 		if(PlayerPrefs.HasKey($"{_letter.Tittle}_{_letter.Tema}_take") == false)
@@ -70,6 +86,7 @@ public class LetterReadHolder : MonoBehaviour
 			Bank.BankManager.Instance.Heart.Put(_letter.CountRewardHeart);
 			PlayerPrefs.SetInt($"{_letter.Tittle}_{_letter.Tema}_take", 1);
 			_button.interactable = false;
+			_heartText.text = LocalizationText(_letter);
 		}
 		
 	}

@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsDontDestroyOnLoad: 1
-  _language: 0
+  _language: 2
   LocalizationList:
   - ID: "\u04414_001"
     Groups:
@@ -793,6 +793,18 @@ MonoBehaviour:
       EN: Thank you for that :)
       TR: "Bunun i\xE7in te\u015Fekk\xFCr ederim :)"
       MASSA: 
+  - ID: core_060
+    Groups:
+      RU: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C"
+      EN: Receive
+      TR: Almak
+      MASSA: 
+  - ID: core_061
+    Groups:
+      RU: "\u041F\u043E\u043B\u0443\u0447\u0435\u043D\u043E"
+      EN: Received
+      TR: "Al\u0131nan"
+      MASSA: 
   - ID: "\u04415_001"
     Groups:
       RU: "\u0414\u0440\u0443\u0436\u0431\u0430"
@@ -6346,6 +6358,18 @@ MonoBehaviour:
       EN: Thank you for that :)
       TR: "Bunun i\xE7in te\u015Fekk\xFCr ederim :)"
       MASSA: 
+  - ID: core_060
+    Groups:
+      RU: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C"
+      EN: Receive
+      TR: Almak
+      MASSA: 
+  - ID: core_061
+    Groups:
+      RU: "\u041F\u043E\u043B\u0443\u0447\u0435\u043D\u043E"
+      EN: Received
+      TR: "Al\u0131nan"
+      MASSA: 
   - ID: "\u04415_001"
     Groups:
       RU: "\u0414\u0440\u0443\u0436\u0431\u0430"
@@ -11898,6 +11922,18 @@ MonoBehaviour:
         \u044D\u0442\u043E :)"
       EN: Thank you for that :)
       TR: "Bunun i\xE7in te\u015Fekk\xFCr ederim :)"
+      MASSA: 
+  - ID: core_060
+    Groups:
+      RU: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u044C"
+      EN: Receive
+      TR: Almak
+      MASSA: 
+  - ID: core_061
+    Groups:
+      RU: "\u041F\u043E\u043B\u0443\u0447\u0435\u043D\u043E"
+      EN: Received
+      TR: "Al\u0131nan"
       MASSA: 
   - ID: "\u04415_001"
     Groups:
