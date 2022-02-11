@@ -14,18 +14,10 @@ public class LeaderboardManger : SingletonMono<LeaderboardManger>
 
 	private void Start()
 	{
-		YandexSDK.Instance.onAuth += HandleInitLeaderboardToAuthYandex;
+		Init();
 		YandexSDK.Instance.onDataLeaderboardScorePlayerEntry += HandleDataLeaderboardScorePlayerEntry;
 		YandexSDK.Instance.onDataLeaderboardsScoreTop += HandleDataLeaderboardsScoreTop;
 	}
-
-	public void HandleInitLeaderboardToAuthYandex()
-	{
-		Debug.Log("Init to C# script leaderboard");
-		Init();
-	}
-
-
 
 	private void HandleDataLeaderboardsScoreTop(string data)
 	{
@@ -41,7 +33,7 @@ public class LeaderboardManger : SingletonMono<LeaderboardManger>
 	{
 	}
 
-	private void Init()
+	public void Init()
 	{
 		GetLeaderboards(4);
 	}
@@ -95,6 +87,19 @@ public class LeaderboardManger : SingletonMono<LeaderboardManger>
 	public void GetLeaderboards(int countTopPlayers)
 	{
 		YandexSDK.Instance.GetLeaderboardsScoreTop(_nameLeaderboard, countTopPlayers);
+	}
+
+	public void UpdateLeaderboard()
+	{
+		_leaders.ForEach(leaderHolder =>
+		{
+			Destroy(leaderHolder.gameObject);
+
+		});
+		_leaders = new List<LeaderHolder>();
+		_leaderList = new List<Leader>();
+
+		//Init();
 	}
 
 	[System.Serializable]

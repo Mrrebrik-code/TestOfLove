@@ -44,10 +44,10 @@ public class YandexSDK : SingletonMono<YandexSDK>
         AuthenticateUser();
     }
 
-    public void AuthorizationStatus()
+    public void AuthorizationStatus(string name)
 	{
         Debug.Log("Auth succesfyl");
-        onAuth();
+        onAuth?.Invoke();
     }
 
 

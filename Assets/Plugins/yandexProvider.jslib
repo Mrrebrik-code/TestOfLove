@@ -27,10 +27,6 @@ mergeInto(LibraryManager.library, {
   	getLeaderboards(name, count);
   },
 
-  AudioResume: function(){
-	canAuidoSource();
-  },
-
   CurrentLanguage: function(){
 	currentLanguage();
   },

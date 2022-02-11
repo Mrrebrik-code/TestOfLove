@@ -28,7 +28,7 @@ public class PromoCodeManager : SingletonMono<PromoCodeManager>
 				YandexSDK.Instance.GetLeaderboardScorePlayerEntry("LiderboardTestOfLove");
 				break;
 			case "Leaderboard":
-				LeaderboardManger.Instance.HandleInitLeaderboardToAuthYandex();
+				LeaderboardManger.Instance.Init();
 				break;
 			case "Review":
 				YandexSDK.Instance.Review();

@@ -28,8 +28,7 @@ public class SplashLoader : MonoBehaviour
 
 	public void Auth()
 	{
-		//YandexSDK.Instance.Auth();
-		_isAuth = true;
+		YandexSDK.Instance.Auth();
 	}
 
 	private void HandleAuthStatus()
