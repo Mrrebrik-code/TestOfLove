@@ -51,7 +51,6 @@ public class DailyBonusManager : SingletonMono<DailyBonusManager>
 	private void Start()
 	{
 		Init();
-		Debug.Log(_currentStreak);
 		SetCurrentDayBonus(_currentStreak);
 		StartCoroutine(UpdateStateRewards());
 		if (_isTakeReward == true)

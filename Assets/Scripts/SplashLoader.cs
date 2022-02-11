@@ -31,6 +31,11 @@ public class SplashLoader : MonoBehaviour
 		YandexSDK.Instance.Auth();
 	}
 
+	public void AuthGhost()
+	{
+		_isAuth = true;
+	}
+
 	private void HandleAuthStatus()
 	{
 		_isAuth = true;
@@ -47,7 +52,7 @@ public class SplashLoader : MonoBehaviour
 		{
 			yield return new WaitForEndOfFrame();
 		}
-		_auth.DOFade(1f, 1f).onComplete += () =>
+		_auth.DOFade(0f, 1f).onComplete += () =>
 		{
 			_logo.SetTrigger("LogoStart");
 			_auth.gameObject.SetActive(false);

@@ -179,7 +179,7 @@ public class TestHandler : SingletonMono<TestHandler>
 		public int ResultTest { get; private set; }
 		private Category _category;
 		[SerializeField] private ResultHolder _resultHolder;
-
+		public Category Category { get { return _category; } }
 		public void Init(Category category)
 		{
 			_category = category;

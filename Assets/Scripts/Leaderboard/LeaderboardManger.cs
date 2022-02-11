@@ -11,9 +11,34 @@ public class LeaderboardManger : SingletonMono<LeaderboardManger>
 	[SerializeField] private Transform _content;
 	private List<LeaderHolder> _leaders = new List<LeaderHolder>();
 	private List<Leader> _leaderList = new List<Leader>();
+	[SerializeField] private GameObject _noAuthText;
 
 	private void Start()
 	{
+		if (YandexSDK.Instance.IsAuth)
+		{
+			_noAuthText.SetActive(false);
+			Init();
+			YandexSDK.Instance.onDataLeaderboardScorePlayerEntry += HandleDataLeaderboardScorePlayerEntry;
+			YandexSDK.Instance.onDataLeaderboardsScoreTop += HandleDataLeaderboardsScoreTop;
+		}
+		else
+		{
+			_noAuthText.SetActive(true);
+			StartCoroutine(UpdateAuthSystem());
+		}
+	}
+	public void Auth()
+	{
+		YandexSDK.Instance.Auth();
+	}
+	private IEnumerator UpdateAuthSystem()
+	{
+		while (YandexSDK.Instance.IsAuth == false)
+		{
+			yield return null;
+		}
+		_noAuthText.SetActive(false);
 		Init();
 		YandexSDK.Instance.onDataLeaderboardScorePlayerEntry += HandleDataLeaderboardScorePlayerEntry;
 		YandexSDK.Instance.onDataLeaderboardsScoreTop += HandleDataLeaderboardsScoreTop;
@@ -70,36 +95,48 @@ public class LeaderboardManger : SingletonMono<LeaderboardManger>
 			leaderHolder.Init(leader);
 			_leaders.Add(leaderHolder);
 		}
-		
+
 	}
 
 
 	public void SetLeaderboardScore(int score, string description)
 	{
-		YandexSDK.Instance.SetLeaderboardScore(_nameLeaderboard, score, description);
+		if (YandexSDK.Instance.IsAuth)
+		{
+			YandexSDK.Instance.SetLeaderboardScore(_nameLeaderboard, score, description);
+		}
 	}
 
 	public void GetLeaderboard()
 	{
-		YandexSDK.Instance.GetLeaderboardScorePlayerEntry(_nameLeaderboard);
+		if (YandexSDK.Instance.IsAuth)
+		{
+			YandexSDK.Instance.GetLeaderboardScorePlayerEntry(_nameLeaderboard);
+		}
 	}
 
 	public void GetLeaderboards(int countTopPlayers)
 	{
-		YandexSDK.Instance.GetLeaderboardsScoreTop(_nameLeaderboard, countTopPlayers);
+		if (YandexSDK.Instance.IsAuth)
+		{
+			YandexSDK.Instance.GetLeaderboardsScoreTop(_nameLeaderboard, countTopPlayers);
+		}
 	}
 
 	public void UpdateLeaderboard()
 	{
-		_leaders.ForEach(leaderHolder =>
+		if (YandexSDK.Instance.IsAuth)
 		{
-			Destroy(leaderHolder.gameObject);
+			_leaders.ForEach(leaderHolder =>
+			{
+				Destroy(leaderHolder.gameObject);
+			});
 
-		});
-		_leaders = new List<LeaderHolder>();
-		_leaderList = new List<Leader>();
+			_leaders = new List<LeaderHolder>();
+			_leaderList = new List<Leader>();
 
-		Init();
+			Init();
+		}
 	}
 
 	[System.Serializable]
@@ -150,7 +187,7 @@ public class LeaderboardManger : SingletonMono<LeaderboardManger>
 		public Entries(int score, string extraData, int rank, Player player)
 		{
 			this.score = score;
-			this.extraData= extraData;
+			this.extraData = extraData;
 			this.rank = rank;
 			this.player = player;
 		}

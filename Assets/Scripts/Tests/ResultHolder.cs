@@ -7,8 +7,30 @@ public class ResultHolder : MonoBehaviour
 {
 	[SerializeField] private TMP_Text _resultText;
 	[SerializeField] private TMP_Text _resultCountText;
+	[SerializeField] private TMP_Text _tittleText;
 	public void Show(TestHandler.Result result)
 	{
+		var categoryText = "";
+		switch (result.Category.Categorys)
+		{
+			case Categorys.Love:
+				categoryText = Localization.Instance.Localize("core_017");
+				break;
+			case Categorys.Confidence:
+				categoryText = Localization.Instance.Localize("core_015");
+				break;
+			case Categorys.Mutually:
+				categoryText = Localization.Instance.Localize("core_014");
+				break;
+			case Categorys.Values:
+				categoryText = Localization.Instance.Localize("core_019");
+				break;
+			case Categorys.Friends:
+				categoryText = Localization.Instance.Localize("core_016");
+				break;
+		}
+		_tittleText.text = $"{Localization.Instance.Localize("core_078")} \"{categoryText}\"!\n{Localization.Instance.Localize("core_077")}";
+
 		GameManager.CompletCategory();
 		gameObject.SetActive(true);
 		_resultText.text = Localization.Instance.Localize(result.GetResult());

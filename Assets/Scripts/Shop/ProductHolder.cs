@@ -21,10 +21,19 @@ public class ProductHolder : MonoBehaviour
 	{
 		_product = product;
 		_priceText.text = $"{product.Price} YAN";
-		_countText.text = $"{product.Count} шт.";
+		_countText.text = $"{product.Count}";
 
 		var isBenefit = product.Benefit != 0;
-		if (isBenefit) _benefitText.text = $"{product.Benefit}% выгода";
+		if (isBenefit)
+		{
+			_benefitText.text = $"{product.Benefit}% {Localization.Instance.Localize("core_079")}";
+
+			Localization.Instance.Subscribe(() =>
+			{
+				_benefitText.text = $"{product.Benefit}% {Localization.Instance.Localize("core_079")}";
+			});
+		}
+		
 		_benefitObject.gameObject.SetActive(isBenefit);
 
 		_icon.sprite = product.Icon;

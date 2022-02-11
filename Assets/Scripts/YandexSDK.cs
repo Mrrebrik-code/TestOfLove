@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class YandexSDK : SingletonMono<YandexSDK> 
 {
+    public bool IsAuth = false;
     [DllImport("__Internal")] private static extern void ShowFullscreenAd();
     [DllImport("__Internal")] private static extern int ShowRewardedAd(string placement);
     [DllImport("__Internal")] private static extern void GerReward();
@@ -93,6 +94,7 @@ public class YandexSDK : SingletonMono<YandexSDK>
     public void AuthorizationStatus(string name)
 	{
         Debug.Log("Auth succesfyl");
+        IsAuth = true;
         onAuth?.Invoke();
     }
 
