@@ -37,22 +37,37 @@ public class ResourcesManager : SingletonMono<ResourcesManager>
 	{
 		var objects = Resources.LoadAll<ScrollObejct>("ScrollObjects");
 		Tools.BubbleSort(objects);
-
-		ScrollObejct delObj = null;
-		foreach (var obj in objects)
-		{
-			if(obj.TypeMode == TypeMode.VIPScaner)
-			{
-				delObj = obj;
-				break;
-			}
-		}
 		var list = objects.ToList();
-
-		if(DeviceManager.Instance.Type == Devices.Desktop)
+		if (DeviceManager.Instance.Type == Devices.Desktop)
 		{
+			ScrollObejct delObj = null;
+			foreach (var obj in objects)
+			{
+				if (obj.TypeMode == TypeMode.VIPScaner)
+				{
+					delObj = obj;
+					break;
+				}
+			}
 			list.Remove(delObj);
 		}
+		else
+		{
+			List<ScrollObejct> _delObjects = new List<ScrollObejct>();
+			foreach (var obj in objects)
+			{
+				if (obj.TypeMode == TypeMode.VIPNamesToTree || obj.TypeMode == TypeMode.VIPTestNames)
+				{
+					_delObjects.Add(obj);
+				}
+			}
+
+			foreach (var item in _delObjects)
+			{
+				list.Remove(item);
+			}
+		}
+
 		
 		return list;
 	}
