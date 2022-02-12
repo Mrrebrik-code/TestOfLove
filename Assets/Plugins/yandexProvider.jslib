@@ -4,7 +4,7 @@ mergeInto(LibraryManager.library, {
   },
 
   Purchase: function(id) {
-    buy(id);
+    buy(Pointer_stringify(id));
   },
 
   GetInfoDeviceType: function(){

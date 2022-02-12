@@ -23,6 +23,8 @@ public class ShopHandler : MonoBehaviour
 	}
 	private void Initialization()
 	{
+		YandexSDK.Instance.onPurchaseComplet += PurchaseProductSuccessful;
+		YandexSDK.Instance.onPurchaseError += PurchaseProductError;
 		_products = ResourcesManager.Instance.Products;
 		if (_products == null) return;
 
@@ -37,6 +39,35 @@ public class ShopHandler : MonoBehaviour
 
 	public void Buy(Product product)
 	{
+		Debug.Log(product.IdPurchase);
+		if (YandexSDK.Instance.IsPurchase)
+		{
+
+			YandexSDK.Instance.BuyPurchase(product.IdPurchase);
+		}
 		Debug.Log("Buy product: " + product.Price + " YAN");
+	}
+
+	private void PurchaseProductSuccessful(string id)
+	{
+		foreach (var product in _products)
+		{
+			if(product.IdPurchase == id)
+			{
+				Bank.BankManager.Instance.Heart.Put(product.Count);
+				return;
+			}
+		}
+	}
+
+	private void PurchaseProductError()
+	{
+		Debug.Log("Buy FAILED:");
+	}
+
+	private void OnDestroy()
+	{
+		YandexSDK.Instance.onPurchaseComplet -= PurchaseProductSuccessful;
+		YandexSDK.Instance.onPurchaseError -= PurchaseProductError;
 	}
 }

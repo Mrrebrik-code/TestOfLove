@@ -6,6 +6,7 @@ using UnityEngine;
 public class YandexSDK : SingletonMono<YandexSDK> 
 {
     public bool IsAuth = false;
+    public bool IsPurchase = false;
     [DllImport("__Internal")] private static extern void ShowFullscreenAd();
     [DllImport("__Internal")] private static extern int ShowRewardedAd(string placement);
     [DllImport("__Internal")] private static extern void GerReward();
@@ -36,6 +37,8 @@ public class YandexSDK : SingletonMono<YandexSDK>
 
     public event Action onAuth;
     public event Action<string> onDeviceInfo;
+    public event Action<string> onPurchaseComplet;
+    public event Action onPurchaseError;
 
     public Queue<int> rewardedAdPlacementsAsInt = new Queue<int>();
     public Queue<string> rewardedAdsPlacements = new Queue<string>();
@@ -50,6 +53,11 @@ public class YandexSDK : SingletonMono<YandexSDK>
 	{
         OpenWindow(url);
 
+    }
+
+    public void BuyPurchase(string id)
+	{
+        Purchase(id);
     }
 
     public void GetInfoDevice()
@@ -89,6 +97,7 @@ public class YandexSDK : SingletonMono<YandexSDK>
     public void Auth()
 	{
         AuthenticateUser();
+        InitPurchases();
     }
 
     public void AuthorizationStatus(string name)
@@ -98,8 +107,24 @@ public class YandexSDK : SingletonMono<YandexSDK>
         onAuth?.Invoke();
     }
 
+    public void PurchaseStatus()
+	{
+        IsPurchase = true;
+    }
 
-	public void SetLeaderboardScore(string name, int score, string description)
+    public void OnPurchaseComplet(string id)
+	{
+        onPurchaseComplet?.Invoke(id);
+    }
+
+    public void OnPurchaseFailed()
+	{
+        onPurchaseError?.Invoke();
+    }
+
+
+
+    public void SetLeaderboardScore(string name, int score, string description)
 	{
         SetLeaderboard(name, score, description);
 	}

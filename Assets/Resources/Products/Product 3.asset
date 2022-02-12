@@ -16,3 +16,4 @@ MonoBehaviour:
   _count: 2500
   _benefit: 70
   _icon: {fileID: 21300000, guid: c316c16776157944892990c1c7ae39e7, type: 3}
+  _idPurchase: 2500heart_499yan_purchase
