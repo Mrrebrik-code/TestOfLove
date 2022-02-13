@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class AudioManager : SingletonMono<AudioManager>
 {
@@ -15,6 +16,12 @@ public class AudioManager : SingletonMono<AudioManager>
 	{
 		base.Awake();
 		Init();
+	}
+
+	public void SetValues(float valuesSound, float valueMusic)
+	{
+		_soundSource.DOFade(valuesSound / 10, 0.5f);
+		_musicSource.DOFade(valueMusic / 100, 0.5f);
 	}
 
 	private void Init()

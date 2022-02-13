@@ -26,7 +26,15 @@ public class Localization : SingletonMono<Localization>
 		}
 		else
 		{
-			YandexSDK.Instance.GetLanguage();
+			if(DeviceManager.Instance._isUnity == false)
+			{
+				YandexSDK.Instance.GetLanguage();
+			}
+			else
+			{
+				Instance.SetLanguage(Languages.Russian.ToString());
+			}
+			
 			//Instance.SetLanguage(Languages.Russian.ToString());
 		}
 	}

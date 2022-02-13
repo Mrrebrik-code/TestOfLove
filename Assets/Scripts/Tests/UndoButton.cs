@@ -12,10 +12,32 @@ public class UndoButton : MonoBehaviour
 	private void Awake()
 	{
 		_button = GetComponent<Button>();
+		YandexSDK.Instance.onRewardedAdReward += Undo;
 		_button.onClick.AddListener(() =>
 		{
-			TestHandler.Instance.Undo();
+			ShowReward();
 		});
+	}
+	private void OnDestroy()
+	{
+		YandexSDK.Instance.onRewardedAdReward -= Undo;
+	}
+	private void Undo(string reward)
+	{
+		if(reward == "Back") TestHandler.Instance.Undo();
+	}
+
+	private void ShowReward()
+	{
+		if (DeviceManager.Instance._isUnity)
+		{
+			Undo("Back");
+		}
+		else
+		{
+			YandexSDK.Instance.ShowRewarded("Back");
+		}
+		
 	}
 }
 

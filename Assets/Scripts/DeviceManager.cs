@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class DeviceManager : SingletonMono<DeviceManager>
 {
-	[SerializeField] private bool _isUnity = true;
+	public bool _isUnity = true;
 	[SerializeField] private bool _isDesktop = true;
 	[SerializeField] private GameObject _textInfoDevice;
 	public Devices Type { get; private set; }

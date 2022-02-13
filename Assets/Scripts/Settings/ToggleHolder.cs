@@ -4,6 +4,7 @@ using UnityEngine;
 using Itibsoft.TOAnimate;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class ToggleHolder : MonoBehaviour
 {
@@ -16,12 +17,18 @@ public class ToggleHolder : MonoBehaviour
 
 	private void Start()
 	{
+		_slider.onActiveSldier += HandleActiveSlider;
 		Localization.Instance.Subscribe(() =>
 		{
 			_statusText.text = _isActive == true ? "¬ À" : "¬€ À";
 		});
 	}
-	public void SwitchToggle()
+
+	private void HandleActiveSlider(bool arg1, string arg2)
+	{
+	}
+
+	public void SwitchToggle(bool isSlider = true)
 	{
 		_isActive = !_isActive;
 		var position = new Vector2(_isActive == true ? _positions.x : _positions.y, _handle.rectTransform.anchoredPosition.y);
@@ -30,6 +37,10 @@ public class ToggleHolder : MonoBehaviour
 			_statusText.text = _isActive == true ? "¬ À" : "¬€ À";
 			_handle.sprite = _isActive == true ? _sprites[0] : _sprites[1];
 		});
-		_slider.SwitchActivitySlider();
+		if (isSlider)
+		{
+			_slider.SwitchActivitySlider();
+		}
+		
 	}
 }

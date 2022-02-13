@@ -27,6 +27,7 @@ public class TestHandler : SingletonMono<TestHandler>
 
 	private void Start()
 	{
+		YandexSDK.Instance.onRewardedAdReward += HandleReward;
 		_categoryCurrent = GameManager.Category;
 		_questionCount = _categoryCurrent.Questions.Count;
 		_result.Init(_categoryCurrent);
@@ -46,6 +47,12 @@ public class TestHandler : SingletonMono<TestHandler>
 
 		Init();
 	}
+
+	private void OnDestroy()
+	{
+		YandexSDK.Instance.onRewardedAdReward -= HandleReward;
+	}
+
 
 	private void GenerationIndexAdditionQuestion(int count)
 	{
@@ -126,17 +133,32 @@ public class TestHandler : SingletonMono<TestHandler>
 
 	public void SetAdditionalQuestion()
 	{
+		if (DeviceManager.Instance._isUnity)
+		{
+			HandleReward("add");
+		}
+		else
+		{
+			YandexSDK.Instance.ShowRewarded("add");
+		}
+		
+	}
 
-		if (_additionalQuestions.Count <= 0) return;
+	private void HandleReward(string reward)
+	{
+		if (reward == "add")
+		{
+			if (_additionalQuestions.Count <= 0) return;
 
-		_questionCount++;
-		_questions.Add(Instance._currentQuestion);
-		var question = _additionalQuestions[_additionalQuestions.Count - 1];
+			_questionCount++;
+			_questions.Add(Instance._currentQuestion);
+			var question = _additionalQuestions[_additionalQuestions.Count - 1];
 
-		Init(question, true);
-		_additionalPanel.SetActive(false);
+			Init(question, true);
+			_additionalPanel.SetActive(false);
 
-		_additionalQuestions.Remove(question);
+			_additionalQuestions.Remove(question);
+		}
 	}
 	private void ClearAnswers()
 	{
