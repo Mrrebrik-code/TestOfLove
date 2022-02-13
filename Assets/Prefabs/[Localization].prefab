@@ -6219,9 +6219,9 @@ MonoBehaviour:
   - ID: core_012
     Groups:
       RU: "Itibsoft | \u0422\u0435\u0441\u0442 \u043D\u0430 \u043B\u044E\u0431\u043E\u0432\u044C
-        v0.3.34 (2022\u0433)"
-      EN: Itibsoft | Love Test V0.3.34 (2022g)
-      TR: "\u0130tibsoft | A\u015Fk Testi v0.3.34 (2022g)"
+        v0.3.37 (2022)"
+      EN: Itibsoft | Love Test V0.3.37 (2022)
+      TR: "\u0130tibsoft | A\u015Fk Testi v0.3.37 (2022)"
       MASSA: 
   - ID: core_013
     Groups:
@@ -6658,8 +6658,8 @@ MonoBehaviour:
   - ID: core_080
     Groups:
       RU: "\u041F\u043E\u043D\u044F\u0442\u043D\u043E"
-      EN: clear
-      TR: "a\xE7\u0131k"
+      EN: Got It
+      TR: "A\xE7\u0131k"
       MASSA: 
   - ID: core_081
     Groups:

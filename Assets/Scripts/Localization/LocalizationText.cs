@@ -39,10 +39,12 @@ public class LocalizationText : MonoBehaviour
 	}
 	public void EditText()
 	{
-		_text.text = Localization.Instance.Localize(_id);
+		Debug.Log(gameObject.name);
+		if(_text != null) _text.text = Localization.Instance.Localize(_id);
+		
 	}
 	public void EditTextTMP()
 	{
-		_tmpText.text = Localization.Instance.Localize(_id);
+		if (_tmpText != null) _tmpText.text = Localization.Instance.Localize(_id);
 	}
 }
