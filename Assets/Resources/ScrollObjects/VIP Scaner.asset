@@ -20,4 +20,4 @@ MonoBehaviour:
   _modePrefab: {fileID: 6148728931356064539, guid: 85ec1e267fdf74742a67579e4bf10b14,
     type: 3}
   _isLock: 1
-  _priceUnLock: 100
+  _priceUnLock: 1500
