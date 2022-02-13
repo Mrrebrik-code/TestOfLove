@@ -79,9 +79,27 @@ public class ModeHolder : MonoBehaviour
 		else
 		{
 			_lockObject.UnLock();
+			if(!PlayerPrefs.HasKey($"Saving_opening_vip_mode_{ScrollObject.TypeMode.ToString()}"))
+			{
+				PlayerPrefs.SetInt($"Saving_opening_vip_mode_{ScrollObject.TypeMode.ToString()}", 1);
+				switch (ScrollObject.TypeMode)
+				{
+					case TypeMode.VIPNamesToTree:
+						MailManager.Instance.AddLetter(Letters.OpenVIPModeTree, UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "_Menu");
+						break;
+					case TypeMode.VIPScaner:
+						MailManager.Instance.AddLetter(Letters.OpenVIPModeScaner, UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "_Menu");
+						break;
+					case TypeMode.VIPTestNames:
+						MailManager.Instance.AddLetter(Letters.OpenVIPModeTestOfNames, UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "_Menu");
+						break;
+				}
+
+			}
 		}
 		UpdateStatus();
 
+		
 
 	}
 	public void UpdateStatus()

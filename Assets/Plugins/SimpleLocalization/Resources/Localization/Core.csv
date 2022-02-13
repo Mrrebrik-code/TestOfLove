@@ -10,7 +10,7 @@ core_008,(Это нужно для соревновательной таблиц
 core_009,ВОЙТИ,LOGIN,GİRİŞ YAPMAK
 core_010,Загрузка,loading,Yükleniyor
 core_011,ТЕСТ НА ЛЮБОВЬ,Test Love,Aşk Test
-core_012,Itibsoft | Тест на любовь v0.2.25 (2022г),Itibsoft | Love Test V0.2.25 (2022g),İtibsoft | Aşk Testi V0.2.25 (2022g)
+core_012,Itibsoft | Тест на любовь v0.3.34 (2022г),Itibsoft | Love Test V0.3.34 (2022g),İtibsoft | Aşk Testi v0.3.34 (2022g)
 core_013,Доступно,Available,Mevcut
 core_014,Взаимно?,Mutually?,Karşılıklı?
 core_015,На доверие,On trust,Güvenmek
@@ -82,3 +82,4 @@ core_080,Понятно,clear,açık
 core_081,Вы не авторизованы в игре через аккаунт Яндекс.Игры!,You are not authorized in the game through the Yandex.Game account!,Yandex.game hesabı aracılığıyla oyunda yetkiniz yok!
 core_082,Поэтому таблица лидеров для вас не доступна!,"Therefore, the leader's table is not available for you!","Bu nedenle, liderin masası sizin için uygun değildir!"
 core_083,ГОСТЬ,GUEST,BİR KONUK
+core_084,Баллы,Point,Nokta

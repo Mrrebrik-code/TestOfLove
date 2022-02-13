@@ -1827,22 +1827,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4440846266016290488, guid: 16f4932770ebd5841a87432886412683,
-        type: 3}
-      propertyPath: LocalizationList.Array.data[784].Groups.EN
-      value: Itibsoft | Love Test V0.2.25 (2022g)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4440846266016290488, guid: 16f4932770ebd5841a87432886412683,
-        type: 3}
-      propertyPath: LocalizationList.Array.data[784].Groups.RU
-      value: "Itibsoft | \u0422\u0435\u0441\u0442 \u043D\u0430 \u043B\u044E\u0431\u043E\u0432\u044C
-        v0.2.25 (2022\u0433)"
-      objectReference: {fileID: 0}
-    - target: {fileID: 4440846266016290488, guid: 16f4932770ebd5841a87432886412683,
-        type: 3}
-      propertyPath: LocalizationList.Array.data[784].Groups.TR
-      value: "\u0130tibsoft | A\u015Fk Testi V0.2.25 (2022g)"
-      objectReference: {fileID: 0}
     - target: {fileID: 4440846266016290489, guid: 16f4932770ebd5841a87432886412683,
         type: 3}
       propertyPath: m_Name
@@ -3275,7 +3259,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 643492583, guid: 0bddb888d5608a545a7d8bf1c3e7be37, type: 3}
       propertyPath: _isUnity
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 643492583, guid: 0bddb888d5608a545a7d8bf1c3e7be37, type: 3}
       propertyPath: _isDesktop

@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsDontDestroyOnLoad: 1
-  _language: 0
+  _language: 2
   LocalizationList:
   - ID: "\u04414_001"
     Groups:
@@ -494,9 +494,9 @@ MonoBehaviour:
   - ID: core_012
     Groups:
       RU: "Itibsoft | \u0422\u0435\u0441\u0442 \u043D\u0430 \u043B\u044E\u0431\u043E\u0432\u044C
-        v0.2.25 (2022\u0433)"
-      EN: Itibsoft | Love Test V0.2.25 (2022g)
-      TR: "\u0130tibsoft | A\u015Fk Testi V0.2.25 (2022g)"
+        v0.3.34 (2022\u0433)"
+      EN: Itibsoft | Love Test V0.3.34 (2022g)
+      TR: "\u0130tibsoft | A\u015Fk Testi v0.3.34 (2022g)"
       MASSA: 
   - ID: core_013
     Groups:
@@ -958,6 +958,12 @@ MonoBehaviour:
       RU: "\u0413\u041E\u0421\u0422\u042C"
       EN: GUEST
       TR: "B\u0130R KONUK"
+      MASSA: 
+  - ID: core_084
+    Groups:
+      RU: "\u0411\u0430\u043B\u043B\u044B"
+      EN: Point
+      TR: Nokta
       MASSA: 
   - ID: "\u04415_001"
     Groups:
@@ -6213,9 +6219,9 @@ MonoBehaviour:
   - ID: core_012
     Groups:
       RU: "Itibsoft | \u0422\u0435\u0441\u0442 \u043D\u0430 \u043B\u044E\u0431\u043E\u0432\u044C
-        v0.2.25 (2022\u0433)"
-      EN: Itibsoft | Love Test V0.2.25 (2022g)
-      TR: "\u0130tibsoft | A\u015Fk Testi V0.2.25 (2022g)"
+        v0.3.34 (2022\u0433)"
+      EN: Itibsoft | Love Test V0.3.34 (2022g)
+      TR: "\u0130tibsoft | A\u015Fk Testi v0.3.34 (2022g)"
       MASSA: 
   - ID: core_013
     Groups:
@@ -6677,6 +6683,12 @@ MonoBehaviour:
       RU: "\u0413\u041E\u0421\u0422\u042C"
       EN: GUEST
       TR: "B\u0130R KONUK"
+      MASSA: 
+  - ID: core_084
+    Groups:
+      RU: "\u0411\u0430\u043B\u043B\u044B"
+      EN: Point
+      TR: Nokta
       MASSA: 
   - ID: "\u04415_001"
     Groups:
@@ -11932,9 +11944,9 @@ MonoBehaviour:
   - ID: core_012
     Groups:
       RU: "Itibsoft | \u0422\u0435\u0441\u0442 \u043D\u0430 \u043B\u044E\u0431\u043E\u0432\u044C
-        v0.2.25 (2022\u0433)"
-      EN: Itibsoft | Love Test V0.2.25 (2022g)
-      TR: "\u0130tibsoft | A\u015Fk Testi V0.2.25 (2022g)"
+        v0.3.34 (2022\u0433)"
+      EN: Itibsoft | Love Test V0.3.34 (2022g)
+      TR: "\u0130tibsoft | A\u015Fk Testi v0.3.34 (2022g)"
       MASSA: 
   - ID: core_013
     Groups:
@@ -12396,6 +12408,12 @@ MonoBehaviour:
       RU: "\u0413\u041E\u0421\u0422\u042C"
       EN: GUEST
       TR: "B\u0130R KONUK"
+      MASSA: 
+  - ID: core_084
+    Groups:
+      RU: "\u0411\u0430\u043B\u043B\u044B"
+      EN: Point
+      TR: Nokta
       MASSA: 
   - ID: "\u04415_001"
     Groups:
@@ -21233,3 +21251,15 @@ MonoBehaviour:
       EN: Yes
       TR: Evet
       MASSA: 3
+  - ID: "\u0441d2_067"
+    Groups:
+      RU: "\u0418\u043D\u043E\u0433\u0434\u0430"
+      EN: Sometimes
+      TR: "Ara s\u0131ra"
+      MASSA: 3
+  - ID: "\u0441d2_068"
+    Groups:
+      RU: "\u041D\u0435\u0442"
+      EN: Not
+      TR: "De\u011Fil"
+      MASSA: 1

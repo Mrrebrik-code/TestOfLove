@@ -15,7 +15,7 @@ MonoBehaviour:
   _id: 1
   _typeMode: 0
   _nameMode: core_016
-  _icon: {fileID: 21300000, guid: b32a0a19582af954788beb2c893d5bf1, type: 3}
+  _icon: {fileID: 21300000, guid: a2563cfad0060144e8e65cae718fc6fc, type: 3}
   _category: 4
   _modePrefab: {fileID: 7577549171891839196, guid: f44d58c4489b8594cbffe8f4734bbaf2,
     type: 3}

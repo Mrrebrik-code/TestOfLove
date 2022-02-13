@@ -18,7 +18,7 @@ MonoBehaviour:
   _tema: letter_014
   _discription: letter_015
   _fullDescription: letter_016
-  _icon: {fileID: 0}
+  _icon: {fileID: 21300000, guid: 5da064bd201d97f46af241dac94e7f04, type: 3}
   _isLenta: 0
   _isCreatingStart: 0
   _typeLetter: 2

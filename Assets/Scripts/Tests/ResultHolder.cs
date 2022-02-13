@@ -34,7 +34,7 @@ public class ResultHolder : MonoBehaviour
 		GameManager.CompletCategory();
 		gameObject.SetActive(true);
 		_resultText.text = Localization.Instance.Localize(result.GetResult());
-		_resultCountText.text = $"Баллы:{result.ResultTest}";
+		_resultCountText.text = $"{Localization.Instance.Localize("core_084")}:{result.ResultTest}";
 		if (PlayerPrefs.HasKey("Result_score"))
 		{
 			var count = PlayerPrefs.GetInt("Result_score");

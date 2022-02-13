@@ -48,6 +48,7 @@ public class CategoryButton : MonoBehaviour
 					{
 						_modeHolder.ScrollObject.Locker(false);
 						_modeHolder.Locker(false);
+						_modeHolder.UpdateStatus();
 					});
 					WindowManager.Instance.HandleCurrentActiveWindow(Window.Popup_buy_mode);
 

@@ -9,6 +9,7 @@ public class AdsController : MonoBehaviour
 	[SerializeField] private float _time;
 	[SerializeField] private float _workTime;
 	[SerializeField] private bool _isInterstitial = false;
+	public bool IsTimerADS = true;
 
 	private void Start()
 	{
@@ -20,7 +21,11 @@ public class AdsController : MonoBehaviour
 
 	private void Update()
 	{
-		Timer();
+		if (IsTimerADS)
+		{
+			Timer();
+		}
+		
 	}
 
 

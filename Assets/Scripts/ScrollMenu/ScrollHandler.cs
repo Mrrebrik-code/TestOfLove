@@ -9,6 +9,7 @@ public class ScrollHandler : SingletonMono<ScrollHandler>
 	[SerializeField] private Transform _content;
 	[SerializeField] private List<ModeHolder> _modesHodler = new List<ModeHolder>();
 	[SerializeField] private List<Vector2> _positions = new List<Vector2>();
+
 	[SerializeField] private float _spacing;
 	[SerializeField] private float _smooth;
 	private Vector2 _vectorPosition;
@@ -26,7 +27,17 @@ public class ScrollHandler : SingletonMono<ScrollHandler>
 		
 	}
 
-
+	public void UnLockMoreVipModes()
+	{
+		foreach (var mode in _modesHodler)
+		{
+			if(mode.ScrollObject.TypeMode != TypeMode.Default)
+			{
+				mode.Locker(false);
+				mode.ScrollObject.Locker(false);
+			}
+		}
+	}
 
 	private void Initialization()
 	{

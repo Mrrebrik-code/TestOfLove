@@ -11,6 +11,7 @@ public class ShopHandler : MonoBehaviour
 	[SerializeField] private Transform _content;
 	private List<ProductHolder> _productsHolder = new List<ProductHolder>();
 	[SerializeField] private TMP_Text _tittleText;
+	[SerializeField] private GameObject _noAuth;
 	private void Awake()
 	{
 		Initialization();
@@ -42,14 +43,23 @@ public class ShopHandler : MonoBehaviour
 		Debug.Log(product.IdPurchase);
 		if (YandexSDK.Instance.IsPurchase)
 		{
-
 			YandexSDK.Instance.BuyPurchase(product.IdPurchase);
+		}
+		else
+		{
+			_noAuth.SetActive(true);
 		}
 		Debug.Log("Buy product: " + product.Price + " YAN");
 	}
 
 	private void PurchaseProductSuccessful(string id)
 	{
+		if (!PlayerPrefs.HasKey("First_buy"))
+		{
+			PlayerPrefs.SetString("First_buy", "complet");
+			ScrollHandler.Instance.UnLockMoreVipModes();
+		}
+
 		foreach (var product in _products)
 		{
 			if(product.IdPurchase == id)

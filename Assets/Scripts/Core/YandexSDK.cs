@@ -162,6 +162,7 @@ public class YandexSDK : SingletonMono<YandexSDK>
 
     public void ShowRewarded(string placement) 
     {
+        AdsController.Instance.IsTimerADS = false;
         rewardedAdPlacementsAsInt.Enqueue(ShowRewardedAd(placement));
         rewardedAdsPlacements.Enqueue(placement);
     }
@@ -191,6 +192,7 @@ public class YandexSDK : SingletonMono<YandexSDK>
 
     public void OnRewardedClose(int placement) 
     {
+        AdsController.Instance.IsTimerADS = false;
         onRewardedAdClosed(placement);
     }
 
