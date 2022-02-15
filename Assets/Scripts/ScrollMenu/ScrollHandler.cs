@@ -35,6 +35,7 @@ public class ScrollHandler : SingletonMono<ScrollHandler>
 			{
 				mode.Locker(false);
 				mode.ScrollObject.Locker(false);
+				mode.UpdateStatus();
 			}
 		}
 	}

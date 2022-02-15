@@ -12,6 +12,7 @@ public class LeaderboardManger : SingletonMono<LeaderboardManger>
 	private List<LeaderHolder> _leaders = new List<LeaderHolder>();
 	private List<Leader> _leaderList = new List<Leader>();
 	[SerializeField] private GameObject _noAuthText;
+	
 
 	private void Start()
 	{
@@ -28,6 +29,7 @@ public class LeaderboardManger : SingletonMono<LeaderboardManger>
 			StartCoroutine(UpdateAuthSystem());
 		}
 	}
+
 	public void Auth()
 	{
 		YandexSDK.Instance.Auth();
@@ -56,6 +58,15 @@ public class LeaderboardManger : SingletonMono<LeaderboardManger>
 
 	private void HandleDataLeaderboardScorePlayerEntry(string data)
 	{
+		var json = JSON.Parse(data);
+		var score = (int)json["score"];
+		var extraData = json["extraData"].ToString();
+		var rank = (int)json["rank"];
+
+		var player = new Player(json["player"]);
+
+		var entries = new Entries(score, extraData, rank, player);
+		GameManager.ResultToLeaderboard = entries.score;
 	}
 
 	public void Init()
