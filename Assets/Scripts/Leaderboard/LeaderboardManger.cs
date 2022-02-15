@@ -66,7 +66,6 @@ public class LeaderboardManger : SingletonMono<LeaderboardManger>
 		var player = new Player(json["player"]);
 
 		var entries = new Entries(score, extraData, rank, player);
-		GameManager.ResultToLeaderboard = entries.score;
 	}
 
 	public void Init()
