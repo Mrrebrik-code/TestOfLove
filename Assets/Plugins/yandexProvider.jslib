@@ -18,6 +18,14 @@ mergeInto(LibraryManager.library, {
   AuthenticateUser: function() {
     auth();
   },
+
+  SaveData: function(data) {
+    save(Pointer_stringify(data));
+  },
+
+  LoadData: function() {
+    load();
+  },
   
   CanReviewGame: function(){
 	canReviewGame();

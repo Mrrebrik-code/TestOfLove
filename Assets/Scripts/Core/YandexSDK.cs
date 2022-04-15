@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
-
+using SimpleJSON;
 public class YandexSDK : SingletonMono<YandexSDK> 
 {
     public bool IsAuth = false;
@@ -21,6 +21,8 @@ public class YandexSDK : SingletonMono<YandexSDK>
     [DllImport("__Internal")] private static extern void GetInfoDeviceType();
     [DllImport("__Internal")] private static extern void GetCurrentLanguageToDomen();
 
+    [DllImport("__Internal")] private static extern void SaveData(string data);
+    [DllImport("__Internal")] private static extern void LoadData();
 
 
 
@@ -40,19 +42,35 @@ public class YandexSDK : SingletonMono<YandexSDK>
     public event Action<string> onPurchaseComplet;
     public event Action onPurchaseError;
 
+    public event Action<string> onLoadData;
+
     public Queue<int> rewardedAdPlacementsAsInt = new Queue<int>();
     public Queue<string> rewardedAdsPlacements = new Queue<string>();
 
 	public override void Awake()
 	{
 		base.Awake();
-        
+    }
+
+    public void SaveDataTest(SaveData data)
+	{
+		SaveData(JsonUtility.ToJson(data));
+    }
+
+    public void LoadDataTest(Action<string> callback)
+	{
+        onLoadData += callback;
+        LoadData();
+    }
+
+    public void OnLoadData(string data)
+	{
+        onLoadData(data);
     }
 
     public void OpenURL(string url)
 	{
         OpenWindow(url);
-
     }
 
     public void BuyPurchase(string id)
@@ -68,7 +86,6 @@ public class YandexSDK : SingletonMono<YandexSDK>
     public void GetLanguage()
 	{
         GetCurrentLanguageToDomen();
-
     }
 
     public void OnLanguageEnvironment(string domen)
@@ -87,7 +104,6 @@ public class YandexSDK : SingletonMono<YandexSDK>
             default:
                 onLanguagesCurrentToDomen?.Invoke(Languages.Russian);
                 break;
-
         }
 	}
     public void OnDeviceInfo(string device)

@@ -45,7 +45,7 @@ public class ResultHolder : MonoBehaviour
 		{
 			PlayerPrefs.SetInt("Result_score", result.ResultTest);
 		}
-		YandexSDK.Instance.SetLeaderboardScore("LiderboardLove", PlayerPrefs.GetInt("Result_score"), "Very good!");
+		//YandexSDK.Instance.SetLeaderboardScore("LiderboardLove", PlayerPrefs.GetInt("Result_score"), "Very good!");
 		
 	}
 }

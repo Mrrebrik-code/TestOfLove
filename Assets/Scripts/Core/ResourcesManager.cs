@@ -38,7 +38,7 @@ public class ResourcesManager : SingletonMono<ResourcesManager>
 		var objects = Resources.LoadAll<ScrollObejct>("ScrollObjects");
 		Tools.BubbleSort(objects);
 		var list = objects.ToList();
-		if (DeviceManager.Instance.Type == Devices.Desktop)
+/*		if (DeviceManager.Instance.Type == Devices.Desktop)
 		{
 			ScrollObejct delObj = null;
 			foreach (var obj in objects)
@@ -66,7 +66,7 @@ public class ResourcesManager : SingletonMono<ResourcesManager>
 			{
 				list.Remove(item);
 			}
-		}
+		}*/
 
 		
 		return list;

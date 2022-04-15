@@ -13,17 +13,17 @@ public class FaderLoading : MonoBehaviour
 	{
 		DontDestroyOnLoad(this);
 	}
-	public void Show()
+	public void Show(string scene)
 	{
 		_image.DOFade(1, 1f);
-		StartCoroutine(Updater());
+		StartCoroutine(Updater(scene));
 	}
-	private IEnumerator Updater()
+	private IEnumerator Updater(string scene)
 	{
 		while (true)
 		{
 			yield return new WaitForEndOfFrame();
-			if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "_Menu")
+			if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == scene)
 			{
 				Hide();
 			}

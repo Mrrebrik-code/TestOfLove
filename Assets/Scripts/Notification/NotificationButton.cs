@@ -63,7 +63,6 @@ public class NotificationButton : MonoBehaviour
 			
 		}
 	}
-
 	public void ShowNotification()
 	{
 		if (_animationFader != null) StopCoroutine(_animationFader);

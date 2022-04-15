@@ -1732,6 +1732,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32959be16d4867b48a2f99b5d0ff068f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _nameSceneToLoad: TEST_SAVE
   _logo: {fileID: 1457645766}
   _fader: {fileID: 1769578875}
   _auth: {fileID: 1936442942}
@@ -2654,7 +2655,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 216, y: -206.4}
+  m_AnchoredPosition: {x: 249.02, y: -206.4}
   m_SizeDelta: {x: 443, y: 143}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1895127117
@@ -3259,7 +3260,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 643492583, guid: 0bddb888d5608a545a7d8bf1c3e7be37, type: 3}
       propertyPath: _isUnity
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 643492583, guid: 0bddb888d5608a545a7d8bf1c3e7be37, type: 3}
       propertyPath: _isDesktop
