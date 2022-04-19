@@ -1,12 +1,16 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using SimpleJSON;
-using System.Linq;
+﻿using System.Collections.Generic;
+using Newtonsoft.Json;
+using System.IO;
 
 public static class SaveManager
 {
+	public static BankSave Bank = null;
+	public static CategorySave Categorys = null;
+	public enum TypeData
+	{
+		Bank,
+		Category
+	}
 	public static List<ColorObject> _colorsObjects = new List<ColorObject>();
 
 	public static void Subscribe(ColorObject colorObject)
@@ -14,45 +18,71 @@ public static class SaveManager
 		_colorsObjects.Add(colorObject);
 	}
 
-	public static void Save()
+	public static void Save(ISaver data, TypeData type)
 	{
-		Data[] _datas = new Data[_colorsObjects.Count];
-
-		for (int i = 0; i < _colorsObjects.Count; i++)
+		using (StreamWriter file = File.CreateText($"{UnityEngine.Application.streamingAssetsPath}/{type}.data"))
 		{
-			_datas[i] = new Data(_colorsObjects[i].Index, _colorsObjects[i].gameObject.name);
+			JsonSerializer serializer = new JsonSerializer();
+			serializer.Serialize(file, data);
 		}
+		//YandexSDK.Instance.SaveDataTest(data);
 
-		var data = new SaveData(_datas);
+		switch (type)
+		{
+			case TypeData.Bank: Bank = (BankSave)data; break;
+			case TypeData.Category: Categorys = (CategorySave)data; break;
+		}
+	}
 
-		YandexSDK.Instance.SaveDataTest(data);
+	public static void Save(TypeData type)
+	{
+		switch (type)
+		{
+			case TypeData.Bank:
+				Save(Bank, type);
+				break;
+			case TypeData.Category:
+				Save(Categorys, type);
+				break;
+		}
 	}
 
 	public static void Load()
 	{
-		YandexSDK.Instance.LoadDataTest((data) =>
+		if (YandexSDK.Instance.IsAuth)
 		{
-			var saveData = JsonUtility.FromJson<SaveData>(data);
-			foreach (var datas in saveData.data)
+			YandexSDK.Instance.LoadDataTest((data) =>
 			{
-				foreach (var item in _colorsObjects)
-				{
-					if(item.gameObject.name == datas.name)
-					{
-						item.SetColor(datas.index);
-						break;
-					}
-				}
-			}
-		});
+				Bank = JsonConvert.DeserializeObject<BankSave>(data);
+				Categorys = JsonConvert.DeserializeObject<CategorySave>(data);
+			});
+		}
+		else
+		{
+			Bank = LoadFile<BankSave>($"{UnityEngine.Application.streamingAssetsPath}/{TypeData.Bank}.data");
+			if(Bank == null) Save(new BankSave(), TypeData.Bank);
 
+			Categorys = LoadFile<CategorySave>($"{UnityEngine.Application.streamingAssetsPath}/{TypeData.Category}.data");
+			if (Categorys == null) Save(new CategorySave(), TypeData.Category);
+		}
+		
 	}
 
-	public static void Reboot()
+	private static T LoadFile<T>(string path) where T : class
 	{
-		foreach (var color in _colorsObjects)
+		try
 		{
-			color.SetColor(0);
+			using (StreamReader dataFile = new StreamReader(path))
+			{
+
+				string data = dataFile.ReadToEnd();
+				return JsonConvert.DeserializeObject<T>(data);
+			}
 		}
+		catch
+		{
+			return null;
+		}
+		
 	}
 }

@@ -46,7 +46,9 @@ public static class GameManager
 				MailManager.Instance.AddLetter(Letters.CompletFriendshipTest, false);
 				break;
 		}
-		PlayerPrefs.SetInt($"{Category.Categorys}_complet", 1);
+
+		SaveManager.Categorys.Set($"{Category.Categorys}", 1, CategorySave.Type.Complet);
+		SaveManager.Save(SaveManager.TypeData.Category);
 
 		if(CheckCompletTestAll()) MailManager.Instance.AddLetter(Letters.CompletAllTests, false);
 	}
@@ -57,7 +59,7 @@ public static class GameManager
 		var indexes = new List<int>();
 		foreach (var category in categorys)
 		{
-			indexes.Add(PlayerPrefs.GetInt($"{category}_complet"));
+			indexes.Add((int)SaveManager.Categorys.Get($"{category}", CategorySave.Type.Complet));
 		}
 		var complets = 0;
 		foreach (var index in indexes)

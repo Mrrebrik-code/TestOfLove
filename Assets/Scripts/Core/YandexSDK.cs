@@ -52,7 +52,7 @@ public class YandexSDK : SingletonMono<YandexSDK>
 		base.Awake();
     }
 
-    public void SaveDataTest(SaveData data)
+    public void SaveDataTest(ISaver data)
 	{
 		SaveData(JsonUtility.ToJson(data));
     }

@@ -15,8 +15,6 @@ public class UIButtonLoad : MonoBehaviour
 		var button = GetComponent<Button>();
 		button.onClick.AddListener(() =>
 		{
-			_textInfoData.text = "";
-			SaveManager.Load();
 		});
 	}
 

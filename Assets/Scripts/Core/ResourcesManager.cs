@@ -11,7 +11,7 @@ public class ResourcesManager : SingletonMono<ResourcesManager>
 	public List<ScrollObejct> ScrollObjects = new List<ScrollObejct>();
 	public List<Product> Products = new List<Product>();
 	public Dictionary<Categorys, Category> Categories = new Dictionary<Categorys, Category>();
-
+	private Action onInit;
 	public void Initialization(Action callback)
 	{
 		Letters = LoadLetters();
@@ -19,7 +19,21 @@ public class ResourcesManager : SingletonMono<ResourcesManager>
 		ScrollObjects = LoadScrollObjcts();
 		Products = LoadProducts();
 		Categories = LoadCategorys();
-		callback?.Invoke();
+		SaveManager.Load();
+		onInit += callback;
+		if (DeviceManager.Instance._isUnity)
+		{
+			onInit?.Invoke();
+		}
+		else
+		{
+			YandexSDK.Instance.onLoadData += (data) =>
+			{
+				onInit?.Invoke();
+			};
+		}
+		
+		
 	}
 	private List<Letter> LoadLetters()
 	{

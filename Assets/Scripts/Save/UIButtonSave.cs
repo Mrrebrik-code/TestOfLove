@@ -10,7 +10,7 @@ public class UIButtonSave : MonoBehaviour
 		var button = GetComponent<Button>();
 		button.onClick.AddListener(() =>
 		{
-			SaveManager.Save();
+		
 		});
 	}
 }

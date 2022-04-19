@@ -29,11 +29,30 @@ public partial class ScrollObejct : ScriptableObject
 	{ 
 		get 
 		{ 
-			return Convert.ToBoolean(PlayerPrefs.GetInt($"Category_{_id}_{_nameMode}_locker", Convert.ToInt32(_isLock)));
+			if(_typeMode == TypeMode.Default)
+			{
+				return Convert.ToBoolean((int)SaveManager.Categorys.Get($"{_category}", CategorySave.Type.Lock));
+				//return Convert.ToBoolean(PlayerPrefs.GetInt($"Category_{_id}_{_nameMode}_locker", Convert.ToInt32(_isLock)));
+			}
+			else
+			{
+				return Convert.ToBoolean((int)SaveManager.Categorys.Get($"{_typeMode}", CategorySave.Type.Lock));
+			}
+			
 		}
 		set
 		{
-			PlayerPrefs.SetInt($"Category_{_id}_{_nameMode}_locker", Convert.ToInt32(value));
+			if (_typeMode == TypeMode.Default)
+			{
+				SaveManager.Categorys.Set($"{_category}", Convert.ToInt32(value), CategorySave.Type.Lock);
+				SaveManager.Save(SaveManager.TypeData.Category);
+			}
+			else
+			{
+				SaveManager.Categorys.Set($"{_typeMode}", Convert.ToInt32(value), CategorySave.Type.Lock);
+				SaveManager.Save(SaveManager.TypeData.Category);
+			}
+			//PlayerPrefs.SetInt($"Category_{_id}_{_nameMode}_locker", Convert.ToInt32(value));
 		}
 	}
 
@@ -41,19 +60,46 @@ public partial class ScrollObejct : ScriptableObject
 	{
 		get
 		{
-			return Convert.ToBoolean(PlayerPrefs.GetInt($"Category_{_id}_{_nameMode}_complet", Convert.ToInt32(0)));
+			if (_typeMode == TypeMode.Default)
+			{
+				return Convert.ToBoolean((int)SaveManager.Categorys.Get($"{_category}", CategorySave.Type.Complet));
+				//return Convert.ToBoolean(PlayerPrefs.GetInt($"Category_{_id}_{_nameMode}_locker", Convert.ToInt32(_isLock)));
+			}
+			else
+			{
+				return Convert.ToBoolean((int)SaveManager.Categorys.Get($"{_typeMode}", CategorySave.Type.Complet));
+			}
+			//return Convert.ToBoolean(PlayerPrefs.GetInt($"Category_{_id}_{_nameMode}_complet", Convert.ToInt32(0)));
 		}
 		set
 		{
-			PlayerPrefs.SetInt($"Category_{_id}_{_nameMode}_complet", Convert.ToInt32(value));
+			if (_typeMode == TypeMode.Default)
+			{
+				SaveManager.Categorys.Set($"{_category}", Convert.ToInt32(value), CategorySave.Type.Complet);
+				SaveManager.Save(SaveManager.TypeData.Category);
+			}
+			else
+			{
+				SaveManager.Categorys.Set($"{_typeMode}", Convert.ToInt32(value), CategorySave.Type.Complet);
+				SaveManager.Save(SaveManager.TypeData.Category);
+			}
+			//PlayerPrefs.SetInt($"Category_{_id}_{_nameMode}_complet", Convert.ToInt32(value));
 		}
 	}
 	public StatusMode.Style.Type Type 
 	{ 
 		get 
 		{
-			string type = PlayerPrefs.GetString($"Category_{_id}_{_nameMode}", StatusMode.Style.Type.Green.ToString());
-
+			string type = ""; //PlayerPrefs.GetString($"Category_{_id}_{_nameMode}", StatusMode.Style.Type.Green.ToString());
+			if (_typeMode == TypeMode.Default)
+			{
+				type = SaveManager.Categorys.Get($"{_category}", CategorySave.Type.Status).ToString();
+				//return Convert.ToBoolean(PlayerPrefs.GetInt($"Category_{_id}_{_nameMode}_locker", Convert.ToInt32(_isLock)));
+			}
+			else
+			{
+				type = SaveManager.Categorys.Get($"{_typeMode}", CategorySave.Type.Status).ToString();
+			}
 			switch (type)
 			{
 				case "Red":
@@ -74,7 +120,17 @@ public partial class ScrollObejct : ScriptableObject
 		}
 		set
 		{
-			PlayerPrefs.SetString($"Category_{_id}_{_nameMode}", value.ToString());
+			if (_typeMode == TypeMode.Default)
+			{
+				SaveManager.Categorys.Set($"{_category}", value.ToString(), CategorySave.Type.Status);
+				SaveManager.Save(SaveManager.TypeData.Category);
+			}
+			else
+			{
+				SaveManager.Categorys.Set($"{_typeMode}", value.ToString(), CategorySave.Type.Status);
+				SaveManager.Save(SaveManager.TypeData.Category);
+			}
+			//PlayerPrefs.SetString($"Category_{_id}_{_nameMode}", value.ToString());
 		}
 	}
 	public TypeMode TypeMode { get { return _typeMode;} }

@@ -13,9 +13,9 @@ namespace Bank
 			base.Awake();
 			History = new HistoryTransaction();
 
-			if (PlayerPrefs.HasKey("Heart_count"))
+			if (SaveManager.Bank != null)
 			{
-				var count = PlayerPrefs.GetInt("Heart_count");
+				var count = SaveManager.Bank.countHeart;
 				Heart = new Heart(count);
 			}
 			else
