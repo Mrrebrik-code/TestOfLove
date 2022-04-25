@@ -554,6 +554,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Menu_btn
       objectReference: {fileID: 0}
+    - target: {fileID: 6514559003772306958, guid: 222fedb30fbf0db4ea8f37bbb75223a2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 222fedb30fbf0db4ea8f37bbb75223a2, type: 3}
 --- !u!224 &225476932 stripped
@@ -1153,7 +1158,7 @@ PrefabInstance:
     - target: {fileID: 1700714054472895526, guid: 90b2091dd59d9c24dbca6ad0bd5b95b4,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 18.700012
+      value: 18.699951
       objectReference: {fileID: 0}
     - target: {fileID: 1700714054472895526, guid: 90b2091dd59d9c24dbca6ad0bd5b95b4,
         type: 3}
@@ -3953,8 +3958,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3312d7739989d2b4e91e6319e9a96d76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Padding: {x: -8, y: -5, z: -8, w: -5}
-  m_Softness: {x: 0, y: 0}
 --- !u!1 &1205847880
 GameObject:
   m_ObjectHideFlags: 0
@@ -5583,8 +5586,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3312d7739989d2b4e91e6319e9a96d76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Padding: {x: -8, y: -5, z: -8, w: -5}
-  m_Softness: {x: 0, y: 0}
 --- !u!1 &1962403764
 GameObject:
   m_ObjectHideFlags: 0
