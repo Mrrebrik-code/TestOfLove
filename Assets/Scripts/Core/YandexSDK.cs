@@ -68,7 +68,6 @@ public class YandexSDK : SingletonMono<YandexSDK>
     public void GetLanguage()
 	{
         GetCurrentLanguageToDomen();
-
     }
 
     public void OnLanguageEnvironment(string domen)

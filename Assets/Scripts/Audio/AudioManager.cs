@@ -24,6 +24,11 @@ public class AudioManager : SingletonMono<AudioManager>
 		_musicSource.DOFade(valueMusic / 100, 0.5f);
 	}
 
+	public void MusicOffOn(bool active)
+	{
+		_musicSource.enabled = active;
+	}
+
 	private void Init()
 	{
 		_soundsAudio.ForEach(audio =>

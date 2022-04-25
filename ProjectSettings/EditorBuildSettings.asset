@@ -8,19 +8,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/_Splash.unity
     guid: 99ae2b8a64d917f4fb38cec552afae6a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/_Menu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/_Game.unity
     guid: 9c5a5866eabf2bd40845e283b8d7c36f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/_ModeTree.unity
     guid: 7f56eca5afd83c641b23386b028b7fbf
   - enabled: 1
     path: Assets/Scenes/_ModeNames.unity
     guid: ab5416224e2bb7e4697befe144256089
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/_ModeScaner.unity
     guid: 3be477dd31229024a89aadc7f5663627
   m_configObjects: {}

@@ -1732,6 +1732,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32959be16d4867b48a2f99b5d0ff068f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _nameSceneToLoad: _ModeNames
   _logo: {fileID: 1457645766}
   _fader: {fileID: 1769578875}
   _auth: {fileID: 1936442942}
