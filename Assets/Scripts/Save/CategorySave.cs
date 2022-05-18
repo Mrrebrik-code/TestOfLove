@@ -18,9 +18,9 @@ public class CategorySave : ISaver
 		{ "Mutually",	0 },
 		{ "Values",		0 },
 		{ "Confidence", 0 },
-		{ "VIPTestNames", 0 },
-		{ "VIPNamesToTree", 0 },
-		{ "VIPScaner", 0 }
+		{ "VIPTestNames", 1 },
+		{ "VIPNamesToTree", 1 },
+		{ "VIPScaner", 1 }
 	};
 	public Dictionary<string, int> categorysComplet = new Dictionary<string, int>()
 	{

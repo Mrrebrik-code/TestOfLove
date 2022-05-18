@@ -3260,7 +3260,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 643492583, guid: 0bddb888d5608a545a7d8bf1c3e7be37, type: 3}
       propertyPath: _isUnity
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 643492583, guid: 0bddb888d5608a545a7d8bf1c3e7be37, type: 3}
       propertyPath: _isDesktop

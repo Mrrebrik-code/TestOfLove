@@ -20,12 +20,12 @@ public static class SaveManager
 
 	public static void Save(ISaver data, TypeData type)
 	{
-		using (StreamWriter file = File.CreateText($"{UnityEngine.Application.streamingAssetsPath}/{type}.data"))
+/*		using (StreamWriter file = File.CreateText($"{UnityEngine.Application.streamingAssetsPath}/{type}.data"))
 		{
 			JsonSerializer serializer = new JsonSerializer();
 			serializer.Serialize(file, data);
-		}
-		//YandexSDK.Instance.SaveDataTest(data);
+		}*/
+		YandexSDK.Instance.SaveDataTest(data);
 
 		switch (type)
 		{
@@ -54,7 +54,14 @@ public static class SaveManager
 			YandexSDK.Instance.LoadDataTest((data) =>
 			{
 				Bank = JsonConvert.DeserializeObject<BankSave>(data);
-				Categorys = JsonConvert.DeserializeObject<CategorySave>(data);
+				try
+				{
+					Categorys = JsonConvert.DeserializeObject<CategorySave>(data);
+				}
+				catch
+				{
+					Save(new CategorySave(), TypeData.Category);
+				}
 			});
 		}
 		else
